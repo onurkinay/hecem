@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hecem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="394.035" Width="316.214">
+        Title="MainWindow" Height="497" Width="500" ResizeMode="NoResize">
     <Grid>
         <DockPanel>
             <Frame x:Name="_Sayfa" x:FieldModifier="public"/>

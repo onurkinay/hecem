@@ -5,13 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hecem"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="500" d:DesignWidth="500"
       Title="Secim">
 
     <Grid>
-        <Button x:Name="btnHarfler" Content="Harfler" HorizontalAlignment="Left" Margin="94,83,0,0" VerticalAlignment="Top" Width="132" Height="44" Click="btnHarfler_Click"/>
-        <Button x:Name="btnHeceler" Content="Heceler" HorizontalAlignment="Left" Margin="94,132,0,0" VerticalAlignment="Top" Width="132" Height="44"/>
-        <Button x:Name="btnKelimeler" Content="Kelimeler" HorizontalAlignment="Left" Margin="94,181,0,0" VerticalAlignment="Top" Width="132" Height="44"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        
+        
+        <Button x:Name="btnHarfler" Content="Harfler" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="0" Width="132" Height="44" Click="btnHarfler_Click"/>
+        <Button x:Name="btnHeceler" Content="Heceler" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Width="132" Height="44"/>
+        <Button x:Name="btnKelimeler" Content="Kelimeler" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Width="132" Height="44"/>
 
     </Grid>
 </Page>
