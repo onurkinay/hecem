@@ -55,6 +55,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Anasayfa.xaml.cs">
+      <DependentUpon>Anasayfa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dinleme.xaml.cs">
+      <DependentUpon>Dinleme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Secim.xaml.cs">
+      <DependentUpon>Secim.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Anasayfa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dinleme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +84,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Secim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -94,6 +115,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1453066977_nav_arrow_point_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1453067036_arrow-right-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1453067058_arrow-left-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1453068122_listen to music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="1453068182_tests.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

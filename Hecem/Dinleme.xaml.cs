@@ -16,16 +16,28 @@ using System.Windows.Shapes;
 namespace Hecem
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Dinleme.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Dinleme : Page
     {
-        public MainWindow()
+        public Dinleme(int konu)
         {
             InitializeComponent();
-            _Sayfa.Navigate(new Anasayfa());
         }
 
-      
+        private void btnSonraki_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Sonraki");
+        }
+
+        private void btnOnceki_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Önceki");
+        }
+
+        private void btnOynat_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Oynat");
+        }
     }
 }

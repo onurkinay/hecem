@@ -16,16 +16,20 @@ using System.Windows.Shapes;
 namespace Hecem
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Secim.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Secim : Page
     {
-        public MainWindow()
+        int secim; Anasayfa snf = new Anasayfa();
+        public Secim(int konu)
         {
             InitializeComponent();
-            _Sayfa.Navigate(new Anasayfa());
+            secim = konu;
         }
 
-      
+        private void btnHarfler_Click(object sender, RoutedEventArgs e)
+        {
+           snf.PencereAc(new Dinleme(0));
+        }
     }
 }
