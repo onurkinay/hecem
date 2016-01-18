@@ -20,6 +20,7 @@ namespace Hecem
     /// </summary>
     public partial class Dinleme : Page
     {
+        Islemler islemler = new Islemler();
         public Dinleme(int konu)
         {
             InitializeComponent();
@@ -37,7 +38,7 @@ namespace Hecem
 
         private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Oynat");
+            islemler.Oynat("K");
         }
     }
 }

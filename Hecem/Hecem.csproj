@@ -61,6 +61,12 @@
     <Compile Include="Dinleme.xaml.cs">
       <DependentUpon>Dinleme.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Islemler.cs" />
+    <Compile Include="Harfler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Harfler.resx</DependentUpon>
+    </Compile>
     <Compile Include="Secim.xaml.cs">
       <DependentUpon>Secim.xaml</DependentUpon>
     </Compile>
@@ -114,6 +120,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Harfler.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Harfler.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -142,12 +152,42 @@
     <Resource Include="Resources\1453126452_package_edutainment.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\z.wav" />
+    <None Include="Resources\y.wav" />
+    <None Include="Resources\v.wav" />
+    <None Include="Resources\ü.wav" />
+    <None Include="Resources\u.wav" />
+    <None Include="Resources\t.wav" />
+    <None Include="Resources\ş.wav" />
+    <None Include="Resources\s.wav" />
+    <None Include="Resources\r.wav" />
+    <None Include="Resources\p.wav" />
+    <None Include="Resources\ö.wav" />
+    <None Include="Resources\o.wav" />
+    <None Include="Resources\n.wav" />
+    <None Include="Resources\m.wav" />
+    <None Include="Resources\l.wav" />
+    <None Include="Resources\k.wav" />
+    <None Include="Resources\j.wav" />
+    <None Include="Resources\ı.wav" />
+    <None Include="Resources\i.wav" />
+    <None Include="Resources\h.wav" />
+    <None Include="Resources\ğ.wav" />
+    <None Include="Resources\g.wav" />
+    <None Include="Resources\f.wav" />
+    <None Include="Resources\e.wav" />
+    <None Include="Resources\d.wav" />
+    <None Include="Resources\ç.wav" />
+    <None Include="Resources\c.wav" />
+    <None Include="Resources\b.wav" />
+    <None Include="Resources\a.wav" />
     <Resource Include="Resources\1453145219_onebit_34.png" />
     <Resource Include="Resources\1453145269_onebit_33.png" />
     <Content Include="hecem.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

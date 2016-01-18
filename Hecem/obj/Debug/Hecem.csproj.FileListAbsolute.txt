@@ -22,3 +22,4 @@ E:\Projelerim\Hecem\Hecem\bin\Debug\hecem.accdb
 E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem_Content.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Test.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Test.baml
+E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.Harfler.resources
