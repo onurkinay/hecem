@@ -20,16 +20,20 @@ namespace Hecem
     /// </summary>
     public partial class Secim : Page
     {
-        int secim; Anasayfa snf = new Anasayfa();
+        int k; Anasayfa snf = new Anasayfa();
         public Secim(int konu)
         {
             InitializeComponent();
-            secim = konu;
+            k = konu;
         }
 
-        private void btnHarfler_Click(object sender, RoutedEventArgs e)
+        private void btnSecim_Click(object sender, RoutedEventArgs e)
         {
-           snf.PencereAc(new Dinleme(0));
+            Button btn = (Button)sender;
+            int secim = (btn.Name == "btnHarfler") ? 0 : (btn.Name == "btnHeceler") ? 1 : 2;
+
+            if (k == 0) snf.PencereAc(new Dinleme(secim));
+            else snf.PencereAc(new Test(secim));
         }
     }
 }

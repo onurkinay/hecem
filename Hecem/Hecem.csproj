@@ -64,6 +64,9 @@
     <Compile Include="Secim.xaml.cs">
       <DependentUpon>Secim.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Test.xaml.cs">
+      <DependentUpon>Test.xaml</DependentUpon>
+    </Compile>
     <Page Include="Anasayfa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -85,6 +88,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Secim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -117,19 +124,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1453066977_nav_arrow_point_right.png" />
+    <Resource Include="Resources\1453066977_nav_arrow_point_right.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1453067036_arrow-right-01.png" />
+    <Resource Include="Resources\1453067036_arrow-right-01.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1453067058_arrow-left-01.png" />
+    <Resource Include="Resources\1453067058_arrow-left-01.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1453068122_listen to music.png" />
+    <Resource Include="Resources\1453068122_listen to music.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="1453068182_tests.png" />
+    <Resource Include="Resources\1453068182_tests.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1453126452_package_edutainment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\1453145219_onebit_34.png" />
+    <Resource Include="Resources\1453145269_onebit_33.png" />
+    <Content Include="hecem.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

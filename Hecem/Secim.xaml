@@ -8,6 +8,33 @@
       d:DesignHeight="500" d:DesignWidth="500"
       Title="Secim">
 
+    <Page.Resources>
+        <Style x:Key="NoChromeButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid x:Name="Chrome" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#ADADAD"/>
+                                <Setter Property="Opacity" TargetName="Chrome" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -19,11 +46,13 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        
-        
-        <Button x:Name="btnHarfler" Content="Harfler" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="0" Width="132" Height="44" Click="btnHarfler_Click"/>
-        <Button x:Name="btnHeceler" Content="Heceler" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="1" Width="132" Height="44"/>
-        <Button x:Name="btnKelimeler" Content="Kelimeler" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Width="132" Height="44"/>
 
+        <Button Grid.Column="1" Grid.Row="0" Style="{DynamicResource NoChromeButton}" Click="btnSecim_Click" x:Name="btnHarfler">
+            <Image x:Name="_1453126452_package_edutainment_png" Source="Resources/1453126452_package_edutainment.png" Stretch="Fill"/>
+        </Button>
+
+        <Button x:Name="btnHeceler" Content="Heceler" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSecim_Click" Grid.Column="1" Grid.Row="1" Width="132" Height="44"/>
+        <Button x:Name="btnKelimeler" Content="Kelimeler" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSecim_Click" Grid.Column="1" Grid.Row="2" Width="132" Height="44"/>
+      
     </Grid>
 </Page>

@@ -40,5 +40,10 @@ namespace Hecem
                 }
             }
         }
+
+        private void btnTest_Click(object sender, RoutedEventArgs e)
+        {
+            PencereAc(new Secim(1));
+        }
     }
 }

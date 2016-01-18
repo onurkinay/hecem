@@ -51,15 +51,15 @@
         <Image x:Name="image" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
 
         <Button Grid.Column="1" Grid.Row="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynat" Click="btnOynat_Click" >
-            <Image x:Name="_1453066977_nav_arrow_point_right_png"  Source="1453066977_nav_arrow_point_right.png" />
+            <Image x:Name="_1453066977_nav_arrow_point_right_png"  Source="Resources/1453066977_nav_arrow_point_right.png" />
         </Button>
 
         <Button Style="{DynamicResource NoChromeButton}" Click="btnSonraki_Click" x:Name="btnSonraki" Grid.Column="2" Grid.Row="2">
-            <Image x:Name="_1453067036_arrow_right_01_png"  Source="1453067036_arrow-right-01.png" />
+            <Image x:Name="_1453067036_arrow_right_01_png"  Source="Resources/1453067036_arrow-right-01.png" />
         </Button>
 
         <Button Style="{DynamicResource NoChromeButton}" x:Name="btnOnceki" Click="btnOnceki_Click" Grid.Column="0" Grid.Row="2">
-            <Image x:Name="_1453067058_arrow_left_01_png" Source="1453067058_arrow-left-01.png" />
+            <Image x:Name="_1453067058_arrow_left_01_png" Source="Resources/1453067058_arrow-left-01.png" />
         </Button>
     </Grid>
 </Page>
