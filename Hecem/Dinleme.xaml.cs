@@ -20,25 +20,37 @@ namespace Hecem
     /// </summary>
     public partial class Dinleme : Page
     {
-        Islemler islemler = new Islemler();
+        Islemler islemler = new Islemler();int i = 1;int k = 0;
         public Dinleme(int konu)
         {
             InitializeComponent();
+            DinlemeCek(i);
+            k = konu;
         }
 
         private void btnSonraki_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Sonraki");
+            i++;
+            DinlemeCek(i);
+
         }
 
         private void btnOnceki_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Önceki");
+            i--;
+            DinlemeCek(i);
         }
 
         private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
-            islemler.Oynat("K");
+            islemler.Oynat(label.Text);
+        }
+
+        private void DinlemeCek(int sira)
+        {
+            string[] sonuc = islemler.Getir(0, i);
+            label.Text = sonuc[1];
+          //  image.Source = new BitmapImage(new Uri(sonuc[2]));
         }
     }
 }
