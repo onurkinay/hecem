@@ -22,7 +22,7 @@ namespace Hecem {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Harfler {
+    public class Harfler {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Hecem {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Hecem.Harfler", typeof(Harfler).Assembly);
@@ -51,7 +51,7 @@ namespace Hecem {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream a {
+        public static System.IO.UnmanagedMemoryStream a {
             get {
                 return ResourceManager.GetStream("a", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream b {
+        public static System.IO.UnmanagedMemoryStream b {
             get {
                 return ResourceManager.GetStream("b", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream c {
+        public static System.IO.UnmanagedMemoryStream c {
             get {
                 return ResourceManager.GetStream("c", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ç {
+        public static System.IO.UnmanagedMemoryStream ç {
             get {
                 return ResourceManager.GetStream("ç", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream d {
+        public static System.IO.UnmanagedMemoryStream d {
             get {
                 return ResourceManager.GetStream("d", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream e {
+        public static System.IO.UnmanagedMemoryStream e {
             get {
                 return ResourceManager.GetStream("e", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream f {
+        public static System.IO.UnmanagedMemoryStream f {
             get {
                 return ResourceManager.GetStream("f", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream g {
+        public static System.IO.UnmanagedMemoryStream g {
             get {
                 return ResourceManager.GetStream("g", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ğ {
+        public static System.IO.UnmanagedMemoryStream ğ {
             get {
                 return ResourceManager.GetStream("ğ", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream h {
+        public static System.IO.UnmanagedMemoryStream h {
             get {
                 return ResourceManager.GetStream("h", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream i {
+        public static System.IO.UnmanagedMemoryStream i {
             get {
                 return ResourceManager.GetStream("i", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ı {
+        public static System.IO.UnmanagedMemoryStream ı {
             get {
                 return ResourceManager.GetStream("ı", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream j {
+        public static System.IO.UnmanagedMemoryStream j {
             get {
                 return ResourceManager.GetStream("j", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream k {
+        public static System.IO.UnmanagedMemoryStream k {
             get {
                 return ResourceManager.GetStream("k", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream l {
+        public static System.IO.UnmanagedMemoryStream l {
             get {
                 return ResourceManager.GetStream("l", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream m {
+        public static System.IO.UnmanagedMemoryStream m {
             get {
                 return ResourceManager.GetStream("m", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream n {
+        public static System.IO.UnmanagedMemoryStream n {
             get {
                 return ResourceManager.GetStream("n", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream o {
+        public static System.IO.UnmanagedMemoryStream o {
             get {
                 return ResourceManager.GetStream("o", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ö {
+        public static System.IO.UnmanagedMemoryStream ö {
             get {
                 return ResourceManager.GetStream("ö", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream p {
+        public static System.IO.UnmanagedMemoryStream p {
             get {
                 return ResourceManager.GetStream("p", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream r {
+        public static System.IO.UnmanagedMemoryStream r {
             get {
                 return ResourceManager.GetStream("r", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream s {
+        public static System.IO.UnmanagedMemoryStream s {
             get {
                 return ResourceManager.GetStream("s", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ş {
+        public static System.IO.UnmanagedMemoryStream ş {
             get {
                 return ResourceManager.GetStream("ş", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream t {
+        public static System.IO.UnmanagedMemoryStream t {
             get {
                 return ResourceManager.GetStream("t", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream u {
+        public static System.IO.UnmanagedMemoryStream u {
             get {
                 return ResourceManager.GetStream("u", resourceCulture);
             }
@@ -288,7 +288,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream ü {
+        public static System.IO.UnmanagedMemoryStream ü {
             get {
                 return ResourceManager.GetStream("ü", resourceCulture);
             }
@@ -297,7 +297,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream v {
+        public static System.IO.UnmanagedMemoryStream v {
             get {
                 return ResourceManager.GetStream("v", resourceCulture);
             }
@@ -306,7 +306,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream y {
+        public static System.IO.UnmanagedMemoryStream y {
             get {
                 return ResourceManager.GetStream("y", resourceCulture);
             }
@@ -315,7 +315,7 @@ namespace Hecem {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream z {
+        public static System.IO.UnmanagedMemoryStream z {
             get {
                 return ResourceManager.GetStream("z", resourceCulture);
             }

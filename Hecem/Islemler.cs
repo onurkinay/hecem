@@ -11,7 +11,8 @@ namespace Hecem
    public class Islemler
     {
 
-        OleDbConnection con;
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
+        public List<List<string>> harfler = new List<List<string>>();
         public void Oynat(string gelen)
         {
             if (gelen.Length == 1) {
@@ -21,24 +22,25 @@ namespace Hecem
             }
           
         }
-        public void Baglan()
-        {
-           con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb"); con.Open();
-        }
 
-        public string[] Getir(int konu, int sira)
+        public void HarfleriGetir()
         {
-            Baglan();
-            string tablo = (konu == 0) ? "harfler" : (konu==1)? "heceler":"kelimeler";
-            OleDbCommand cmd = new OleDbCommand("Select * from "+tablo+" where id="+sira, con);
+            if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
+            OleDbCommand cmd = new OleDbCommand("Select * from harfler", con);
             OleDbDataReader dr = cmd.ExecuteReader();
-            string[] sonuc = new string[3];
             while (dr.Read())
             {
-                for (int i = 0; i < 3; i++) sonuc[i] = dr[i].ToString();
+                List<string> veri = new List<string>();
+                for (int i = 0; i < 3; i++) veri.Add(dr[i].ToString());
+                harfler.Add(veri);
             }
-            con.Close();
-            return sonuc;
+             
+        }
+
+        public object[] Getir(int konu, int sira)
+        {
+            if (harfler.Count == 0) HarfleriGetir();
+            return new object[3] { harfler[sira][0], harfler[sira][1] , HarflerResim.ResourceManager.GetObject(harfler[sira][1]) };
         }
     }
 }

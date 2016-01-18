@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.IO;
 namespace Hecem
 {
     /// <summary>
@@ -20,7 +20,7 @@ namespace Hecem
     /// </summary>
     public partial class Dinleme : Page
     {
-        Islemler islemler = new Islemler();int i = 1;int k = 0;
+        Islemler islemler = new Islemler();int i = 0;int k = 0;
         public Dinleme(int konu)
         {
             InitializeComponent();
@@ -48,9 +48,24 @@ namespace Hecem
 
         private void DinlemeCek(int sira)
         {
-            string[] sonuc = islemler.Getir(0, i);
-            label.Text = sonuc[1];
-          //  image.Source = new BitmapImage(new Uri(sonuc[2]));
+            if (islemler.harfler.Count <= i) i = 0;
+            else if (i < 0) i = islemler.harfler.Count-1;
+            object[] sonuc = islemler.Getir(0, i);
+            
+            label.Text = sonuc[1].ToString();
+
+             
+            System.Drawing.Bitmap dImg = new System.Drawing.Bitmap((System.Drawing.Image)sonuc[2]);
+            MemoryStream ms = new MemoryStream();
+            dImg.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            System.Windows.Media.Imaging.BitmapImage bImg = new System.Windows.Media.Imaging.BitmapImage();
+            bImg.BeginInit();
+            bImg.StreamSource = new MemoryStream(ms.ToArray());
+            bImg.EndInit();
+            //img is an Image control.
+            image.Source = bImg;
+            
+            
         }
     }
 }

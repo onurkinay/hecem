@@ -48,7 +48,7 @@
         </Grid.RowDefinitions>
 
         <TextBlock x:Name="label" Grid.Row="1" Grid.ColumnSpan="3" Text="Label" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Width="490" FontSize="21.333"/>
-        <Image x:Name="image" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Image x:Name="image" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
 
         <Button Grid.Column="1" Grid.Row="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynat" Click="btnOynat_Click" Margin="10">
             <Image x:Name="_1453066977_nav_arrow_point_right_png"  Source="Resources/1453066977_nav_arrow_point_right.png" />

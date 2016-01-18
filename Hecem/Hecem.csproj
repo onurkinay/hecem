@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,6 +61,11 @@
     </Compile>
     <Compile Include="Dinleme.xaml.cs">
       <DependentUpon>Dinleme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HarflerResim.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HarflerResim.resx</DependentUpon>
     </Compile>
     <Compile Include="Islemler.cs" />
     <Compile Include="Harfler.Designer.cs">
@@ -116,12 +122,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="HarflerResim.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HarflerResim.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Harfler.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Harfler.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -152,6 +162,33 @@
     <Resource Include="Resources\1453126452_package_edutainment.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Z.png" />
+    <None Include="Resources\Y.png" />
+    <None Include="Resources\V.png" />
+    <None Include="Resources\Ü.png" />
+    <None Include="Resources\U.png" />
+    <None Include="Resources\T.png" />
+    <None Include="Resources\Ş.png" />
+    <None Include="Resources\S.png" />
+    <None Include="Resources\R.png" />
+    <None Include="Resources\P.png" />
+    <None Include="Resources\Ö.png" />
+    <None Include="Resources\O.png" />
+    <None Include="Resources\N.png" />
+    <None Include="Resources\M.png" />
+    <None Include="Resources\L.png" />
+    <None Include="Resources\K.png" />
+    <None Include="Resources\J.png" />
+    <None Include="Resources\İ.png" />
+    <None Include="Resources\I.png" />
+    <None Include="Resources\H.png" />
+    <None Include="Resources\G.png" />
+    <None Include="Resources\F.png" />
+    <None Include="Resources\E.png" />
+    <None Include="Resources\D.png" />
+    <None Include="Resources\C.png" />
+    <None Include="Resources\B.png" />
+    <None Include="Resources\A.png" />
     <None Include="Resources\z.wav" />
     <None Include="Resources\y.wav" />
     <None Include="Resources\v.wav" />
