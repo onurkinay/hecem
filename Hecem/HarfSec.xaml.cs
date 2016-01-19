@@ -37,10 +37,13 @@ namespace Hecem
             foreach (var item in VeriHarf)
             {
                 Button harf = new Button();
-                harf.Width = 70; harf.Height = 70; harf.Margin = new Thickness(5);
+                harf.Width = 70;
+                harf.Height = 70;
+                harf.Margin = new Thickness(5);
 
                 harf.Style = this.FindResource("NoChromeButton") as Style;
-                harf.Click += Harf_Click; harf.Tag = item[0];
+                harf.Click += Harf_Click;
+                harf.Tag = item[1];
 
                 harf.Content = new Image
                 {
@@ -53,7 +56,7 @@ namespace Hecem
         {
             Button snd = sender as Button;
             if (k == 0) snf.PencereAc(new Dinleme(s, snd.Tag.ToString()));
-            else snf.PencereAc(new Test(s));
+            else snf.PencereAc(new Test(s, snd.Tag.ToString()));
         }
     }
 }

@@ -20,12 +20,12 @@ namespace Hecem
     /// </summary>
     public partial class Test : Page
     {
-        int puan = 0; int konu; int onceki = -1;
-        public Test(int k)
+        int puan = 0; int konu; int onceki = -1; 
+        Islemler islemler = new Islemler();
+        public Test(int k, string harf = "")
         {
             InitializeComponent();
             konu = k;
-
             
             TestSorusuOlustur();
         }
@@ -37,28 +37,67 @@ namespace Hecem
             int testKod = -1;
 
             do testKod = rnd.Next(0, 4);
-            while (onceki == testKod); 
+            while (onceki == testKod);
 
-            switch (testKod)
-            {
-                case 0: CoktanSecmeli(); break;
-                case 1: KlavyeYazma(); break;
-                case 2: DogruYanlis(); break;
-                case 3: SurukleBirak(); break;
-            }
+            /*   switch (testKod)
+               {
+                   case 0: CoktanSecmeli(); break;
+                   case 1: KlavyeYazma(); break;
+                   case 2: DogruYanlis(); break;
+                   case 3: SurukleBirak(); break;
+               }*/
+            KlavyeYazma();
             onceki = testKod;
         }
 
         private void CoktanSecmeli() {
 
             coktanSecmeli.Visibility = Visibility.Visible;
-            //
-            
+
+            islemler.HarfleriGetir();
+            var harfler = islemler.harfler;
+            int[] oncekiS = new int[4];
+            bool cevapVar = false;
+            for (int i = 0; i < 4; i++)
+            {
+                Random rnd = new Random();
+                int sira = rnd.Next(1, harfler.Count);
+
+                do sira = rnd.Next(1, harfler.Count);
+                while (oncekiS.Contains(sira));
+                oncekiS[i] = sira;
+
+                Button secenek = new Button();
+                secenek.Click += SecenekSec;
+                secenek.Tag = harfler[sira][1];
+                secenek.Margin = new Thickness(5);
+
+                if((rnd.Next(0, 2) == rnd.Next(0, 2)) && !cevapVar)
+                {
+                    btnOynatCoktan.Tag = secenek.Tag.ToString();
+                    cevapVar = true;
+                }
+                
+                secenek.Content = new Image
+                {
+                    Source = islemler.ResimGetir(HarflerResim.ResourceManager.GetObject(harfler[sira][1]))
+                };
+                secenekler.Children.Add(secenek);
+            }
         }
 
         private void KlavyeYazma()
         {
             klavyeli.Visibility = Visibility.Visible;
+            
+            islemler.HarfleriGetir();
+            var harfler = islemler.harfler;
+
+            Random rnd = new Random();
+            int sira = rnd.Next(1, harfler.Count);
+
+            btnOynatKlavyeli.Tag = harfler[sira][1];
+
         }
 
         private void DogruYanlis()
@@ -72,28 +111,22 @@ namespace Hecem
 
         }
 
-        private void Button_MouseDown(object sender, MouseButtonEventArgs e)
+        private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
-            Button lblFrom = e.Source as Button;
-
-            if (e.LeftButton == MouseButtonState.Pressed)
-                DragDrop.DoDragDrop(lblFrom, lblFrom.Content, DragDropEffects.Copy);
+            islemler.Oynat(((Button)sender).Tag.ToString());
         }
 
-        private void Button_QueryContinueDrag(object sender, QueryContinueDragEventArgs e)
+        public void SecenekSec(object sender, RoutedEventArgs e)
         {
-            Button lblFrom = e.Source as Button;
-
-            if (!e.KeyStates.HasFlag(DragDropKeyStates.LeftMouseButton))
-                lblFrom.Content = "...";
+            if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString()) MessageBox.Show("Doğru");
+            else MessageBox.Show("Yanlış");
         }
 
-        private void Button_Drop(object sender, DragEventArgs e)
+        public void KlavyeCevap(object sender, RoutedEventArgs e)
         {
-            string draggedText = (string)e.Data.GetData(DataFormats.StringFormat);
-
-            Button toLabel = e.Source as Button;
-            toLabel.Content = draggedText;
+            if (klavye.Text == btnOynatKlavyeli.Tag.ToString()) MessageBox.Show("Doğru");
+            else MessageBox.Show("Yanlış");
         }
     }
+
 }
