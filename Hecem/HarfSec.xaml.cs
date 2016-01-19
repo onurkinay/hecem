@@ -22,19 +22,18 @@ namespace Hecem
     {
         Islemler islemler = new Islemler(); int k; int s;
         Anasayfa snf = new Anasayfa();
+        List<List<string>> Veri;
         public HarfSec(int konu, int secim)
         {
             InitializeComponent();
             HarfYukle();
             k = konu;
             s = secim;
+            Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
         }
         private void HarfYukle()
         {
-            islemler.HarfleriGetir();
-            var VeriHarf = islemler.harfler;
-
-            foreach (var item in VeriHarf)
+            foreach (var item in Veri)
             {
                 Button harf = new Button();
                 harf.Width = 70;
@@ -47,7 +46,7 @@ namespace Hecem
 
                 harf.Content = new Image
                 {
-                    Source = islemler.ResimGetir(HarflerResim.ResourceManager.GetObject(item[1]))
+                    Source = islemler.ResimGetir(item[1])
                 };
                 harfler.Children.Add(harf);
             }

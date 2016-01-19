@@ -20,19 +20,20 @@ namespace Hecem
     /// </summary>
     public partial class Dinleme : Page
     {
-        Islemler islemler = new Islemler();int i = 0;int k = 0;int s = 0;
+        Islemler islemler = new Islemler();int i = 0;int k = 0;
+        List<List<string>> Veri;
         public Dinleme(int secim, string harf = "")
         {
             InitializeComponent();
+            Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
             DinlemeCek(i);
-            s = secim;
+            
         }
 
         private void btnSonraki_Click(object sender, RoutedEventArgs e)
         {
             i++;
             DinlemeCek(i);
-
         }
 
         private void btnOnceki_Click(object sender, RoutedEventArgs e)
@@ -48,13 +49,11 @@ namespace Hecem
 
         private void DinlemeCek(int sira)
         {
-            if (islemler.harfler.Count <= i) i = 0;
-            else if (i < 0) i = islemler.harfler.Count-1;
-            object[] sonuc = islemler.Getir(0, i);
+            if (Veri.Count <= i) i = 0;
+            else if (i < 0) i = Veri.Count-1;
             
-            label.Text = sonuc[1].ToString();
-            image.Source = islemler.ResimGetir(sonuc[2]);
-            
+            label.Text = Veri[i][1].ToString();
+            image.Source = islemler.ResimGetir(Veri[i][1]);
             
         }
     }

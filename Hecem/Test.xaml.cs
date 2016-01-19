@@ -20,67 +20,72 @@ namespace Hecem
     /// </summary>
     public partial class Test : Page
     {
-        int puan = 0; int konu; int onceki = -1; 
+        int puan = 0; int secim; int onceki = -1;
         Islemler islemler = new Islemler();
-        public Test(int k, string harf = "")
+        List<List<string>> Veri;
+        public Test(int s, string harf = "")
         {
             InitializeComponent();
-            konu = k;
-            
+            secim = s;
+            Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
             TestSorusuOlustur();
         }
-
+        int kac = 1;
         private void TestSorusuOlustur()
         {
-            foreach (Grid grid in main2.Children) grid.Visibility = Visibility.Collapsed;
-            Random rnd = new Random();
-            int testKod = -1;
+            if (kac < 21)
+            {
+                foreach (Grid grid in main2.Children) grid.Visibility = Visibility.Collapsed;
+                Random rnd = new Random();
+                int testKod = -1;
 
-            do testKod = rnd.Next(0, 4);
-            while (onceki == testKod);
+                do testKod = rnd.Next(0, 3);
+                while (onceki == testKod);
 
-            /*   switch (testKod)
-               {
-                   case 0: CoktanSecmeli(); break;
-                   case 1: KlavyeYazma(); break;
-                   case 2: DogruYanlis(); break;
-                   case 3: SurukleBirak(); break;
-               }*/
-            KlavyeYazma();
-            onceki = testKod;
+                switch (testKod)
+                {
+                    case 0: CoktanSecmeli(); break;
+                    case 1: KlavyeYazma(); break;
+                    case 2: DogruYanlis(); break;
+                        //    case 3: SurukleBirak(); break;
+                }
+
+                onceki = testKod;
+                kac++;
+            }
+            else MessageBox.Show(puan.ToString());
         }
 
-        private void CoktanSecmeli() {
+        private void CoktanSecmeli()
+        {
 
             coktanSecmeli.Visibility = Visibility.Visible;
-
-            islemler.HarfleriGetir();
-            var harfler = islemler.harfler;
+            secenekler.Children.Clear();
             int[] oncekiS = new int[4];
             bool cevapVar = false;
             for (int i = 0; i < 4; i++)
             {
                 Random rnd = new Random();
-                int sira = rnd.Next(1, harfler.Count);
+                int sira = rnd.Next(1, Veri.Count);
 
-                do sira = rnd.Next(1, harfler.Count);
+                do sira = rnd.Next(1, Veri.Count);
                 while (oncekiS.Contains(sira));
                 oncekiS[i] = sira;
 
                 Button secenek = new Button();
                 secenek.Click += SecenekSec;
-                secenek.Tag = harfler[sira][1];
+                secenek.Tag = Veri[sira][1];
                 secenek.Margin = new Thickness(5);
 
-                if((rnd.Next(0, 2) == rnd.Next(0, 2)) && !cevapVar)
+                if ((rnd.Next(0, 2) == rnd.Next(0, 2)) && !cevapVar)
                 {
                     btnOynatCoktan.Tag = secenek.Tag.ToString();
                     cevapVar = true;
                 }
-                
+
                 secenek.Content = new Image
                 {
-                    Source = islemler.ResimGetir(HarflerResim.ResourceManager.GetObject(harfler[sira][1]))
+                    Source = islemler.ResimGetir(Veri[sira][1])
                 };
                 secenekler.Children.Add(secenek);
             }
@@ -89,20 +94,30 @@ namespace Hecem
         private void KlavyeYazma()
         {
             klavyeli.Visibility = Visibility.Visible;
-            
-            islemler.HarfleriGetir();
-            var harfler = islemler.harfler;
+            klavye.Clear();
 
             Random rnd = new Random();
-            int sira = rnd.Next(1, harfler.Count);
+            int sira = rnd.Next(1, Veri.Count);
 
-            btnOynatKlavyeli.Tag = harfler[sira][1];
+            btnOynatKlavyeli.Tag = Veri[sira][1];
 
         }
 
         private void DogruYanlis()
         {
             dogruYanlis.Visibility = Visibility.Visible;
+            
+
+            Random rnd = new Random();
+            bool sonuc = Convert.ToBoolean(rnd.Next(0, 2));
+            int soru = rnd.Next(1, Veri.Count); int yanlis = -1;
+
+            if (sonuc) soru = rnd.Next(1, Veri.Count);
+            else yanlis = rnd.Next(1, Veri.Count);
+
+            dogruResim.Source = islemler.ResimGetir(Veri[soru][1]);
+            dogruResim.Tag = Veri[soru][1];
+            btnOynat3.Tag = Veri[(yanlis == -1) ? soru : yanlis][1];
         }
 
         private void SurukleBirak()
@@ -118,15 +133,37 @@ namespace Hecem
 
         public void SecenekSec(object sender, RoutedEventArgs e)
         {
-            if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString()) MessageBox.Show("Doğru");
+            if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString()) { MessageBox.Show("Doğru"); puan++;  }
             else MessageBox.Show("Yanlış");
+            TestSorusuOlustur();
         }
 
         public void KlavyeCevap(object sender, RoutedEventArgs e)
         {
-            if (klavye.Text == btnOynatKlavyeli.Tag.ToString()) MessageBox.Show("Doğru");
+            if (klavye.Text == btnOynatKlavyeli.Tag.ToString()) { MessageBox.Show("Doğru"); puan++; }
             else MessageBox.Show("Yanlış");
+            TestSorusuOlustur();
+        }
+
+        public void DYCevapla(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            switch (btn.Tag.ToString())
+            {
+                case "yanlis":
+                    if (dogruResim.Tag.ToString() != btnOynat3.Tag.ToString())
+                    {
+                        MessageBox.Show("Bildiniz");puan++;
+                    }
+                    else MessageBox.Show("Bilemediniz"); break;
+                case "dogru":
+                    if (dogruResim.Tag.ToString() == btnOynat3.Tag.ToString())
+                    {
+                        MessageBox.Show("Bildiniz"); puan++;
+                    }
+                    else MessageBox.Show("Bilemediniz"); break;
+            }
+            TestSorusuOlustur();
         }
     }
-
 }
