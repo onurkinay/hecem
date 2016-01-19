@@ -62,17 +62,20 @@
     <Compile Include="Dinleme.xaml.cs">
       <DependentUpon>Dinleme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HarflerResim.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HarflerResim.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Islemler.cs" />
     <Compile Include="Harfler.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Harfler.resx</DependentUpon>
     </Compile>
+    <Compile Include="HarflerResim.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HarflerResim.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HarfSec.xaml.cs">
+      <DependentUpon>HarfSec.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Islemler.cs" />
     <Compile Include="Secim.xaml.cs">
       <DependentUpon>Secim.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dinleme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HarfSec.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

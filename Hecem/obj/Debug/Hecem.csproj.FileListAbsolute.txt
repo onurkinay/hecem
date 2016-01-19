@@ -24,3 +24,5 @@ E:\Projelerim\Hecem\Hecem\obj\Debug\Test.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Test.baml
 E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.Harfler.resources
 E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.HarflerResim.resources
+E:\Projelerim\Hecem\Hecem\obj\Debug\HarfSec.g.cs
+E:\Projelerim\Hecem\Hecem\obj\Debug\HarfSec.baml

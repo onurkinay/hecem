@@ -32,8 +32,12 @@ namespace Hecem
             Button btn = (Button)sender;
             int secim = (btn.Name == "btnHarfler") ? 0 : (btn.Name == "btnHeceler") ? 1 : 2;
 
-            if (k == 0) snf.PencereAc(new Dinleme(secim));
-            else snf.PencereAc(new Test(secim));
+            if (secim != 0) snf.PencereAc(new HarfSec(k, secim));
+            
+            else {
+                if (k == 0) snf.PencereAc(new Dinleme(secim));
+                else snf.PencereAc(new Test(secim));
+            }
         }
     }
 }

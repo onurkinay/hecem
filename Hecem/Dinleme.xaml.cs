@@ -20,12 +20,12 @@ namespace Hecem
     /// </summary>
     public partial class Dinleme : Page
     {
-        Islemler islemler = new Islemler();int i = 0;int k = 0;
-        public Dinleme(int konu)
+        Islemler islemler = new Islemler();int i = 0;int k = 0;int s = 0;
+        public Dinleme(int secim, string harf = "")
         {
             InitializeComponent();
             DinlemeCek(i);
-            k = konu;
+            s = secim;
         }
 
         private void btnSonraki_Click(object sender, RoutedEventArgs e)
@@ -53,17 +53,7 @@ namespace Hecem
             object[] sonuc = islemler.Getir(0, i);
             
             label.Text = sonuc[1].ToString();
-
-             
-            System.Drawing.Bitmap dImg = new System.Drawing.Bitmap((System.Drawing.Image)sonuc[2]);
-            MemoryStream ms = new MemoryStream();
-            dImg.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            System.Windows.Media.Imaging.BitmapImage bImg = new System.Windows.Media.Imaging.BitmapImage();
-            bImg.BeginInit();
-            bImg.StreamSource = new MemoryStream(ms.ToArray());
-            bImg.EndInit();
-            //img is an Image control.
-            image.Source = bImg;
+            image.Source = islemler.ResimGetir(sonuc[2]);
             
             
         }

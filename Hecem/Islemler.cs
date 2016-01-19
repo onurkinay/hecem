@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Media;
 using System.Data.OleDb;
-
+using System.IO;
 namespace Hecem
 {
    public class Islemler
@@ -41,6 +41,18 @@ namespace Hecem
         {
             if (harfler.Count == 0) HarfleriGetir();
             return new object[3] { harfler[sira][0], harfler[sira][1] , HarflerResim.ResourceManager.GetObject(harfler[sira][1]) };
+        }
+
+        public System.Windows.Media.Imaging.BitmapImage ResimGetir(object resimObje)
+        {
+            System.Drawing.Bitmap dImg = new System.Drawing.Bitmap((System.Drawing.Image)resimObje);
+            MemoryStream ms = new MemoryStream();
+            dImg.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            System.Windows.Media.Imaging.BitmapImage bImg = new System.Windows.Media.Imaging.BitmapImage();
+            bImg.BeginInit();
+            bImg.StreamSource = new MemoryStream(ms.ToArray());
+            bImg.EndInit();
+            return bImg;
         }
     }
 }
