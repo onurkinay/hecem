@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Media;
 using System.Data.OleDb;
 using System.IO;
+using System.Net;
 namespace Hecem
 {
     public class Islemler
@@ -40,7 +41,14 @@ namespace Hecem
         {
             System.Drawing.Bitmap dImg;
             if (resim.Length == 1) dImg = new System.Drawing.Bitmap((System.Drawing.Image)HarflerResim.ResourceManager.GetObject(resim));
-            else dImg = new System.Drawing.Bitmap(System.Windows.Application.GetResourceStream(new Uri(resim, UriKind.RelativeOrAbsolute)).Stream);
+            else {
+               // dImg = new System.Drawing.Bitmap(System.Windows.Application.GetResourceStream(new Uri(resim)).Stream);
+                WebClient webClient = new WebClient();
+                byte[] imgData = webClient.DownloadData(resim);
+                MemoryStream stream = new MemoryStream(imgData);
+                dImg = new System.Drawing.Bitmap( System.Drawing.Image.FromStream( stream ));
+                stream.Close();
+            }
             MemoryStream ms = new MemoryStream();
             dImg.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             System.Windows.Media.Imaging.BitmapImage bImg = new System.Windows.Media.Imaging.BitmapImage();
