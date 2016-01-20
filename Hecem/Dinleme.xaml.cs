@@ -20,12 +20,16 @@ namespace Hecem
     /// </summary>
     public partial class Dinleme : Page
     {
-        Islemler islemler = new Islemler();int i = 0;int k = 0;
+        Islemler islemler = new Islemler();
+        int i = 0;
+        int k = 0;
         List<List<string>> Veri;
         public Dinleme(int secim, string harf = "")
         {
             InitializeComponent();
             Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
+            if(secim != 0) Veri = Veri.Where(x => x[1][0] == harf[0] ).ToList();
+            
             DinlemeCek(i);
             
         }

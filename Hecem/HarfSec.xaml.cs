@@ -29,10 +29,11 @@ namespace Hecem
             HarfYukle();
             k = konu;
             s = secim;
-            Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
+           
         }
         private void HarfYukle()
         {
+            Veri = Islemler.VeriGetir("harfler");
             foreach (var item in Veri)
             {
                 Button harf = new Button();

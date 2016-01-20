@@ -14,7 +14,7 @@ namespace Hecem
         public static List<List<string>> VeriGetir(string tablo)
         {
             if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
-            OleDbCommand cmd = new OleDbCommand("Select * from "+tablo, con);
+            OleDbCommand cmd = new OleDbCommand("Select * from " + tablo, con);
             OleDbDataReader dr = cmd.ExecuteReader();
             List<List<string>> Veri = new List<List<string>>();
             while (dr.Read())
@@ -28,7 +28,8 @@ namespace Hecem
 
         public void Oynat(string gelen)
         {
-            if (gelen.Length == 1) {
+            if (gelen.Length == 1)
+            {
 
                 SoundPlayer ses = new SoundPlayer(Harfler.ResourceManager.GetStream(gelen.ToLower()));
                 ses.Play();
@@ -37,7 +38,9 @@ namespace Hecem
         }
         public System.Windows.Media.Imaging.BitmapImage ResimGetir(string resim)
         {
-            System.Drawing.Bitmap dImg = new System.Drawing.Bitmap( (System.Drawing.Image)HarflerResim.ResourceManager.GetObject(resim) );
+            System.Drawing.Bitmap dImg;
+            if (resim.Length == 1) dImg = new System.Drawing.Bitmap((System.Drawing.Image)HarflerResim.ResourceManager.GetObject(resim));
+            else dImg = new System.Drawing.Bitmap(System.Windows.Application.GetResourceStream(new Uri(resim, UriKind.RelativeOrAbsolute)).Stream);
             MemoryStream ms = new MemoryStream();
             dImg.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
             System.Windows.Media.Imaging.BitmapImage bImg = new System.Windows.Media.Imaging.BitmapImage();
@@ -47,60 +50,4 @@ namespace Hecem
             return bImg;
         }
     }
-    #region Veri Getirme Classları
-    public class Harf
-    {
-        public List<List<string>> Veri = new List<List<string>>();
-        public Harf()
-        {
-            Veri = Islemler.VeriGetir("harfler");
-        }
-
-        public object[] Getir(int konu, int sira)
-        {
-            return new object[3] { Veri[sira][0], Veri[sira][1], HarflerResim.ResourceManager.GetObject(Veri[sira][1]) };
-        }
-
-
-/*
-        public List<List<string>> Veri = new List<List<string>>();
-        public Hece()
-        {
-            Veri = Islemler.VeriGetir("heceler");
-        }
-
-        public object[] Getir(int konu, int sira)
-        {
-            return new object[3] { Veri[sira][0], Veri[sira][1], HarflerResim.ResourceManager.GetObject(Veri[sira][1]) };
-        }*/
-
-    }
-    
-    public class Hece
-    {
-        public List<List<string>> Veri = new List<List<string>>();
-        public Hece()
-        {
-            Veri = Islemler.VeriGetir("heceler");
-        }
-
-        public object[] Getir(int konu, int sira)
-        {
-            return new object[3] { Veri[sira][0], Veri[sira][1], HarflerResim.ResourceManager.GetObject(Veri[sira][1]) };
-        }
-    }
-    public class Kelime
-    {
-        public List<List<string>> Veri = new List<List<string>>();
-        public Kelime()
-        {
-            Veri = Islemler.VeriGetir("kelimeler");
-        }
-
-        public object[] Getir(int konu, int sira)
-        {
-            return new object[3] { Veri[sira][0], Veri[sira][1], HarflerResim.ResourceManager.GetObject(Veri[sira][1]) };
-        }
-    }
-    #endregion
 }
