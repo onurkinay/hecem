@@ -18,7 +18,6 @@ E:\Projelerim\Hecem\Hecem\obj\Debug\Anasayfa.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Anasayfa.baml
 E:\Projelerim\Hecem\Hecem\obj\Debug\Dinleme.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Dinleme.baml
-E:\Projelerim\Hecem\Hecem\bin\Debug\hecem.accdb
 E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem_Content.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Test.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Test.baml
@@ -26,3 +25,4 @@ E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.Harfler.resources
 E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.HarflerResim.resources
 E:\Projelerim\Hecem\Hecem\obj\Debug\HarfSec.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\HarfSec.baml
+E:\Projelerim\Hecem\Hecem\bin\Debug\hecem.accdb

@@ -22,7 +22,6 @@ namespace Hecem
     {
         Islemler islemler = new Islemler();
         int i = 0;
-        int k = 0;
         List<List<string>> Veri;
         public Dinleme(int secim, string harf = "")
         {
@@ -57,7 +56,8 @@ namespace Hecem
             else if (i < 0) i = Veri.Count-1;
             
             label.Text = Veri[i][1].ToString();
-            image.Source = islemler.ResimGetir(Veri[i][2]);
+
+            image.Source = islemler.ResimGetir(Veri[i][ (label.Text.Length == 1)?1:2 ]);
             
         }
     }

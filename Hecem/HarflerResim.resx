@@ -187,11 +187,17 @@
   <data name="Z" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Z.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ç" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Ç.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ö" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Ö.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Ü" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Ü.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ğ" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Ğ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="İ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\İ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

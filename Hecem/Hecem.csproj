@@ -169,6 +169,8 @@
     <Resource Include="Resources\1453126452_package_edutainment.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Ğ.png" />
+    <None Include="Resources\Ç.png" />
     <None Include="Resources\Z.png" />
     <None Include="Resources\Y.png" />
     <None Include="Resources\V.png" />
