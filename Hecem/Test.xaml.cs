@@ -23,6 +23,7 @@ namespace Hecem
         int puan = 0; int secim; int onceki = -1;
         Islemler islemler = new Islemler();
         List<List<string>> Veri;
+        Random rnd = new Random();
         public Test(int s, string harf = "")
         {
             InitializeComponent();
@@ -37,26 +38,26 @@ namespace Hecem
             if (kac < 21)
             {
                 foreach (Grid grid in main2.Children) grid.Visibility = Visibility.Collapsed;
-                Random rnd = new Random();
+                 
                 int testKod = -1;
 
                 do testKod = rnd.Next(0, 3);
                 while (onceki == testKod);
 
-                switch (testKod)
-                {
-                    case 0: CoktanSecmeli(); break;
-                    case 1: KlavyeYazma(); break;
-                    case 2: DogruYanlis(); break;
-                        //    case 3: SurukleBirak(); break;
-                }
-
+                /*  switch (testKod)
+                  {
+                      case 0: CoktanSecmeli(); break;
+                      case 1: KlavyeYazma(); break;
+                      case 2: DogruYanlis(); break;
+                      case 3: SurukleBirak(); break;
+                  }*/
+                Eslestir();
                 onceki = testKod;
                 kac++;
             }
             else MessageBox.Show(puan.ToString());
         }
-
+#region Soru oluşturma fonksiyonları
         private void CoktanSecmeli()
         {
 
@@ -66,8 +67,8 @@ namespace Hecem
             bool cevapVar = false;
             for (int i = 0; i < 4; i++)
             {
-                Random rnd = new Random();
-                int sira = rnd.Next(1, Veri.Count);
+                
+                int sira = rnd.Next(0, Veri.Count);
 
                 do sira = rnd.Next(1, Veri.Count);
                 while (oncekiS.Contains(sira));
@@ -97,8 +98,8 @@ namespace Hecem
             klavyeli.Visibility = Visibility.Visible;
             klavye.Clear();
 
-            Random rnd = new Random();
-            int sira = rnd.Next(1, Veri.Count);
+            
+            int sira = rnd.Next(0, Veri.Count);
 
             btnOynatKlavyeli.Tag = Veri[sira][1];
 
@@ -109,29 +110,58 @@ namespace Hecem
             dogruYanlis.Visibility = Visibility.Visible;
             
 
-            Random rnd = new Random();
+            
             bool sonuc = Convert.ToBoolean(rnd.Next(0, 2));
-            int soru = rnd.Next(1, Veri.Count); int yanlis = -1;
+            int soru = rnd.Next(0, Veri.Count); int yanlis = -1;
 
-            if (sonuc) soru = rnd.Next(1, Veri.Count);
-            else yanlis = rnd.Next(1, Veri.Count);
+            if (sonuc) soru = rnd.Next(0, Veri.Count);
+            else yanlis = rnd.Next(0, Veri.Count);
 
-            dogruResim.Source = islemler.ResimGetir(Veri[soru][1]);
+            dogruResim.Source = islemler.ResimGetir(Veri[soru][ (Veri[soru][1].Length == 1) ? 1 : 2 ]);
             dogruResim.Tag = Veri[soru][1];
             btnOynat3.Tag = Veri[(yanlis == -1) ? soru : yanlis][1];
         }
 
-        private void SurukleBirak()
+        private void Eslestir()
         {
             surukleBirak.Visibility = Visibility.Visible;
+            int[] cevaplar = new int[4];
+
+            for (int i = 0; i < 4; i++)
+            {
+                int sira;
+
+                do sira = rnd.Next(1, Veri.Count);
+                while (cevaplar.Contains(sira));
+
+                cevaplar[i] = sira;
+            }
+          
+
+            for (int i = 0; i < 8; i++)
+            {
+                if (i == 4) cevaplar = cevaplar.OrderBy(x => rnd.Next()).ToArray();
+                Button sec = new Button();
+                Grid grid = (i < 4) ? sol : sag;
+
+                Grid.SetColumn(sec, (i < 4) ? 0 : 1);
+                Grid.SetRow(sec, (i < 4) ? i : (i-4));
+
+                sec.Margin = new Thickness(10);
+
+                if (i < 4) { sec.Content = Veri[cevaplar[i]][1]; sec.FontSize = 24; sec.Click += SolC; sec.Tag = cevaplar[i]; }
+                else {
+                    sec.Content = new Image() { Source = islemler.ResimGetir(Veri[cevaplar[i - 4]][(Veri[cevaplar[i - 4]][1].Length == 1) ? 1 : 2]) };
+                    sec.Click += SagC;
+                    sec.Tag = cevaplar[i-4];
+                }
+
+                grid.Children.Add(sec);
+            }
 
         }
-
-        private void btnOynat_Click(object sender, RoutedEventArgs e)
-        {
-            islemler.Oynat(((Button)sender).Tag.ToString());
-        }
-
+        #endregion
+#region Cevaplama Fonksiyonları
         public void SecenekSec(object sender, RoutedEventArgs e)
         {
             if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString()) { MessageBox.Show("Doğru"); puan++;  }
@@ -166,5 +196,62 @@ namespace Hecem
             }
             TestSorusuOlustur();
         }
+        #endregion
+
+        int[,] cevaplari = new int[4,2]; int c = 0;
+        public void CizgiCek(Button sol, Button sag)
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                if (cevaplari[i, 0] != 0 && cevaplari[i, 1] != 0)
+                {
+                    if (cevaplari[i, 0] == Convert.ToInt32(sol.Tag.ToString()) || cevaplari[i, 1] == Convert.ToInt32(sag.Tag.ToString()))
+                    {
+                        return;
+                    }
+                }
+
+            }
+            cevaplari[c ,0] = Convert.ToInt32(sol.Tag.ToString());
+            cevaplari[c, 1] = Convert.ToInt32(sag.Tag.ToString());
+
+            Line line = new Line();
+            line.Visibility = System.Windows.Visibility.Visible;
+            line.StrokeThickness = 4;
+            line.Stroke = System.Windows.Media.Brushes.Red;
+
+            Point solPoint = sol.TransformToAncestor(this)
+                          .Transform(new Point(0, 0));
+
+            Point sagPoint = sag.TransformToAncestor(this)
+                         .Transform(new Point(0, 0));
+
+            line.X1 = solPoint.X;
+            line.Y1 = solPoint.Y;
+
+            line.X2 = sagPoint.X;
+            line.Y2 = sagPoint.Y;
+            
+            cevapCizgileri.Children.Add(line);
+
+            c++;
+
+        }
+        Button solC;
+        public void SolC(object sender, RoutedEventArgs e)
+        {
+            solC = sender as Button;
+        }
+        public void SagC(object sender, RoutedEventArgs e)
+        {
+            CizgiCek(solC, sender as Button);
+        }
+
+
+        private void btnOynat_Click(object sender, RoutedEventArgs e)
+        {
+            islemler.Oynat(((Button)sender).Tag.ToString());
+        }
+        
     }
 }
