@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.Reflection;
 namespace Hecem
 {
     /// <summary>
@@ -41,17 +41,17 @@ namespace Hecem
                  
                 int testKod = -1;
 
-                do testKod = rnd.Next(0, 3);
+                do testKod = rnd.Next(0, 4);
                 while (onceki == testKod);
 
-                /*  switch (testKod)
+                 switch (testKod)
                   {
                       case 0: CoktanSecmeli(); break;
                       case 1: KlavyeYazma(); break;
                       case 2: DogruYanlis(); break;
-                      case 3: SurukleBirak(); break;
-                  }*/
-                Eslestir();
+                      case 3: Eslestir(); break;
+                  }
+                 
                 onceki = testKod;
                 kac++;
             }
@@ -196,7 +196,7 @@ namespace Hecem
             }
             TestSorusuOlustur();
         }
-        #endregion
+      
 
         int[,] cevaplari = new int[4,2]; int c = 0;
         public void CizgiCek(Button sol, Button sag)
@@ -218,7 +218,7 @@ namespace Hecem
             Line line = new Line();
             line.Visibility = System.Windows.Visibility.Visible;
             line.StrokeThickness = 4;
-            line.Stroke = System.Windows.Media.Brushes.Red;
+            line.Stroke = PickBrush();
             line.Tag = c.ToString();
             Point solPoint = sol.TransformToAncestor(this)
                           .Transform(new Point(0, 0));
@@ -226,11 +226,11 @@ namespace Hecem
             Point sagPoint = sag.TransformToAncestor(this)
                          .Transform(new Point(0, 0));
 
-            line.X1 = solPoint.X;
-            line.Y1 = solPoint.Y;
+            line.X1 = solPoint.X + 100;
+            line.Y1 = solPoint.Y + 50;
 
             line.X2 = sagPoint.X;
-            line.Y2 = sagPoint.Y;
+            line.Y2 = sagPoint.Y + 50;
             
             cevapCizgileri.Children.Add(line);
 
@@ -239,7 +239,8 @@ namespace Hecem
             {
                 int sonuc = 0;
                 for (int i = 0; i < 4; i++) if (cevaplari[i, 0] == cevaplari[i, 1]) sonuc++;
-                MessageBox.Show(sonuc.ToString());
+                puan += sonuc;
+                TestSorusuOlustur();
             }
 
         }
@@ -252,12 +253,26 @@ namespace Hecem
         {
             CizgiCek(solC, sender as Button);
         }
-
+        #endregion
 
         private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
             islemler.Oynat(((Button)sender).Tag.ToString());
         }
-        
+        private Brush PickBrush()
+        {
+            Brush result = Brushes.Transparent;
+
+            Random rnd = new Random();
+
+            Type brushesType = typeof(Brushes);
+
+            PropertyInfo[] properties = brushesType.GetProperties();
+
+            int random = rnd.Next(properties.Length);
+            result = (Brush)properties[random].GetValue(null, null);
+
+            return result;
+        }
     }
 }
