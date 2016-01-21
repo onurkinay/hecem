@@ -125,6 +125,9 @@ namespace Hecem
         private void Eslestir()
         {
             surukleBirak.Visibility = Visibility.Visible;
+            cevapCizgileri.Children.Clear();
+            sol.Children.Clear();
+            sag.Children.Clear();
             int[] cevaplar = new int[4];
 
             for (int i = 0; i < 4; i++)
@@ -240,6 +243,8 @@ namespace Hecem
                 int sonuc = 0;
                 for (int i = 0; i < 4; i++) if (cevaplari[i, 0] == cevaplari[i, 1]) sonuc++;
                 puan += sonuc;
+                cevaplari = new int[4, 2];
+                c = 0;
                 TestSorusuOlustur();
             }
 
@@ -265,12 +270,9 @@ namespace Hecem
 
             Random rnd = new Random();
 
-            Type brushesType = typeof(Brushes);
-
-            PropertyInfo[] properties = brushesType.GetProperties();
-
-            int random = rnd.Next(properties.Length);
-            result = (Brush)properties[random].GetValue(null, null);
+            Brush[] renkler = new Brush[] { Brushes.Black, Brushes.Blue, Brushes.Red, Brushes.Green };
+            int random = rnd.Next(renkler.Length);
+            result = renkler[random];
 
             return result;
         }
