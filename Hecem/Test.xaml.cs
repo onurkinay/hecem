@@ -219,7 +219,7 @@ namespace Hecem
             line.Visibility = System.Windows.Visibility.Visible;
             line.StrokeThickness = 4;
             line.Stroke = System.Windows.Media.Brushes.Red;
-
+            line.Tag = c.ToString();
             Point solPoint = sol.TransformToAncestor(this)
                           .Transform(new Point(0, 0));
 
@@ -235,6 +235,12 @@ namespace Hecem
             cevapCizgileri.Children.Add(line);
 
             c++;
+            if(c == 4)
+            {
+                int sonuc = 0;
+                for (int i = 0; i < 4; i++) if (cevaplari[i, 0] == cevaplari[i, 1]) sonuc++;
+                MessageBox.Show(sonuc.ToString());
+            }
 
         }
         Button solC;
