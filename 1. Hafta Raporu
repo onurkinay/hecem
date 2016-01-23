@@ -1,0 +1,9 @@
+16/01/2016 - 23/01/2016 Hecem Projesi 1.Hafta Raporu
+
+#ÖZET#
+
+2016 yılın Ocak ayın 16. gününde oluşturulan depo, Visual Studio üzerinden etkileşime geçmiştir. Basit tasarım ile altyapı kodlaması gerçekleştirildi.
+Heceler ve kelimeler nasıl seslendirileceği konusunda hala karar verilemedi. Google Translate Voice API'si 1 milyon kelimeye 20$ istemektedir.
+Harflerin resimleri ve sesleri, projenin *.resx dosyalarında bulunmaktadır. Bu yolun tercih edilme sebebi ise Uri nesnesi, resimleri direk alamamaktadır
+Seslere gelince, dosya türleri *.wav'dır. Buna dikkat edilmelidir. Ses dosyaları çalma şekli, örneğin "At" ise at.wav olarak ayarlandı.
+Testlerde sorun yok gibi. 
