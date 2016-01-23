@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Hecem"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="768" d:DesignWidth="1366"
       Title="Test">
 
     <Page.Resources>
@@ -36,7 +36,7 @@
 
     <Grid x:Name="main2">
 
-        <Grid x:Name="surukleBirak" Visibility="Visible">
+        <Grid x:Name="surukleBirak" Visibility="Collapsed">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
@@ -103,7 +103,7 @@
             
         </Grid>
 
-        <Grid x:Name="klavyeli" Visibility="Collapsed">
+        <Grid x:Name="klavyeli" Visibility="Visible">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
@@ -118,14 +118,14 @@
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
 
-            <Button Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynatKlavyeli" Click="btnOynat_Click">
-                <Image x:Name="klavyeOynat"  Source="Resources/1453066977_nav_arrow_point_right.png" />
+            <Button Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynatKlavyeli" Click="btnOynat_Click">
+                <Image x:Name="klavyeOynat"  Source="Resources/1453066977_nav_arrow_point_right.png" Stretch="None" />
             </Button>
 
-            <TextBox x:Name="klavye" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Margin="15" />
+            <TextBox x:Name="klavye" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Margin="15" FontSize="96" Text="s" HorizontalContentAlignment="Center" />
 
             <Button x:Name="cevap" Style="{DynamicResource NoChromeButton}" Grid.Column="3" Grid.Row="3" Margin="5" Click="KlavyeCevap">
-                <Image Height="48" Source="Resources/1453145219_onebit_34.png" Stretch="Fill" Width="48"/>
+                <Image Height="48" Source="Resources/1453145219_onebit_34.png" Width="48" Stretch="None"/>
             </Button>
 
         </Grid>

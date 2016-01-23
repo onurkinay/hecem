@@ -54,6 +54,13 @@ namespace Hecem
                  
                 onceki = testKod;
                 kac++;
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                    {
+                        (window as MainWindow).baslik.Text = "Puan: "+puan.ToString();
+                    }
+                }
             }
             else MessageBox.Show(puan.ToString());
         }
@@ -167,15 +174,14 @@ namespace Hecem
 #region Cevaplama Fonksiyonları
         public void SecenekSec(object sender, RoutedEventArgs e)
         {
-            if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString()) { MessageBox.Show("Doğru"); puan++;  }
-            else MessageBox.Show("Yanlış");
+            if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString())  puan++;  
+        
             TestSorusuOlustur();
         }
 
         public void KlavyeCevap(object sender, RoutedEventArgs e)
         {
-            if (klavye.Text == btnOynatKlavyeli.Tag.ToString()) { MessageBox.Show("Doğru"); puan++; }
-            else MessageBox.Show("Yanlış");
+            if (klavye.Text == btnOynatKlavyeli.Tag.ToString()) puan++; 
             TestSorusuOlustur();
         }
 
@@ -185,17 +191,12 @@ namespace Hecem
             switch (btn.Tag.ToString())
             {
                 case "yanlis":
-                    if (dogruResim.Tag.ToString() != btnOynat3.Tag.ToString())
-                    {
-                        MessageBox.Show("Bildiniz");puan++;
-                    }
-                    else MessageBox.Show("Bilemediniz"); break;
+                    if (dogruResim.Tag.ToString() != btnOynat3.Tag.ToString()) puan++;
+                    break;
                 case "dogru":
-                    if (dogruResim.Tag.ToString() == btnOynat3.Tag.ToString())
-                    {
-                        MessageBox.Show("Bildiniz"); puan++;
-                    }
-                    else MessageBox.Show("Bilemediniz"); break;
+                    if (dogruResim.Tag.ToString() == btnOynat3.Tag.ToString()) puan++;
+                    
+                     break;
             }
             TestSorusuOlustur();
         }
@@ -207,13 +208,11 @@ namespace Hecem
             for (int i = 0; i < 4; i++)
             {
                 if (cevaplari[i, 0] != 0 && cevaplari[i, 1] != 0)
-                {
+                
                     if (cevaplari[i, 0] == Convert.ToInt32(sol.Tag.ToString()) || cevaplari[i, 1] == Convert.ToInt32(sag.Tag.ToString()))
-                    {
+                    
                         return;
-                    }
-                }
-
+                    
             }
             cevaplari[c ,0] = Convert.ToInt32(sol.Tag.ToString());
             cevaplari[c, 1] = Convert.ToInt32(sag.Tag.ToString());

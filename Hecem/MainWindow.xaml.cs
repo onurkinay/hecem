@@ -24,8 +24,21 @@ namespace Hecem
         {
             InitializeComponent();
             _Sayfa.Navigate(new Anasayfa());
+            
         }
 
-      
+        private void _Sayfa_Navigated(object sender, NavigationEventArgs e)
+        {
+            if (_Sayfa.CanGoBack)
+                back.Visibility = Visibility.Visible;
+            else back.Visibility = Visibility.Collapsed;
+
+           
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            _Sayfa.GoBack();
+        }
     }
 }
