@@ -32,15 +32,17 @@ namespace Hecem
         private void _Sayfa_Navigated(object sender, NavigationEventArgs e)
         {
             if (_Sayfa.CanGoBack)
-                back.Visibility = Visibility.Visible;
-            else back.Visibility = Visibility.Collapsed;
+                backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/back.png"));
+            else backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/close.png"));
 
-           
+           // baslik.Text = _Sayfa.
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            _Sayfa.GoBack();
+            if (backImg.Source.ToString().IndexOf("back") != -1)
+                _Sayfa.GoBack();
+            else Close();
         }
     }
 }

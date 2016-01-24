@@ -176,6 +176,7 @@
     <Resource Include="Resources\1453126452_package_edutainment.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\close.png" />
     <Resource Include="Resources\back.png" />
     <Resource Include="Resources\logo.png" />
     <Resource Include="Resources\user.png" />
