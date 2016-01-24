@@ -20,13 +20,17 @@ namespace Hecem
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         public MainWindow()
         {
             InitializeComponent();
             Giris giris = new Giris();
             giris.ShowDialog();
             _Sayfa.Navigate(new Anasayfa());
-            ka.Text = App.ka;
+            List<string> kullanici = Islemler.KullaniciCek(App.ka);
+
+            ka.Text = kullanici[1];
+            puan.Text = "Puan: "+ kullanici[5];
         }
 
         private void _Sayfa_Navigated(object sender, NavigationEventArgs e)
@@ -43,6 +47,19 @@ namespace Hecem
             if (backImg.Source.ToString().IndexOf("back") != -1)
                 _Sayfa.GoBack();
             else Close();
+        }
+
+        private void user_Click(object sender, RoutedEventArgs e)
+        {
+            if (userMenu.Visibility == Visibility.Collapsed) userMenu.Visibility = Visibility.Visible;
+            else userMenu.Visibility = Visibility.Collapsed;
+        }
+
+        private void cikis_Click(object sender, RoutedEventArgs e)
+        {
+            App.ka = "";
+            Giris giris = new Giris();
+            giris.ShowDialog();
         }
     }
 }

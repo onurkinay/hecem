@@ -37,8 +37,7 @@ namespace Hecem
             foreach (var item in Veri)
             {
                 Button harf = new Button();
-                harf.Width = 70;
-                harf.Height = 70;
+            
                 harf.Margin = new Thickness(5);
 
                 harf.Style = this.FindResource("NoChromeButton") as Style;

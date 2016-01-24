@@ -32,12 +32,29 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="19*" />
+            <ColumnDefinition Width="5*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="55*" />
@@ -46,7 +63,7 @@
             <RowDefinition Height="134*" />
         </Grid.RowDefinitions>
 
-        <Grid x:Name="ustbar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" Background="#E65100">
+        <Grid x:Name="ustbar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#E65100" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*" />
                 <ColumnDefinition Width="9*" />
@@ -63,37 +80,53 @@
                 <Button Grid.Column="0" x:Name="back" Style="{DynamicResource NoChromeButton}" Click="back_Click">
                     <Image Source="Resources/back.png" x:Name="backImg"/>
                 </Button>
-
-                <Viewbox Grid.Column="1" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" HorizontalAlignment="Left" Margin="5">
-                    <TextBlock Text="Hecem" FontFamily="Segoe Print" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                </Viewbox>
             </Grid>
 
-            <Grid Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="puan" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+            <Grid Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="orta" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
                     <ColumnDefinition Width="1*" />
                 </Grid.ColumnDefinitions>
                 <Viewbox Margin="10">
-                    <TextBlock x:FieldModifier="public" Foreground="White" x:Name="baslik" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Anasayfa"/>
+                    <TextBlock x:FieldModifier="public" FontFamily="Segoe Print" Foreground="White" x:Name="baslik" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Hecem"/>
                 </Viewbox>
             </Grid>
 
-            <Grid Grid.Column="3" x:Name="profil" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
-                <Image Source="Resources/user.png" Grid.Column="0" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-                <Viewbox Grid.Column="1" Margin="5">
-                    <TextBlock x:Name="ka" Text="teknoonur" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left"/>
-                </Viewbox>
+            <Grid Grid.Column="3" x:Name="profil">
+                <Button Style="{DynamicResource NoChromeButton}" VerticalAlignment="Center" HorizontalAlignment="Right" x:Name="user" Click="user_Click">
+                    <Grid>
+                        <Image Source="Resources/user.png" Grid.Column="1" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    </Grid>
+                </Button>
             </Grid>
 
         </Grid>
 
+        <Grid Grid.Row="1" Grid.Column="1" Margin="7,0,8,7" Background="#FB8C00" x:Name="userMenu" Visibility="Collapsed" Panel.ZIndex="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+         
+       
+                <Image Source="Resources/user.png" Grid.Row="0" Grid.RowSpan="2" Margin="5"/>
+            <TextBlock Grid.Row="2" x:Name="ka" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" />
+            
+            
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Puan: " Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"  Foreground="White" Margin="3,0,0,0" x:Name="puan"/>
+                <Button x:Name="cikis" Content="Çıkış Yap" Foreground="White" Click="cikis_Click" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" BorderThickness="1,1,10,1" Margin="0,0,6,0"/>
+            </Grid>
+        </Grid>
 
-        <DockPanel Grid.Row="1" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+        <DockPanel Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Frame x:Name="_Sayfa" x:FieldModifier="public" NavigationUIVisibility="Hidden" Navigated="_Sayfa_Navigated" />
         </DockPanel>
     </Grid>

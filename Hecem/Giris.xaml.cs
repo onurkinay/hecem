@@ -27,13 +27,18 @@ namespace Hecem
         private void dogru_Click(object sender, RoutedEventArgs e)
         {
 
-            if (Islemler.KullaniciVarmi(ka.Text, sifre.Text))
+            if (Islemler.KullaniciVarmi(ka.Text, sifre.Password))
             {
                 App.ka = ka.Text;
                 Close();
             }
             else MessageBox.Show("Kullanıcı adı ya da şifresi hatalı");
             
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            if (App.ka == "") Application.Current.Shutdown();
         }
     }
 }

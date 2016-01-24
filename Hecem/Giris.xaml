@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hecem"
         mc:Ignorable="d"
+        Background="#E65100"
+        Closed="Window_Closed"
         Title="Giris" Height="300" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
 
 
@@ -42,15 +44,18 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*" />
-            <RowDefinition Height="33*" />
-            <RowDefinition Height="17*" />
-            <RowDefinition Height="25*" />
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="14*" />
+            <RowDefinition Height="15*" />
         </Grid.RowDefinitions>
 
+        <Viewbox Margin="5" Grid.Column="0" Grid.ColumnSpan="3" >
+            <TextBlock Text="Hecem" FontFamily="Segoe Print" Foreground="White"/>
+        </Viewbox>
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <TextBox x:Name="ka" Margin="5"/>
-            <TextBox x:Name="sifre" Margin="5"/>
+            <PasswordBox x:Name="sifre" Margin="5" PasswordChar="*" />
         </StackPanel>
 
         <Button Click="dogru_Click" x:Name="dogru" Style="{DynamicResource NoChromeButton}" Grid.Column="2" Grid.Row="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">

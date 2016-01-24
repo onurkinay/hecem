@@ -40,6 +40,17 @@ namespace Hecem
             return false;
         }
 
+        public static List<string> KullaniciCek(string ad)
+        {
+            if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
+            OleDbCommand cmd = new OleDbCommand("Select * from kullanicilar where ka='" + ad + "'", con);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            List<string> Veri = new List<string>();
+            while (dr.Read()) for (int i = 0; i < 7; i++) Veri.Add(dr[i].ToString());
+            return Veri;
+            
+        }
+
         public void PuanEkle(string ad, int puan)
         {
 
