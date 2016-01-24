@@ -23,8 +23,10 @@ namespace Hecem
         public MainWindow()
         {
             InitializeComponent();
+            Giris giris = new Giris();
+            giris.ShowDialog();
             _Sayfa.Navigate(new Anasayfa());
-            
+            ka.Text = App.ka;
         }
 
         private void _Sayfa_Navigated(object sender, NavigationEventArgs e)

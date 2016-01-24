@@ -62,6 +62,9 @@
     <Compile Include="Dinleme.xaml.cs">
       <DependentUpon>Dinleme.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Giris.xaml.cs">
+      <DependentUpon>Giris.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Harfler.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dinleme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Giris.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

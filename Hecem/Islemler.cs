@@ -27,11 +27,28 @@ namespace Hecem
             return Veri;
         }
 
+        public static bool KullaniciVarmi(string ad, string sifre)
+        {
+            if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
+            OleDbCommand cmd = new OleDbCommand("Select * from kullanicilar where ka='"+ad+"' AND sifre='"+sifre+"'", con);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            List<List<string>> Veri = new List<List<string>>();
+            while (dr.Read())
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void PuanEkle(string ad, int puan)
+        {
+
+        }
+
         public void Oynat(string gelen)
         {
             if (gelen.Length == 1)
             {
-
                 SoundPlayer ses = new SoundPlayer(Harfler.ResourceManager.GetStream(gelen.ToLower()));
                 ses.Play();
             }
