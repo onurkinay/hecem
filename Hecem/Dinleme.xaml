@@ -47,9 +47,10 @@
             <RowDefinition Height="47*" />
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="label" Grid.Row="1" Text="Label" TextAlignment="Center" FontSize="48" Margin="10,102.078,10,142.058" Grid.ColumnSpan="3" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin"/>
-        <Image x:Name="image" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Height="0" Margin="227.667,0,0,0" Width="0" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" Stretch="None"/>
-
+        <Image x:Name="image" Grid.Row="0" Grid.Column="1" Stretch="Uniform"/>
+        <Viewbox Grid.Row="1" Grid.ColumnSpan="3">
+            <TextBlock x:Name="label" Text="Label" TextAlignment="Center" Margin="10"/>
+        </Viewbox>
         <Button Grid.Column="1" Grid.Row="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynat" Click="btnOynat_Click" Margin="10" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Image x:Name="_1453066977_nav_arrow_point_right_png"  Source="Resources/1453066977_nav_arrow_point_right.png" />
         </Button>
