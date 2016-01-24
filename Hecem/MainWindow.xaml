@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Hecem"
         mc:Ignorable="d"
         Title="MainWindow" WindowStyle="None" ResizeMode="NoResize"  
-    WindowStartupLocation="CenterScreen" WindowState="Maximized" >
+    WindowStartupLocation="CenterScreen" WindowState="Maximized" MouseDown="Window_MouseDown" >
 
     <Window.Resources>
         <Style x:Key="NoChromeButton" TargetType="{x:Type Button}">
@@ -53,8 +53,8 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="19*" />
-            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="13*" />
+            <ColumnDefinition Width="3*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="55*" />
@@ -102,7 +102,7 @@
 
         </Grid>
 
-        <Grid Grid.Row="1" Grid.Column="1" Margin="7,0,8,7" Background="#FB8C00" x:Name="userMenu" Visibility="Collapsed" Panel.ZIndex="1">
+        <Grid Grid.Row="1" Grid.Column="1" Margin="39,4,3,7" Background="#EF6C00" x:Name="userMenu" Panel.ZIndex="1" Visibility="Collapsed" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
@@ -110,24 +110,19 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
-         
-       
-                <Image Source="Resources/user.png" Grid.Row="0" Grid.RowSpan="2" Margin="5"/>
+
+
+            <Image Source="Resources/user.png" Grid.Row="0" Grid.RowSpan="2" Margin="5"/>
             <TextBlock Grid.Row="2" x:Name="ka" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" />
-            
-            
-            <Grid Grid.Row="4">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="1*" />
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="Puan: " Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"  Foreground="White" Margin="3,0,0,0" x:Name="puan"/>
-                <Button x:Name="cikis" Content="Çıkış Yap" Foreground="White" Click="cikis_Click" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" BorderThickness="1,1,10,1" Margin="0,0,6,0"/>
-            </Grid>
+
+            <TextBlock Text="Puan: " Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Center"  Foreground="White" Margin="3,0,0,0" x:Name="puan"/>
+            <Button x:Name="cikis" Content="Çıkış Yap" Foreground="White" Click="cikis_Click" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" BorderThickness="1,1,10,1" Margin="0,0,6,0"/>
+
+
         </Grid>
 
         <DockPanel Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
-            <Frame x:Name="_Sayfa" x:FieldModifier="public" NavigationUIVisibility="Hidden" Navigated="_Sayfa_Navigated" />
+            <Frame x:Name="_Sayfa" x:FieldModifier="public" NavigationUIVisibility="Hidden" Navigated="_Sayfa_Navigated" Background="#FF039BE5" />
         </DockPanel>
     </Grid>
 </Window>

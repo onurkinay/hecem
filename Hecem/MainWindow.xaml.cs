@@ -20,18 +20,25 @@ namespace Hecem
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+
         public MainWindow()
         {
             InitializeComponent();
             Giris giris = new Giris();
             giris.ShowDialog();
             _Sayfa.Navigate(new Anasayfa());
+            Yenile();
+        }
+
+
+        void Yenile()
+        {
             List<string> kullanici = Islemler.KullaniciCek(App.ka);
 
             ka.Text = kullanici[1];
-            puan.Text = "Puan: "+ kullanici[5];
+            puan.Text = "Puan: " + kullanici[5];
         }
+    
 
         private void _Sayfa_Navigated(object sender, NavigationEventArgs e)
         {
@@ -47,6 +54,8 @@ namespace Hecem
             if (backImg.Source.ToString().IndexOf("back") != -1)
                 _Sayfa.GoBack();
             else Close();
+
+            baslik.Text = "Hecem";
         }
 
         private void user_Click(object sender, RoutedEventArgs e)
@@ -60,6 +69,11 @@ namespace Hecem
             App.ka = "";
             Giris giris = new Giris();
             giris.ShowDialog();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            userMenu.Visibility = Visibility.Collapsed;
         }
     }
 }

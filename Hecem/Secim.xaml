@@ -47,12 +47,17 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        <Button Grid.Column="0" Grid.Row="1" Style="{DynamicResource NoChromeButton}" Click="btnSecim_Click" x:Name="btnHarfler">
-            <Image x:Name="_1453126452_package_edutainment_png" Source="Resources/1453126452_package_edutainment.png"/>
+        <Button Grid.Column="0" Margin="25" Grid.Row="1" Style="{DynamicResource NoChromeButton}" Click="btnSecim_Click" x:Name="btnHarfler">
+            <Image Source="Resources/1453126452_package_edutainment.png"/>
         </Button>
 
-        <Button x:Name="btnHeceler" Content="Heceler" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSecim_Click" Grid.Column="1" Grid.Row="1" Width="132" Height="44"/>
-        <Button x:Name="btnKelimeler" Content="Kelimeler" VerticalAlignment="Center" HorizontalAlignment="Center" Click="btnSecim_Click" Grid.Column="2" Grid.Row="1" Width="132" Height="44"/>
-      
+        <Button x:Name="btnHeceler" Margin="25" Grid.Column="1" Grid.Row="1" Style="{DynamicResource NoChromeButton}" Click="btnSecim_Click">
+            <Image Source="Resources/hece.jpg"/>
+        </Button>
+
+        <Button x:Name="btnKelimeler" Margin="25" Grid.Column="2" Grid.Row="1" Style="{DynamicResource NoChromeButton}" Click="btnSecim_Click">
+            <Image  Source="Resources/kelimeler.jpg"/>
+        </Button>
+
     </Grid>
 </Page>
