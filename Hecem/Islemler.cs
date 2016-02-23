@@ -53,7 +53,10 @@ namespace Hecem
 
         public void PuanEkle(string ad, int puan)
         {
-
+          /*  if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
+            OleDbCommand cmd = new OleDbCommand("Select * from kullanicilar where ka='" + ad + "'", con);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            while(dr.Read()) */
         }
 
         public void Oynat(string gelen)
@@ -72,7 +75,7 @@ namespace Hecem
             else {
                // dImg = new System.Drawing.Bitmap(System.Windows.Application.GetResourceStream(new Uri(resim)).Stream);
                 WebClient webClient = new WebClient();
-                byte[] imgData = webClient.DownloadData(resim);
+                byte[] imgData = webClient.DownloadData((resim != "") ? resim : "https://placehold.it/350x150");
                 MemoryStream stream = new MemoryStream(imgData);
                 dImg = new System.Drawing.Bitmap( System.Drawing.Image.FromStream( stream ));
                 stream.Close();

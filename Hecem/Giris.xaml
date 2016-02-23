@@ -10,32 +10,6 @@
         Title="Giris" Height="300" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
 
 
-    <Window.Resources>
-        <Style x:Key="NoChromeButton" TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="1"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid x:Name="Chrome" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter Property="Foreground" Value="#ADADAD"/>
-                                <Setter Property="Opacity" TargetName="Chrome" Value="0.5"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Window.Resources>
-
     <Grid>
 
         <Grid.ColumnDefinitions>
@@ -55,8 +29,12 @@
         </Viewbox>
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="10" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <TextBox x:Name="ka" Margin="5"/>
-            <PasswordBox x:Name="sifre" Margin="5" PasswordChar="*" />
+            <PasswordBox x:Name="sifre" Margin="5" PasswordChar="*" KeyDown="sifre_KeyDown_1"/>
         </StackPanel>
+
+        <Button Click="anon_Click_1" x:Name="anon" Style="{DynamicResource NoChromeButton}" Grid.Column="1" Grid.Row="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+            <Image Height="48" Source="Resources/user-anonymous-icon.png" Stretch="Fill" Width="48" Grid.Column="2" Grid.Row="2"/>
+        </Button>
 
         <Button Click="dogru_Click" x:Name="dogru" Style="{DynamicResource NoChromeButton}" Grid.Column="2" Grid.Row="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Image Height="48" Source="Resources/1453145219_onebit_34.png" Stretch="Fill" Width="48" Grid.Column="2" Grid.Row="2"/>
