@@ -61,12 +61,10 @@ namespace Hecem
 
         public void Oynat(string gelen)
         {
-            if (gelen.Length == 1)
-            {
-                SoundPlayer ses = new SoundPlayer(Harfler.ResourceManager.GetStream(gelen.ToLower()));
+          
+                SoundPlayer ses = new SoundPlayer(Sesler.ResourceManager.GetStream(gelen.ToLower()));
                 ses.Play();
-            }
-
+         
         }
         public System.Windows.Media.Imaging.BitmapImage ResimGetir(string resim)
         {
@@ -75,7 +73,7 @@ namespace Hecem
             else {
                // dImg = new System.Drawing.Bitmap(System.Windows.Application.GetResourceStream(new Uri(resim)).Stream);
                 WebClient webClient = new WebClient();
-                byte[] imgData = webClient.DownloadData((resim != "") ? resim : "https://placehold.it/350x150");
+                byte[] imgData = webClient.DownloadData((resim != "") ? resim : "http://lorempixel.com/500/300/business");
                 MemoryStream stream = new MemoryStream(imgData);
                 dImg = new System.Drawing.Bitmap( System.Drawing.Image.FromStream( stream ));
                 stream.Close();
