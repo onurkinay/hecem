@@ -172,10 +172,10 @@
     <Resource Include="Resources\dinleme.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\test.png" />
+    <None Include="Resources\test" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\alfabe.png" />
+    <Resource Include="Resources\hece.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\zor.wav" />

@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <Button Grid.Column="0" Margin="25" Grid.Row="1" Style="{DynamicResource NoChromeButton}" Click="btnSecim_Click" x:Name="btnHarfler">
-            <Image Source="Resources/alfabe.png"/>
+            <Image Source="Resources/1453126452_package_edutainment.png"/>
         </Button>
 
         <Button x:Name="btnHeceler" Margin="25" Grid.Column="1" Grid.Row="1" Style="{DynamicResource NoChromeButton}" Click="btnSecim_Click">
