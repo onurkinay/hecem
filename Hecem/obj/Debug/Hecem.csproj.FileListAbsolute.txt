@@ -1,7 +1,6 @@
 E:\Projelerim\Hecem\Hecem\bin\Debug\Hecem.exe.config
 E:\Projelerim\Hecem\Hecem\bin\Debug\Hecem.exe
 E:\Projelerim\Hecem\Hecem\bin\Debug\Hecem.pdb
-E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache
 E:\Projelerim\Hecem\Hecem\obj\Debug\MainWindow.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Secim.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\App.g.cs

@@ -52,7 +52,7 @@ namespace Hecem
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            if (backImg.Source.ToString().IndexOf("back") != -1)
+            if (backImg.Source.ToString().IndexOf("geri") != -1)
                 _Sayfa.GoBack();
             else Close();
 

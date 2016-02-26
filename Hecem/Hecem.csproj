@@ -173,7 +173,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\hece.png" />
-    <Content Include="Resources\test.png" />
+    <Content Include="Resources\tests.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\zor.wav" />
