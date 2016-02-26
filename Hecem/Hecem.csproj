@@ -178,8 +178,6 @@
     <Resource Include="Resources\hece.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <None Include="Resources\zor.wav" />
     <None Include="Resources\zevk.wav" />
     <None Include="Resources\zengin.wav" />
@@ -1017,7 +1015,6 @@
     <None Include="Resources\acı.wav" />
     <None Include="Resources\acaba.wav" />
     <None Include="Resources\abla.wav" />
->>>>>>> remotes/origin/sesler
     <None Include="Resources\zü.wav" />
     <None Include="Resources\zu.wav" />
     <None Include="Resources\zı.wav" />
@@ -1273,10 +1270,6 @@
     <None Include="Resources\ar.wav" />
     <None Include="Resources\ap.wav" />
     <None Include="Resources\an.wav" />
-<<<<<<< HEAD
-    <None Include="Resources\am.wav" />
-=======
->>>>>>> remotes/origin/sesler
     <None Include="Resources\al.wav" />
     <None Include="Resources\ak.wav" />
     <None Include="Resources\aj.wav" />
