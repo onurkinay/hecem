@@ -23,8 +23,7 @@ namespace Hecem
 
         public MainWindow()
         {
-            Yukleme yukleme = new Yukleme();
-            yukleme.Show();
+         
             InitializeComponent();
             Giris giris = new Giris();
             giris.ShowDialog();
