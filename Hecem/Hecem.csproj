@@ -163,7 +163,7 @@
     <Resource Include="Resources\oynat.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\sag.png" />
+    <Resource Include="Resources\sag1.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\sol.png" />
@@ -172,10 +172,8 @@
     <Resource Include="Resources\dinleme.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\hece.png" />
     <Content Include="Resources\test.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\alfabe.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\zor.wav" />
@@ -1282,7 +1280,7 @@
     <None Include="Resources\ac.wav" />
     <None Include="Resources\ab.wav" />
     <Resource Include="Resources\anonim.png" />
-    <Resource Include="Resources\cikis.png" />
+    <Resource Include="Resources\cik.png" />
     <Resource Include="Resources\hece.JPG" />
     <Resource Include="Resources\kelimeler.jpg" />
     <Resource Include="Resources\kapat.png" />

@@ -95,7 +95,7 @@
            
             <Button Style="{DynamicResource NoChromeButton}" VerticalAlignment="Center" HorizontalAlignment="Right" x:Name="cikis" Click="cikis_Click" Grid.Row="4">
                 <Grid>
-                    <Image Source="Resources/Actions-user-group-delete-icon.png" Grid.Column="1" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <Image Source="Resources/cik.png" Grid.Column="1" Margin="5" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 </Grid>
             </Button>
         </Grid>
