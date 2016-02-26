@@ -47,11 +47,11 @@
         </Grid.RowDefinitions>
 
         <Button Style="{DynamicResource NoChromeButton}" x:Name="btnDinleme" Click="btnDinleme_Click" Grid.Column="0" Grid.Row="1" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
-            <Image x:Name="_1453068122_listen_to_music_png" Source="Resources/dinleme.png"/>
+            <Image x:Name="_1453068122_listen_to_music_png" Source="Resources/1453068122_listen to music.png"/>
         </Button>
 
         <Button Style="{DynamicResource NoChromeButton}" x:Name="btnTest" Click="btnTest_Click"  Grid.Column="2" Grid.Row="1" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
-            <Image x:Name="_1453068182_tests_png"  Source="Resources/test.png"/>
+            <Image x:Name="_1453068182_tests_png"  Source="Resources/1453068182_tests.png"/>
         </Button>
 
 

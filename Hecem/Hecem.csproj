@@ -160,13 +160,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\1453066977_nav_arrow_point_right.png" />
+    <Resource Include="Resources\oynat.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\1453067036_arrow-right-01.png" />
+    <Resource Include="Resources\sag.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\1453067058_arrow-left-01.png" />
+    <Resource Include="Resources\sol.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\dinleme.png" />
@@ -1281,14 +1281,13 @@
     <None Include="Resources\aç.wav" />
     <None Include="Resources\ac.wav" />
     <None Include="Resources\ab.wav" />
-    <Resource Include="Resources\user-anonymous-icon.png" />
-    <Resource Include="Resources\Actions-user-group-delete-icon.png" />
+    <Resource Include="Resources\anonim.png" />
+    <Resource Include="Resources\cikis.png" />
     <Resource Include="Resources\hece.JPG" />
     <Resource Include="Resources\kelimeler.jpg" />
-    <Resource Include="Resources\close.png" />
-    <Resource Include="Resources\back.png" />
-    <Resource Include="Resources\logo.png" />
-    <Resource Include="Resources\user.png" />
+    <Resource Include="Resources\kapat.png" />
+    <Resource Include="Resources\geri.png" />
+    <Resource Include="Resources\kullanici.png" />
     <None Include="Resources\Ğ.png" />
     <None Include="Resources\Ç.png" />
     <None Include="Resources\Z.png" />
