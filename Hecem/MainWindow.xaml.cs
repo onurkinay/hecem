@@ -44,8 +44,8 @@ namespace Hecem
         private void _Sayfa_Navigated(object sender, NavigationEventArgs e)
         {
             if (_Sayfa.CanGoBack)
-                backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/back.png"));
-            else backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/close.png"));
+                backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/geri.png"));
+            else backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/kapat.png"));
 
            // baslik.Text = _Sayfa.
         }
