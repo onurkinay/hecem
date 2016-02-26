@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/test.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hecem.accdb")]
 
 
