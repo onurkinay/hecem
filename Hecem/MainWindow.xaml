@@ -25,6 +25,9 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <SolidColorBrush Color="#D90E00" x:Key="baslik" />
+        <SolidColorBrush Color="#145D85" x:Key="ic" />
     </Window.Resources>
 
     <Grid>
@@ -39,7 +42,7 @@
             <RowDefinition Height="134*" />
         </Grid.RowDefinitions>
 
-        <Grid x:Name="ustbar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="#E65100" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+        <Grid x:Name="ustbar" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Background="{StaticResource baslik}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*" />
                 <ColumnDefinition Width="9*" />
@@ -78,7 +81,7 @@
 
         </Grid>
 
-        <Grid Grid.Row="1" Grid.Column="1" Margin="39,4,3,7" Background="#EF6C00" x:Name="userMenu" Panel.ZIndex="1" Visibility="Collapsed" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
+        <Grid Grid.Row="1" Grid.Column="1" Margin="39,4,3,7" Background="{StaticResource baslik}" x:Name="userMenu" Panel.ZIndex="1" Visibility="Collapsed" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
@@ -101,7 +104,7 @@
         </Grid>
 
         <DockPanel Grid.Row="1" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="2" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
-            <Frame x:Name="_Sayfa" x:FieldModifier="public" NavigationUIVisibility="Hidden" Navigated="_Sayfa_Navigated" Background="#FF039BE5" />
+            <Frame x:Name="_Sayfa" x:FieldModifier="public" NavigationUIVisibility="Hidden" Navigated="_Sayfa_Navigated" Background="{StaticResource ic}" />
         </DockPanel>
     </Grid>
 </Window>

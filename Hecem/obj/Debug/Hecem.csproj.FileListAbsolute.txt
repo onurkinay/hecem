@@ -28,3 +28,4 @@ E:\Projelerim\Hecem\Hecem\obj\Debug\Giris.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Giris.baml
 E:\Projelerim\Hecem\Hecem\obj\Debug\App.baml
 E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.Sesler.resources
+E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache
