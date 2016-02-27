@@ -36,19 +36,22 @@ namespace Hecem
             Veri = Islemler.VeriGetir("harfler");
             foreach (var item in Veri)
             {
-                Button harf = new Button();
-            
-                harf.Margin = new Thickness(5);
-
-                harf.Style = this.FindResource("NoChromeButton") as Style;
-                harf.Click += Harf_Click;
-                harf.Tag = item[1];
-
-                harf.Content = new Image
+                if (item[1].ToLower() != "ğ")
                 {
-                    Source = islemler.ResimGetir(item[1])
-                };
-                harfler.Children.Add(harf);
+                    Button harf = new Button();
+
+                    harf.Margin = new Thickness(5);
+
+                    harf.Style = this.FindResource("NoChromeButton") as Style;
+                    harf.Click += Harf_Click;
+                    harf.Tag = item[1];
+
+                    harf.Content = new Image
+                    {
+                        Source = islemler.ResimGetir(item[1])
+                    };
+                    harfler.Children.Add(harf);
+                }
             }
         }
         private void Harf_Click(object sender, RoutedEventArgs e)

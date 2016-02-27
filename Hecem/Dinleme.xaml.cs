@@ -28,7 +28,7 @@ namespace Hecem
             InitializeComponent();
             Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
             if(secim != 0) Veri = Veri.Where(x => x[1][0] == harf[0].ToString().ToLower()[0] ).ToList();
-            
+           
             DinlemeCek(i);
             
         }
