@@ -29,7 +29,7 @@ namespace Hecem
             InitializeComponent();
             secim = s;
             Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
-            if (secim != 0) Veri = Veri.Where(x => x[1][0] == harf[0]).ToList();
+            if (secim != 0) Veri = Veri.Where(x => x[1][0] == harf[0].ToString().ToLower()[0]).ToList();
             TestSorusuOlustur();
         }
         int kac = 1;
@@ -263,16 +263,16 @@ namespace Hecem
         {
            islemler.Oynat(((Button)sender).Tag.ToString());
         }
+        int pb = 0;
         private Brush PickBrush()
         {
             Brush result = Brushes.Transparent;
-
-            Random rnd = new Random();
-
+            
             Brush[] renkler = new Brush[] { Brushes.Black, Brushes.Blue, Brushes.Red, Brushes.Green };
-            int random = rnd.Next(renkler.Length);
-            result = renkler[random];
-
+            if (pb == renkler.Length) pb = 0;
+            result = renkler[pb];
+            pb++;
+           
             return result;
         }
     }

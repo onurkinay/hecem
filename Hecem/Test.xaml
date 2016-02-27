@@ -69,7 +69,7 @@
             </Grid.RowDefinitions>
 
             <Button Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynatCoktan" Click="btnOynat_Click" >
-                <Image x:Name="oynat"  Source="Resources/1453066977_nav_arrow_point_right.png" />
+                <Image x:Name="oynat"  Source="Resources/oynat.png" />
             </Button>
             <UniformGrid x:Name="secenekler" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" Columns="4" >
 
@@ -93,13 +93,13 @@
             </Grid.RowDefinitions>
 
             <Button Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynatKlavyeli" Click="btnOynat_Click">
-                <Image x:Name="klavyeOynat"  Source="Resources/1453066977_nav_arrow_point_right.png" Stretch="None" />
+                <Image x:Name="klavyeOynat"  Source="Resources/oynat.png" Stretch="None" />
             </Button>
 
             <TextBox x:Name="klavye" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="2" Margin="15" FontSize="96" Text="s" HorizontalContentAlignment="Center" />
 
             <Button x:Name="cevap" Style="{DynamicResource NoChromeButton}" Grid.Column="3" Grid.Row="3" Margin="5" Click="KlavyeCevap">
-                <Image Height="48" Source="Resources/1453145219_onebit_34.png" Width="48" Stretch="None"/>
+                <Image Height="48" Source="Resources/tik.png" Width="48" Stretch="Uniform"/>
             </Button>
 
         </Grid>
@@ -121,15 +121,15 @@
             <Image x:Name="dogruResim" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="5"/>
 
             <Button Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Style="{DynamicResource NoChromeButton}" x:Name="btnOynat3" Click="btnOynat_Click">
-                <Image x:Name="dogruOynat"  Source="Resources/1453066977_nav_arrow_point_right.png" />
+                <Image x:Name="dogruOynat"  Source="Resources/oynat.png" />
             </Button>
 
             <Button x:Name="dogru" Style="{DynamicResource NoChromeButton}" Grid.Column="1" Grid.Row="2" Margin="5" Click="DYCevapla" Tag="dogru">
-                <Image Height="48" Source="Resources/1453145219_onebit_34.png" Stretch="Fill" Width="48"/>
+                <Image Height="48" Source="Resources/tik.png" Stretch="Fill" Width="48"/>
             </Button>
 
             <Button x:Name="yanlis" Style="{DynamicResource NoChromeButton}" Grid.Column="2" Grid.Row="2" Margin="5" Click="DYCevapla" Tag="yanlis">
-                <Image Height="48" Source="Resources/1453145269_onebit_33.png" Stretch="Fill" Width="48"/>
+                <Image Height="48" Source="Resources/iptal.png" Stretch="Fill" Width="48"/>
             </Button>
         </Grid>
     </Grid>
