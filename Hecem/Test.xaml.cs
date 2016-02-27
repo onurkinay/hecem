@@ -38,31 +38,34 @@ namespace Hecem
             if (kac < 21)
             {
                 foreach (Grid grid in main2.Children) grid.Visibility = Visibility.Collapsed;
-                 
+
                 int testKod = -1;
 
                 do testKod = rnd.Next(0, 4);
                 while (onceki == testKod);
 
-                 switch (testKod)
-                  {
-                      case 0: CoktanSecmeli(); break;
-                      case 1: KlavyeYazma(); break;
-                      case 2: DogruYanlis(); break;
-                      case 3: Eslestir(); break;
-                  }
-                 
+                switch (testKod)
+                {
+                    case 0: CoktanSecmeli(); break;
+                    case 1: KlavyeYazma(); break;
+                    case 2: DogruYanlis(); break;
+                    case 3: Eslestir(); break;
+                }
+
                 onceki = testKod;
                 kac++;
                 foreach (Window window in Application.Current.Windows)
                 {
                     if (window.GetType() == typeof(MainWindow))
                     {
-                        (window as MainWindow).baslik.Text = "Puan: "+puan.ToString();
+                        (window as MainWindow).baslik.Text = "Puan: " + puan.ToString();
                     }
                 }
             }
-            else MessageBox.Show(puan.ToString());
+            else {
+                MessageBox.Show(puan.ToString());
+                Islemler.PuanEkle(App.ka, puan);
+            }
         }
 #region Soru oluşturma fonksiyonları
         private void CoktanSecmeli()

@@ -48,17 +48,26 @@ namespace Hecem
             OleDbCommand cmd = new OleDbCommand("Select * from kullanicilar where ka='" + ad + "'", con);
             OleDbDataReader dr = cmd.ExecuteReader();
             List<string> Veri = new List<string>();
-            while (dr.Read()) for (int i = 0; i < 7; i++) Veri.Add(dr[i].ToString());
+            while (dr.Read()) for (int i = 0; i < dr.FieldCount; i++) Veri.Add(dr[i].ToString());
             return Veri;
             
         }
 
-        public void PuanEkle(string ad, int puan)
+        public static void PuanEkle(string ad, int puan)
         {
-          /*  if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
+            if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
             OleDbCommand cmd = new OleDbCommand("Select * from kullanicilar where ka='" + ad + "'", con);
             OleDbDataReader dr = cmd.ExecuteReader();
-            while(dr.Read()) */
+            while(dr.Read())
+            {
+                
+                OleDbCommand puanEkle = new OleDbCommand("Update kullanicilar set puan=" + (puan + Convert.ToInt16(dr[5].ToString())).ToString() + " where ka='" + ad + "'" , con);
+               
+                puanEkle.ExecuteNonQuery();
+                
+               
+            }
+            con.Close();
         }
 
         public void Oynat(string gelen)

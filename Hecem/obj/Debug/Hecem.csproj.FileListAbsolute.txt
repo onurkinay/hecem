@@ -27,7 +27,6 @@ E:\Projelerim\Hecem\Hecem\bin\Debug\hecem.accdb
 E:\Projelerim\Hecem\Hecem\obj\Debug\Giris.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Giris.baml
 E:\Projelerim\Hecem\Hecem\obj\Debug\App.baml
-E:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache
 E:\Projelerim\Hecem\Hecem\bin\Debug\Resources\ses\a.mp3
 E:\Projelerim\Hecem\Hecem\bin\Debug\Resources\ses\ab.mp3
 E:\Projelerim\Hecem\Hecem\bin\Debug\Resources\ses\abla.mp3

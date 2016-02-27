@@ -25,10 +25,12 @@ namespace Hecem
         {
          
             InitializeComponent();
+           
             Giris giris = new Giris();
             giris.ShowDialog();
             _Sayfa.Navigate(new Anasayfa());
             Yenile();
+            
         }
 
 
