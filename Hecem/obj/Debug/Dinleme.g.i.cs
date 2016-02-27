@@ -104,6 +104,14 @@ namespace Hecem {
         #line default
         #line hidden
         
+        
+        #line 39 "..\..\Dinleme.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.MediaElement ses;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -175,6 +183,9 @@ namespace Hecem {
             return;
             case 8:
             this._1453067058_arrow_left_01_png = ((System.Windows.Controls.Image)(target));
+            return;
+            case 9:
+            this.ses = ((System.Windows.Controls.MediaElement)(target));
             return;
             }
             this._contentLoaded = true;
