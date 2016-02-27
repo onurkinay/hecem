@@ -7,6 +7,8 @@ using System.Media;
 using System.Data.OleDb;
 using System.IO;
 using System.Net;
+using System.Reflection;
+using System.Windows.Media;
 namespace Hecem
 {
     public class Islemler
@@ -59,6 +61,14 @@ namespace Hecem
             while(dr.Read()) */
         }
 
+        public void Oynat(string gelen)
+        {
+              MediaPlayer player = new MediaPlayer();
+               player.Open(new Uri("Resources/ses/"+gelen.ToLower()+".mp3", UriKind.RelativeOrAbsolute));
+
+               player.Play();
+            
+        }
      
         public System.Windows.Media.Imaging.BitmapImage ResimGetir(string resim)
         {

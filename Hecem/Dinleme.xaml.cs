@@ -47,8 +47,7 @@ namespace Hecem
 
         private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
-            ses.Source = new Uri("pack://application:,,,/Resources/sesler/"+label.Text+".mp3", UriKind.Relative);
-            ses.Play();
+            islemler.Oynat(label.Text.ToLower());
         }
 
         private void DinlemeCek(int sira)
