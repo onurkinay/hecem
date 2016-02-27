@@ -261,7 +261,7 @@ namespace Hecem
 
         private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
-            islemler.Oynat(((Button)sender).Tag.ToString());
+           // islemler.Oynat(((Button)sender).Tag.ToString());
         }
         private Brush PickBrush()
         {

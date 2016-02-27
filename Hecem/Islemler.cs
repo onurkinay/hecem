@@ -59,13 +59,7 @@ namespace Hecem
             while(dr.Read()) */
         }
 
-        public void Oynat(string gelen)
-        {
-          
-                SoundPlayer ses = new SoundPlayer(Sesler.ResourceManager.GetStream(gelen.ToLower()));
-                ses.Play();
-         
-        }
+     
         public System.Windows.Media.Imaging.BitmapImage ResimGetir(string resim)
         {
             System.Drawing.Bitmap dImg;
