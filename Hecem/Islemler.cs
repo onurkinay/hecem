@@ -78,26 +78,24 @@ namespace Hecem
                player.Play();
             
         }
-     
+
         public System.Windows.Media.Imaging.BitmapImage ResimGetir(string resim)
         {
-              System.Drawing.Bitmap dImg;
-              if (resim.Length == 1) dImg = new System.Drawing.Bitmap((System.Drawing.Image)HarflerResim.ResourceManager.GetObject(resim));
-              else {
-                 dImg = new System.Drawing.Bitmap(System.Windows.Application.GetResourceStream(new Uri("pack://application:,,,/Resources/gg.jpg")).Stream);
-                 /* WebClient webClient = new WebClient();
-                  byte[] imgData = webClient.DownloadData((resim != "") ? resim : "http://lorempixel.com/500/300/business");
-                  MemoryStream stream = new MemoryStream(imgData);
-                  dImg = new System.Drawing.Bitmap( System.Drawing.Image.FromStream( stream ));
-                  stream.Close();*/
-              }
-              MemoryStream ms = new MemoryStream();
-              dImg.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-              System.Windows.Media.Imaging.BitmapImage bImg = new System.Windows.Media.Imaging.BitmapImage();
-              bImg.BeginInit();
-              bImg.StreamSource = new MemoryStream(ms.ToArray());
-              bImg.EndInit();
-            
+
+            string directory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            string filePath = Path.Combine(directory, "Resources\\resim\\"+  resim + ".png");
+            bool varmi = File.Exists(filePath);
+            System.Drawing.Bitmap dImg;
+            // 
+            dImg = new System.Drawing.Bitmap((!varmi) ? "Resources/gg.jpg" : "Resources/resim/" + resim + ".png");
+
+            MemoryStream ms = new MemoryStream();
+            dImg.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            System.Windows.Media.Imaging.BitmapImage bImg = new System.Windows.Media.Imaging.BitmapImage();
+            bImg.BeginInit();
+            bImg.StreamSource = new MemoryStream(ms.ToArray());
+            bImg.EndInit();
+
             return bImg;
         }
     }

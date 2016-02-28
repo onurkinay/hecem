@@ -67,11 +67,6 @@
     <Compile Include="Giris.xaml.cs">
       <DependentUpon>Giris.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HarflerResim.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HarflerResim.resx</DependentUpon>
-    </Compile>
     <Compile Include="HarfSec.xaml.cs">
       <DependentUpon>HarfSec.xaml</DependentUpon>
     </Compile>
@@ -133,10 +128,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="HarflerResim.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>HarflerResim.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -157,37 +148,73 @@
     <Resource Include="Resources\alfabe.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\A.png" />
+    <Content Include="Resources\resim\A.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\anonim.png" />
-    <Resource Include="Resources\B.png" />
-    <Resource Include="Resources\C.png" />
+    <Content Include="Resources\resim\B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\C.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\cik.png" />
-    <Resource Include="Resources\D.png" />
-    <Resource Include="Resources\E.png" />
-    <Resource Include="Resources\F.png" />
-    <Resource Include="Resources\G.png" />
+    <Content Include="Resources\resim\D.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\F.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\G.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\geri.png" />
-    <Resource Include="Resources\H.png" />
-    <Resource Include="Resources\I.png" />
-    <Resource Include="Resources\J.png" />
-    <Resource Include="Resources\K.png" />
+    <Content Include="Resources\resim\H.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\I.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\J.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\K.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\kapat.png" />
     <Resource Include="Resources\kullanici.png" />
-    <Resource Include="Resources\L.png" />
+    <Content Include="Resources\resim\L.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\logo.png" />
-    <Resource Include="Resources\M.png" />
-    <Resource Include="Resources\N.png" />
-    <Resource Include="Resources\O.png" />
+    <Content Include="Resources\resim\M.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\N.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\O.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\oynat.png" />
-    <Resource Include="Resources\P.png" />
-    <Resource Include="Resources\R.png" />
-    <Resource Include="Resources\S.png" />
+    <Content Include="Resources\resim\P.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\R.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\S.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\sag1.png" />
     <Resource Include="Resources\hece.JPG" />
     <Resource Include="Resources\kelimeler.jpg" />
-    <Resource Include="Resources\gg.jpg">
+    <Content Include="Resources\gg.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Content Include="Resources\ses\a.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -3993,18 +4020,40 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\sol.png" />
-    <Resource Include="Resources\T.png" />
+    <Content Include="Resources\resim\T.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\tests.png" />
-    <Resource Include="Resources\U.png" />
-    <Resource Include="Resources\V.png" />
-    <Resource Include="Resources\Y.png" />
-    <Resource Include="Resources\Z.png" />
-    <Resource Include="Resources\Ç.png" />
-    <Resource Include="Resources\Ö.png" />
-    <Resource Include="Resources\Ü.png" />
-    <Resource Include="Resources\Ğ.png" />
-    <Resource Include="Resources\İ.png" />
-    <Resource Include="Resources\Ş.png" />
+    <Content Include="Resources\resim\U.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\V.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\Y.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\Z.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\Ç.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\Ö.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\Ü.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\Ğ.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\İ.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\resim\Ş.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\tik.png" />
     <Resource Include="Resources\iptal.png" />
     <Content Include="hecem.accdb">
