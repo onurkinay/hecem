@@ -34,8 +34,9 @@ namespace Hecem
         }
 
 
-        void Yenile()
+        public void Yenile()
         {
+            if (App.ka == "") Application.Current.Shutdown();
             List<string> kullanici = Islemler.KullaniciCek(App.ka);
 
             ka.Text = kullanici[1];

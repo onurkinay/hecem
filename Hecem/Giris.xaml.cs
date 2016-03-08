@@ -32,7 +32,7 @@ namespace Hecem
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            if (App.ka == "") Application.Current.Shutdown();
+            if (App.ka == "") Environment.Exit(0);
         }
 
         private void sifre_KeyDown_1(object sender, KeyEventArgs e)
@@ -53,6 +53,10 @@ namespace Hecem
             else if (i == 1) {
 
                 App.ka = "Anonim";
+
+                ka.Text = "anonim";
+                sifre.Password = "anonim";
+
                 Close();
 
             }

@@ -20,6 +20,9 @@ namespace Hecem
     /// </summary>
     public partial class Test : Page
     {
+        MainWindow mw = new MainWindow();
+        Anasayfa ana = new Anasayfa();
+
         int puan = 0; int secim; int onceki = -1;
         Islemler islemler = new Islemler();
         List<List<string>> Veri;
@@ -65,6 +68,8 @@ namespace Hecem
             else {
                 MessageBox.Show(puan.ToString());
                 Islemler.PuanEkle(App.ka, puan);
+                mw.Yenile();
+                ana.PencereAc(new Anasayfa());
             }
         }
 #region Soru oluşturma fonksiyonları
