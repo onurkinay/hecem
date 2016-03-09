@@ -8,6 +8,7 @@
         Title="MainWindow" MouseDown="Window_MouseDown"
          WindowStyle="None" ResizeMode="NoResize"  
     WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Loaded="Window_Loaded"
         >
 
     <Window.Resources>

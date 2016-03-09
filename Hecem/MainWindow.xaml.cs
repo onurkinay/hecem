@@ -23,14 +23,8 @@ namespace Hecem
 
         public MainWindow()
         {
-         
             InitializeComponent();
-           
-            Giris giris = new Giris();
-            giris.ShowDialog();
-            _Sayfa.Navigate(new Anasayfa());
-            Yenile();
-            
+         
         }
 
 
@@ -78,6 +72,15 @@ namespace Hecem
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             userMenu.Visibility = Visibility.Collapsed;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            Giris giris = new Giris();
+            giris.ShowDialog();
+            _Sayfa.Navigate(new Anasayfa());
+            Yenile();
         }
     }
 }
