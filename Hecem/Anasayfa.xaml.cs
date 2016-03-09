@@ -20,9 +20,11 @@ namespace Hecem
     /// </summary>
     public partial class Anasayfa : Page
     {
+        
         public Anasayfa()
         {
             InitializeComponent();
+          
         }
 
         private void btnDinleme_Click(object sender, RoutedEventArgs e)
@@ -44,6 +46,11 @@ namespace Hecem
         private void btnTest_Click(object sender, RoutedEventArgs e)
         {
             PencereAc(new Secim(1));
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }

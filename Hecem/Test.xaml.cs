@@ -68,8 +68,18 @@ namespace Hecem
             else {
                 MessageBox.Show(puan.ToString());
                 Islemler.PuanEkle(App.ka, puan);
-                mw.Yenile();
+
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window.GetType() == typeof(MainWindow))
+                    {
+                        (window as MainWindow).baslik.Text = "Hecem";
+                        (window as MainWindow).Yenile();
+                    }
+                }
+
                 ana.PencereAc(new Anasayfa());
+               
             }
         }
 #region Soru oluşturma fonksiyonları
@@ -213,48 +223,53 @@ namespace Hecem
         int[,] cevaplari = new int[4,2]; int c = 0;
         public void CizgiCek(Button sol, Button sag)
         {
-            for (int i = 0; i < 4; i++)
-            {
-                if (cevaplari[i, 0] != 0 && cevaplari[i, 1] != 0)
-                
-                    if (cevaplari[i, 0] == Convert.ToInt32(sol.Tag.ToString()) || cevaplari[i, 1] == Convert.ToInt32(sag.Tag.ToString()))
-                    
-                        return;
-                    
+            try {
+                for (int i = 0; i < 4; i++)
+                {
+                    if (cevaplari[i, 0] != 0 && cevaplari[i, 1] != 0)
+
+                        if (cevaplari[i, 0] == Convert.ToInt32(sol.Tag.ToString()) || cevaplari[i, 1] == Convert.ToInt32(sag.Tag.ToString()))
+
+                            return;
+
+                }
+                cevaplari[c, 0] = Convert.ToInt32(sol.Tag.ToString());
+                cevaplari[c, 1] = Convert.ToInt32(sag.Tag.ToString());
+
+                Line line = new Line();
+                line.Visibility = System.Windows.Visibility.Visible;
+                line.StrokeThickness = 4;
+                line.Stroke = PickBrush();
+                line.Tag = c.ToString();
+                Point solPoint = sol.TransformToAncestor(this)
+                              .Transform(new Point(0, 0));
+
+                Point sagPoint = sag.TransformToAncestor(this)
+                             .Transform(new Point(0, 0));
+
+                line.X1 = solPoint.X + 100;
+                line.Y1 = solPoint.Y + 50;
+
+                line.X2 = sagPoint.X;
+                line.Y2 = sagPoint.Y + 50;
+
+                cevapCizgileri.Children.Add(line);
+
+                c++;
+                if (c == 4)
+                {
+                    int sonuc = 0;
+                    for (int i = 0; i < 4; i++) if (cevaplari[i, 0] == cevaplari[i, 1]) sonuc++;
+                    puan += sonuc;
+                    cevaplari = new int[4, 2];
+                    c = 0;
+                    TestSorusuOlustur();
+                }
             }
-            cevaplari[c ,0] = Convert.ToInt32(sol.Tag.ToString());
-            cevaplari[c, 1] = Convert.ToInt32(sag.Tag.ToString());
-
-            Line line = new Line();
-            line.Visibility = System.Windows.Visibility.Visible;
-            line.StrokeThickness = 4;
-            line.Stroke = PickBrush();
-            line.Tag = c.ToString();
-            Point solPoint = sol.TransformToAncestor(this)
-                          .Transform(new Point(0, 0));
-
-            Point sagPoint = sag.TransformToAncestor(this)
-                         .Transform(new Point(0, 0));
-
-            line.X1 = solPoint.X + 100;
-            line.Y1 = solPoint.Y + 50;
-
-            line.X2 = sagPoint.X;
-            line.Y2 = sagPoint.Y + 50;
+            catch
+            {
             
-            cevapCizgileri.Children.Add(line);
-
-            c++;
-            if(c == 4)
-            {
-                int sonuc = 0;
-                for (int i = 0; i < 4; i++) if (cevaplari[i, 0] == cevaplari[i, 1]) sonuc++;
-                puan += sonuc;
-                cevaplari = new int[4, 2];
-                c = 0;
-                TestSorusuOlustur();
             }
-
         }
         Button solC;
         public void SolC(object sender, RoutedEventArgs e)

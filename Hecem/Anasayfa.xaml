@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:Hecem"
       mc:Ignorable="d" 
       d:DesignHeight="768" d:DesignWidth="1366"
+      Loaded="Page_Loaded"
       Title="Anasayfa">
 
     <Page.Resources>
