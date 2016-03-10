@@ -19,10 +19,10 @@ namespace Hecem
     /// </summary>
     public partial class Giris : Window
     {
-        public Bekle bekle = new Bekle();
+        
         public Giris()
         {
-            bekle.Show();
+            App.bekle.Show();
             InitializeComponent();
         }
 
@@ -35,6 +35,7 @@ namespace Hecem
         private void Window_Closed(object sender, EventArgs e)
         {
             if (App.ka == "") Environment.Exit(0);
+
         }
 
         private void sifre_KeyDown_1(object sender, KeyEventArgs e)
@@ -50,6 +51,7 @@ namespace Hecem
             if (Islemler.KullaniciVarmi(ka.Text, sifre.Password))
             {
                 App.ka = ka.Text;
+                Islemler.Yenile();
                 Close();
             }
             else if (i == 1) {
@@ -58,7 +60,7 @@ namespace Hecem
 
                 ka.Text = "anonim";
                 sifre.Password = "anonim";
-
+                Islemler.Yenile();
                 Close();
 
             }

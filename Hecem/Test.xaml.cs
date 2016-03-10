@@ -69,14 +69,7 @@ namespace Hecem
                 MessageBox.Show(puan.ToString());
                 Islemler.PuanEkle(App.ka, puan);
 
-                foreach (Window window in Application.Current.Windows)
-                {
-                    if (window.GetType() == typeof(MainWindow))
-                    {
-                        (window as MainWindow).baslik.Text = "Hecem";
-                        (window as MainWindow).Yenile();
-                    }
-                }
+                Islemler.Yenile();
 
                 ana.PencereAc(new Anasayfa());
                

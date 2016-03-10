@@ -23,15 +23,10 @@ namespace Hecem
         Giris giris = new Giris();
         public MainWindow()
         {
-
-           
+            InitializeComponent();
             giris.ShowDialog();
          
-            InitializeComponent();
-
             _Sayfa.Navigate(new Anasayfa());
-            Yenile();
-          
         }
 
 
@@ -82,7 +77,7 @@ namespace Hecem
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            Islemler.Yenile();
         }
     }
 }

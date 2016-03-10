@@ -9,6 +9,7 @@ using System.IO;
 using System.Net;
 using System.Reflection;
 using System.Windows.Media;
+using System.Windows;
 namespace Hecem
 {
     public class Islemler
@@ -97,6 +98,18 @@ namespace Hecem
             bImg.EndInit();
 
             return bImg;
+        }
+
+        public static void Yenile()
+        {
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).baslik.Text = "Hecem";
+                    (window as MainWindow).Yenile();
+                }
+            }
         }
     }
 }
