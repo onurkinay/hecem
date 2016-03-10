@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hecem"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
-        mc:Ignorable="d"
+        mc:Ignorable="d" ShowInTaskbar="False"
         Title="Bekle"      WindowStyle="None" ResizeMode="NoResize"  
   
     WindowStartupLocation="CenterScreen" WindowState="Maximized">

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Hecem"
         mc:Ignorable="d"
         Background="#E65100"
+        ShowInTaskbar="False"
         Closed="Window_Closed"
         Title="Giris" WindowStyle="None" ResizeMode="NoResize"  
     WindowStartupLocation="CenterScreen" WindowState="Maximized">

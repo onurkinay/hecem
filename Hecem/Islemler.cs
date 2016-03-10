@@ -111,5 +111,16 @@ namespace Hecem
                 }
             }
         }
+
+        public static void BaslikDegistir(string baslik)
+        {
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow).baslik.Text = baslik;
+                }
+            }
+        }
     }
 }

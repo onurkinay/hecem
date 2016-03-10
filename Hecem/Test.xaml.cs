@@ -20,9 +20,9 @@ namespace Hecem
     /// </summary>
     public partial class Test : Page
     {
-       
-        Anasayfa ana = new Anasayfa();
 
+        Anasayfa ana = new Anasayfa();
+        TestSonuclar sonuc = new TestSonuclar();
         int puan = 0; int secim; int onceki = -1;
         Islemler islemler = new Islemler();
         List<List<string>> Veri;
@@ -44,7 +44,7 @@ namespace Hecem
 
                 int testKod = -1;
 
-                do testKod = rnd.Next(0, 4);
+                do testKod = rnd.Next(0, 3);
                 while (onceki == testKod);
 
                 switch (testKod)
@@ -57,25 +57,26 @@ namespace Hecem
 
                 onceki = testKod;
                 kac++;
-                foreach (Window window in Application.Current.Windows)
-                {
-                    if (window.GetType() == typeof(MainWindow))
-                    {
-                        (window as MainWindow).baslik.Text = "Puan: " + puan.ToString();
-                    }
-                }
+                Islemler.BaslikDegistir("Puan: " + puan.ToString());
+                
             }
             else {
-                MessageBox.Show(puan.ToString());
+                sonuc.puan = puan;
                 Islemler.PuanEkle(App.ka, puan);
-
                 Islemler.Yenile();
 
-                ana.PencereAc(new Anasayfa());
-               
+                ana.PencereAc(new TestSonuclari(sonuc));
+
             }
         }
-#region Soru oluşturma fonksiyonları
+
+        public void SonucaEkle(string anahtar, bool cevap, string soru)
+        {
+            sonuc.sorular.Add(soru);
+            sonuc.cevaplar.Add(cevap);
+            sonuc.anahtar.Add(anahtar);
+        }
+        #region Soru oluşturma fonksiyonları
         private void CoktanSecmeli()
         {
 
@@ -85,7 +86,7 @@ namespace Hecem
             bool cevapVar = false;
             for (int i = 0; i < 4; i++)
             {
-                
+
                 int sira = rnd.Next(0, Veri.Count);
 
                 do sira = rnd.Next(1, Veri.Count);
@@ -116,26 +117,26 @@ namespace Hecem
             klavyeli.Visibility = Visibility.Visible;
             klavye.Clear();
 
-            
+
             int sira = rnd.Next(0, Veri.Count);
 
             btnOynatKlavyeli.Tag = Veri[sira][1];
-
+         
         }
 
         private void DogruYanlis()
         {
             dogruYanlis.Visibility = Visibility.Visible;
-            
 
-            
+
+
             bool sonuc = Convert.ToBoolean(rnd.Next(0, 2));
             int soru = rnd.Next(0, Veri.Count); int yanlis = -1;
 
             if (sonuc) soru = rnd.Next(0, Veri.Count);
             else yanlis = rnd.Next(0, Veri.Count);
 
-            dogruResim.Source = islemler.ResimGetir(Veri[soru][ (Veri[soru][1].Length == 1) ? 1 : 2 ]);
+            dogruResim.Source = islemler.ResimGetir(Veri[soru][(Veri[soru][1].Length == 1) ? 1 : 2]);
             dogruResim.Tag = Veri[soru][1];
             btnOynat3.Tag = Veri[(yanlis == -1) ? soru : yanlis][1];
         }
@@ -157,7 +158,7 @@ namespace Hecem
 
                 cevaplar[i] = sira;
             }
-          
+
 
             for (int i = 0; i < 8; i++)
             {
@@ -166,7 +167,7 @@ namespace Hecem
                 Grid grid = (i < 4) ? sol : sag;
 
                 Grid.SetColumn(sec, (i < 4) ? 0 : 1);
-                Grid.SetRow(sec, (i < 4) ? i : (i-4));
+                Grid.SetRow(sec, (i < 4) ? i : (i - 4));
 
                 sec.Margin = new Thickness(10);
 
@@ -174,7 +175,7 @@ namespace Hecem
                 else {
                     sec.Content = new Image() { Source = islemler.ResimGetir(Veri[cevaplar[i - 4]][(Veri[cevaplar[i - 4]][1].Length == 1) ? 1 : 2]) };
                     sec.Click += SagC;
-                    sec.Tag = cevaplar[i-4];
+                    sec.Tag = cevaplar[i - 4];
                 }
 
                 grid.Children.Add(sec);
@@ -182,41 +183,50 @@ namespace Hecem
 
         }
         #endregion
-#region Cevaplama Fonksiyonları
+        #region Cevaplama Fonksiyonları
         public void SecenekSec(object sender, RoutedEventArgs e)
         {
-            if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString())  puan++;  
-        
+            int gecici = puan;
+            if (btnOynatCoktan.Tag.ToString() == ((Button)sender).Tag.ToString()) puan++;
+
+            SonucaEkle(btnOynatCoktan.Tag.ToString(), gecici != puan, ((Button)sender).Tag.ToString());
+
             TestSorusuOlustur();
         }
 
         public void KlavyeCevap(object sender, RoutedEventArgs e)
         {
-            if (klavye.Text == btnOynatKlavyeli.Tag.ToString()) puan++; 
+            int gecici = puan;
+            if (klavye.Text == btnOynatKlavyeli.Tag.ToString()) puan++;
+
+            SonucaEkle(btnOynatKlavyeli.Tag.ToString(), gecici != puan, klavye.Text);
             TestSorusuOlustur();
         }
 
         public void DYCevapla(object sender, RoutedEventArgs e)
         {
+            int gecici = puan;
             Button btn = sender as Button;
             switch (btn.Tag.ToString())
             {
                 case "yanlis":
                     if (dogruResim.Tag.ToString() != btnOynat3.Tag.ToString()) puan++;
+                    SonucaEkle(btnOynat3.Tag.ToString(), gecici != puan, dogruResim.Tag.ToString());
                     break;
                 case "dogru":
                     if (dogruResim.Tag.ToString() == btnOynat3.Tag.ToString()) puan++;
-                    
-                     break;
+                    SonucaEkle(btnOynat3.Tag.ToString(), gecici != puan, dogruResim.Tag.ToString());
+                    break;
             }
             TestSorusuOlustur();
         }
-      
 
-        int[,] cevaplari = new int[4,2]; int c = 0;
+
+        int[,] cevaplari = new int[4, 2]; int c = 0;
         public void CizgiCek(Button sol, Button sag)
         {
-            try {
+            try
+            {
                 for (int i = 0; i < 4; i++)
                 {
                     if (cevaplari[i, 0] != 0 && cevaplari[i, 1] != 0)
@@ -261,7 +271,7 @@ namespace Hecem
             }
             catch
             {
-            
+
             }
         }
         Button solC;
@@ -277,19 +287,30 @@ namespace Hecem
 
         private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
-           islemler.Oynat(((Button)sender).Tag.ToString());
+            islemler.Oynat(((Button)sender).Tag.ToString());
         }
         int pb = 0;
         private Brush PickBrush()
         {
             Brush result = Brushes.Transparent;
-            
+
             Brush[] renkler = new Brush[] { Brushes.Black, Brushes.Blue, Brushes.Red, Brushes.Green };
             if (pb == renkler.Length) pb = 0;
             result = renkler[pb];
             pb++;
-           
+
             return result;
         }
+
+
+    }
+
+    public class TestSonuclar
+    {
+        public int puan = 0;
+        public List<string> sorular = new List<string>();//Çıkan sorular
+        public List<bool> cevaplar = new List<bool>();//Kullanıcının verdiği cevapların doğruluğu
+        public List<string> anahtar = new List<string>();//Çıkan soruların cevap anahtarı
+
     }
 }

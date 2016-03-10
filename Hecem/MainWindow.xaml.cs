@@ -66,6 +66,9 @@ namespace Hecem
         private void cikis_Click(object sender, RoutedEventArgs e)
         {
             App.ka = "";
+            ka.Text = "";
+            puan.Text = "";
+
             Giris giris = new Giris();
             giris.ShowDialog();
         }

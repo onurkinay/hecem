@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:Hecem"
         mc:Ignorable="d"
         Title="MainWindow" MouseDown="Window_MouseDown"
-         WindowStyle="None" ResizeMode="NoResize"  
-    WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        WindowStyle="None" 
+        ResizeMode="NoResize"  
+        WindowStartupLocation="CenterScreen" 
+        WindowState="Maximized"
         Loaded="Window_Loaded"
+        ShowInTaskbar="False"
         >
 
     <Window.Resources>

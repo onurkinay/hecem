@@ -2626,3 +2626,5 @@ F:\Projelerim\Hecem\Hecem\obj\Debug\Bekle.g.cs
 F:\Projelerim\Hecem\Hecem\obj\Debug\Bekle.baml
 F:\Projelerim\Hecem\Hecem\bin\Debug\WpfAnimatedGif.dll
 F:\Projelerim\Hecem\Hecem\bin\Debug\WpfAnimatedGif.xml
+F:\Projelerim\Hecem\Hecem\obj\Debug\TestSonuclari.g.cs
+F:\Projelerim\Hecem\Hecem\obj\Debug\TestSonuclari.baml
