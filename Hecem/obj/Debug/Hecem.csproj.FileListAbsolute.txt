@@ -2622,3 +2622,7 @@ F:\Projelerim\Hecem\Hecem\bin\Debug\Resources\resim\İ.png
 F:\Projelerim\Hecem\Hecem\bin\Debug\Resources\resim\Ş.png
 F:\Projelerim\Hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache
 F:\Projelerim\Hecem\Hecem\bin\Debug\Resources\gg.jpg
+F:\Projelerim\Hecem\Hecem\obj\Debug\Bekle.g.cs
+F:\Projelerim\Hecem\Hecem\obj\Debug\Bekle.baml
+F:\Projelerim\Hecem\Hecem\bin\Debug\WpfAnimatedGif.dll
+F:\Projelerim\Hecem\Hecem\bin\Debug\WpfAnimatedGif.xml

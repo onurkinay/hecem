@@ -20,10 +20,18 @@ namespace Hecem
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        Giris giris = new Giris();
         public MainWindow()
         {
+
+           
+            giris.ShowDialog();
+         
             InitializeComponent();
+
+            _Sayfa.Navigate(new Anasayfa());
+            Yenile();
+          
         }
 
 
@@ -49,7 +57,7 @@ namespace Hecem
         {
             if (backImg.Source.ToString().IndexOf("geri") != -1)
                 _Sayfa.GoBack();
-            else Close();
+            else Environment.Exit(0);
 
             baslik.Text = "Hecem";
         }
@@ -74,11 +82,7 @@ namespace Hecem
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
-            Giris giris = new Giris();
-            giris.ShowDialog();
-            _Sayfa.Navigate(new Anasayfa());
-            Yenile();
+            
         }
     }
 }

@@ -19,8 +19,10 @@ namespace Hecem
     /// </summary>
     public partial class Giris : Window
     {
+        public Bekle bekle = new Bekle();
         public Giris()
         {
+            bekle.Show();
             InitializeComponent();
         }
 

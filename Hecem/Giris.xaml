@@ -29,16 +29,16 @@
             <TextBlock Text="Hecem" FontFamily="Segoe Print" Foreground="White"/>
         </Viewbox>
 
-        <TextBox x:Name="ka" Margin="5,30" Grid.Column="1" Grid.Row="1" MaxLines="1" FontSize="96" Text="s" HorizontalContentAlignment="Center"/>
-        <PasswordBox x:Name="sifre" Margin="5,30" PasswordChar="*" KeyDown="sifre_KeyDown_1" Grid.Column="1" Grid.Row="2" FontSize="96" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="ka" Margin="5,30" Grid.Column="1" Grid.Row="1" MaxLines="1" FontSize="90" HorizontalContentAlignment="Center"/>
+        <PasswordBox x:Name="sifre" Margin="5,30" PasswordChar="*" KeyDown="sifre_KeyDown_1" Grid.Column="1" Grid.Row="2" FontSize="90" HorizontalContentAlignment="Center"/>
 
 
-        <Button Click="anon_Click_1" x:Name="anon" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Height="50" Margin="0,42,0,41" Width="50">
-            <Image Height="48" Source="Resources/anonim.png" Stretch="Fill" Width="48" Grid.Column="2" Grid.Row="2"/>
+        <Button Click="anon_Click_1" x:Name="anon" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" Width="90" Height="90">
+            <Image Source="Resources/anonim.png" Stretch="Fill"  Grid.Column="2" Grid.Row="2"/>
         </Button>
 
-        <Button Click="dogru_Click" x:Name="dogru" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3" Height="50" Margin="0,42,0,41" Width="50">
-            <Image Height="48" Source="Resources/tik.png" Stretch="Fill" Width="48" Grid.Column="2" Grid.Row="2"/>
+        <Button Click="dogru_Click" x:Name="dogru" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="3" Width="90" Height="90">
+            <Image Source="Resources/tik.png"  Stretch="Fill"/>
         </Button>
     </Grid>
 </Window>

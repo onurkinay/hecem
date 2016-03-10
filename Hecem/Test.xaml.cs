@@ -20,7 +20,7 @@ namespace Hecem
     /// </summary>
     public partial class Test : Page
     {
-        MainWindow mw = new MainWindow();
+       
         Anasayfa ana = new Anasayfa();
 
         int puan = 0; int secim; int onceki = -1;
