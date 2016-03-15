@@ -50,11 +50,16 @@ namespace Hecem
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            if (backImg.Source.ToString().IndexOf("geri") != -1)
+           
+            if (((Page)_Sayfa.Content).Title.IndexOf("TestSonuclari") != -1)
+                _Sayfa.Navigate(new Anasayfa());
+           
+            else if (backImg.Source.ToString().IndexOf("geri") != -1)
                 _Sayfa.GoBack();
             else Environment.Exit(0);
 
             baslik.Text = "Hecem";
+            
         }
 
         private void user_Click(object sender, RoutedEventArgs e)

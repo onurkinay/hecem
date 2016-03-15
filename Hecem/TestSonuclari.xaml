@@ -8,6 +8,16 @@
       d:DesignHeight="768" d:DesignWidth="1366"
       Title="TestSonuclari">
 
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Grid.Column" Value="1" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="FontSize" Value="92" />
+        </Style>
+    </Page.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -18,9 +28,37 @@
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
+     
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Puan: " Grid.Column="1" Grid.Row="2" x:Name="puan"/>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+     
+            <Image Source="Resources/tik.png" Grid.Column="0" Margin="25"/>
+            <TextBlock Text=": 0" x:Name="dogru" />
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="Resources/iptal.png" Grid.Column="0" Margin="25"/>
+            <TextBlock Text=": 0" x:Name="yanlis" />
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <Image Source="Resources/puan.png" Grid.Column="0" Margin="25"/>
+            <TextBlock Text=": 0" x:Name="puan" />
+        </Grid>
     </Grid>
 </Page>

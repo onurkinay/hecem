@@ -23,9 +23,10 @@ namespace Hecem
         public TestSonuclari(TestSonuclar testSonuclari)
         {
             InitializeComponent();
-
-            Islemler.BaslikDegistir("Test Sonuçları");
+             
             puan.Text = testSonuclari.puan.ToString();
+            dogru.Text = testSonuclari.cevaplar.Where(x => (x == true)).Count().ToString();
+            yanlis.Text = testSonuclari.cevaplar.Where(x => (x == false)).Count().ToString();
         }
     }
 }

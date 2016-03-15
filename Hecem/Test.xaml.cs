@@ -44,7 +44,7 @@ namespace Hecem
 
                 int testKod = -1;
 
-                do testKod = rnd.Next(0, 3);
+                do testKod = rnd.Next(0, 4);
                 while (onceki == testKod);
 
                 switch (testKod)
@@ -57,8 +57,7 @@ namespace Hecem
 
                 onceki = testKod;
                 kac++;
-                Islemler.BaslikDegistir("Puan: " + puan.ToString());
-                
+                 
             }
             else {
                 sonuc.puan = puan;
@@ -262,11 +261,17 @@ namespace Hecem
                 if (c == 4)
                 {
                     int sonuc = 0;
-                    for (int i = 0; i < 4; i++) if (cevaplari[i, 0] == cevaplari[i, 1]) sonuc++;
+                    bool gecici = false;
+                    for (int i = 0; i < 4; i++) {
+                        if (cevaplari[i, 0] == cevaplari[i, 1]) { sonuc++; gecici = true; }
+                        SonucaEkle(Veri[cevaplari[i, 0]][1], gecici, Veri[cevaplari[i, 1]][1]);
+                        gecici = false;
+                    }
                     puan += sonuc;
                     cevaplari = new int[4, 2];
                     c = 0;
                     TestSorusuOlustur();
+                    /// SonucaEkle(btnOynat3.Tag.ToString(), gecici != puan, dogruResim.Tag.ToString());
                 }
             }
             catch

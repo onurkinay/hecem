@@ -167,6 +167,7 @@
     <Resource Include="Resources\alfabe.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\puan.png" />
     <Content Include="Resources\resim\A.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
