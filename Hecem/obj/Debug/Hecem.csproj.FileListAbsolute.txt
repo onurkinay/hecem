@@ -2665,7 +2665,6 @@ E:\Projelerim\Hecem\Hecem\obj\Debug\Bekle.g.cs
 E:\Projelerim\Hecem\Hecem\obj\Debug\Bekle.baml
 E:\Projelerim\Hecem\Hecem\obj\Debug\TestSonuclari.baml
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Hecem.exe.config
-C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Anasayfa.g.cs
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Dinleme.g.cs
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Giris.g.cs

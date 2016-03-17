@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Media;
 using System.Data.OleDb;
 using System.IO;
-using System.Net;
 using System.Reflection;
 using System.Windows.Media;
 using System.Windows;

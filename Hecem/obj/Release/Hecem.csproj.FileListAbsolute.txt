@@ -1,1 +1,2 @@
 E:\Projelerim\Hecem\Hecem\bin\Release\Hecem.exe.config
+C:\Users\Onur\Desktop\Hecem\Hecem\bin\Release\Hecem.exe.config
