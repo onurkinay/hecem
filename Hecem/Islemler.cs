@@ -24,7 +24,7 @@ namespace Hecem
             while (dr.Read())
             {
                 List<string> veri = new List<string>();
-                for (int i = 0; i < 3; i++) veri.Add(dr[i].ToString());
+                for (int i = 0; i < dr.FieldCount; i++) veri.Add(dr[i].ToString());
                 Veri.Add(veri);
             }
             return Veri;

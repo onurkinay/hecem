@@ -57,7 +57,7 @@ namespace Hecem
             
             label.Text = Veri[i][1].ToString();
 
-            image.Source = islemler.ResimGetir(Veri[i][ (label.Text.Length == 1)? 1:2 ]);
+            image.Source = islemler.ResimGetir(Veri[i][1]);
             
         }
     }
