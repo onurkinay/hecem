@@ -135,7 +135,7 @@ namespace Hecem
             if (sonuc) soru = rnd.Next(0, Veri.Count);
             else yanlis = rnd.Next(0, Veri.Count);
 
-            dogruResim.Source = islemler.ResimGetir(Veri[soru][(Veri[soru][1].Length == 1) ? 1 : 2]);
+            dogruResim.Source = islemler.ResimGetir(Veri[soru][1]);
             dogruResim.Tag = Veri[soru][1];
             btnOynat3.Tag = Veri[(yanlis == -1) ? soru : yanlis][1];
         }
@@ -172,7 +172,7 @@ namespace Hecem
 
                 if (i < 4) { sec.Content = Veri[cevaplar[i]][1]; sec.FontSize = 24; sec.Click += SolC; sec.Tag = cevaplar[i]; }
                 else {
-                    sec.Content = new Image() { Source = islemler.ResimGetir(Veri[cevaplar[i - 4]][(Veri[cevaplar[i - 4]][1].Length == 1) ? 1 : 2]) };
+                    sec.Content = new Image() { Source = islemler.ResimGetir(Veri[cevaplar[i - 4]][1]) };
                     sec.Click += SagC;
                     sec.Tag = cevaplar[i - 4];
                 }
@@ -271,7 +271,7 @@ namespace Hecem
                     cevaplari = new int[4, 2];
                     c = 0;
                     TestSorusuOlustur();
-                    /// SonucaEkle(btnOynat3.Tag.ToString(), gecici != puan, dogruResim.Tag.ToString());
+          
                 }
             }
             catch

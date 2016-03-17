@@ -41,7 +41,7 @@ namespace Hecem
 
         private void _Sayfa_Navigated(object sender, NavigationEventArgs e)
         {
-            if (_Sayfa.CanGoBack)
+            if (_Sayfa.CanGoBack && (((Page)_Sayfa.Content).Title.IndexOf("Anasayfa") == -1)  )
                 backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/geri.png"));
             else backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/kapat.png"));
 
@@ -51,9 +51,8 @@ namespace Hecem
         private void back_Click(object sender, RoutedEventArgs e)
         {
            
-            if (((Page)_Sayfa.Content).Title.IndexOf("TestSonuclari") != -1)
+            if (((Page)_Sayfa.Content).Title.IndexOf("Test") != -1)
                 _Sayfa.Navigate(new Anasayfa());
-           
             else if (backImg.Source.ToString().IndexOf("geri") != -1)
                 _Sayfa.GoBack();
             else Environment.Exit(0);
