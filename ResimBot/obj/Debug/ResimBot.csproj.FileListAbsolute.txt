@@ -1,0 +1,12 @@
+C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.Form1.resources
+C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.Properties.Resources.resources
+C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.csproj.GenerateResource.Cache
+C:\Users\Onur\Desktop\Hecem\ResimBot\bin\Debug\ResimBot.exe.config
+C:\Users\Onur\Desktop\Hecem\ResimBot\bin\Debug\ResimBot.exe
+C:\Users\Onur\Desktop\Hecem\ResimBot\bin\Debug\ResimBot.pdb
+C:\Users\Onur\Desktop\Hecem\ResimBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Onur\Desktop\Hecem\ResimBot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.csprojResolveAssemblyReference.cache
+C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.exe
+C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.pdb
+C:\Users\Onur\Desktop\Hecem\ResimBot\bin\Debug\kaynak.txt

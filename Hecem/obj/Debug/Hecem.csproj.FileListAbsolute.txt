@@ -3996,4 +3996,3 @@ C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.Properties.Resources.resources
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.csproj.GenerateResource.Cache
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.exe
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.pdb
-C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache

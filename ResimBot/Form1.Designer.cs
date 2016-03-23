@@ -1,0 +1,102 @@
+﻿namespace ResimBot
+{
+    partial class Form1
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.pbImage = new System.Windows.Forms.PictureBox();
+            this.btnSonraki = new System.Windows.Forms.Button();
+            this.lbResim = new System.Windows.Forms.Label();
+            this.btnKaydetCek = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pbImage
+            // 
+            this.pbImage.Location = new System.Drawing.Point(12, 24);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(422, 282);
+            this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbImage.TabIndex = 0;
+            this.pbImage.TabStop = false;
+            // 
+            // btnSonraki
+            // 
+            this.btnSonraki.Location = new System.Drawing.Point(211, 312);
+            this.btnSonraki.Name = "btnSonraki";
+            this.btnSonraki.Size = new System.Drawing.Size(108, 23);
+            this.btnSonraki.TabIndex = 1;
+            this.btnSonraki.Text = "Sonraki Resim";
+            this.btnSonraki.UseVisualStyleBackColor = true;
+            this.btnSonraki.Click += new System.EventHandler(this.btnSonraki_Click);
+            // 
+            // lbResim
+            // 
+            this.lbResim.AutoSize = true;
+            this.lbResim.Location = new System.Drawing.Point(8, 8);
+            this.lbResim.Name = "lbResim";
+            this.lbResim.Size = new System.Drawing.Size(88, 13);
+            this.lbResim.TabIndex = 2;
+            this.lbResim.Text = "Resmin kelimesi: ";
+            // 
+            // btnKaydetCek
+            // 
+            this.btnKaydetCek.Location = new System.Drawing.Point(325, 312);
+            this.btnKaydetCek.Name = "btnKaydetCek";
+            this.btnKaydetCek.Size = new System.Drawing.Size(109, 23);
+            this.btnKaydetCek.TabIndex = 3;
+            this.btnKaydetCek.Text = "Sonraki Kelime";
+            this.btnKaydetCek.UseVisualStyleBackColor = true;
+            this.btnKaydetCek.Click += new System.EventHandler(this.btnKaydetCek_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(447, 366);
+            this.Controls.Add(this.btnKaydetCek);
+            this.Controls.Add(this.lbResim);
+            this.Controls.Add(this.btnSonraki);
+            this.Controls.Add(this.pbImage);
+            this.Name = "Form1";
+            this.Text = "ResimBot";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox pbImage;
+        private System.Windows.Forms.Button btnSonraki;
+        private System.Windows.Forms.Label lbResim;
+        private System.Windows.Forms.Button btnKaydetCek;
+    }
+}
+
