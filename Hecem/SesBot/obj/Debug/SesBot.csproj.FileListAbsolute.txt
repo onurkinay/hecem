@@ -1,0 +1,10 @@
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\bin\Debug\SesBot.exe.config
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\obj\Debug\SesBot.Properties.Resources.resources
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\obj\Debug\SesBot.csproj.GenerateResource.Cache
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\bin\Debug\SesBot.exe
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\bin\Debug\SesBot.pdb
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\obj\Debug\SesBot.Form1.resources
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\obj\Debug\SesBot.exe
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\obj\Debug\SesBot.pdb
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\bin\Debug\hece.txt
+C:\Users\Onur\Desktop\Hecem\Hecem\SesBot\bin\Debug\kelime.txt
