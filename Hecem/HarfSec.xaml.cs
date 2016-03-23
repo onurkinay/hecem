@@ -8,8 +8,9 @@ namespace Hecem
     /// </summary>
     public partial class HarfSec : Page
     {
-        Islemler islemler = new Islemler(); int k; int s;
-        Anasayfa snf = new Anasayfa();
+        int k;
+        int s;
+        
         List<List<string>> Veri;
         public HarfSec(int konu, int secim)
         {
@@ -36,7 +37,7 @@ namespace Hecem
 
                     harf.Content = new Image
                     {
-                        Source = islemler.ResimGetir(item[1])
+                        Source = Islemler.ResimGetir(item[1])
                     };
                     harfler.Children.Add(harf);
                 }
@@ -45,8 +46,8 @@ namespace Hecem
         private void Harf_Click(object sender, RoutedEventArgs e)
         {
             Button snd = sender as Button;
-            if (k == 0) snf.PencereAc(new Dinleme(s, snd.Tag.ToString()));
-            else snf.PencereAc(new Test(s, snd.Tag.ToString()));
+            if (k == 0) Islemler.PencereAc(new Dinleme(s, snd.Tag.ToString()));
+            else Islemler.PencereAc(new Test(s, snd.Tag.ToString()));
         }
     }
 }

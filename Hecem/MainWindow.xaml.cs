@@ -36,9 +36,9 @@ namespace Hecem
         {
             if (_Sayfa.CanGoBack && (((Page)_Sayfa.Content).Title.IndexOf("Anasayfa") == -1)  )
                 backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/geri.png"));
-            else backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/kapat.png"));
-
-           // baslik.Text = _Sayfa.
+            else
+                backImg.Source = new BitmapImage(new Uri("pack://application:,,,/Resources/kapat.png"));
+            
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
@@ -56,8 +56,10 @@ namespace Hecem
 
         private void user_Click(object sender, RoutedEventArgs e)
         {
-            if (userMenu.Visibility == Visibility.Collapsed) userMenu.Visibility = Visibility.Visible;
-            else userMenu.Visibility = Visibility.Collapsed;
+            if (userMenu.Visibility == Visibility.Collapsed)
+                userMenu.Visibility = Visibility.Visible;
+            else
+                userMenu.Visibility = Visibility.Collapsed;
         }
 
         private void cikis_Click(object sender, RoutedEventArgs e)

@@ -5,6 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Media;
 using System.Windows;
+using System.Windows.Controls;
 namespace Hecem
 {
     public class Islemler
@@ -66,16 +67,16 @@ namespace Hecem
             con.Close();
         }
 
-        public void Oynat(string gelen)
+        public static void Oynat(string gelen)
         {
-              MediaPlayer player = new MediaPlayer();
-               player.Open(new Uri("Resources/ses/"+gelen.ToLower()+".mp3", UriKind.RelativeOrAbsolute));
+            MediaPlayer player = new MediaPlayer();
+            player.Open(new Uri("Resources/ses/" + gelen.ToLower() + ".mp3", UriKind.RelativeOrAbsolute));
 
-               player.Play();
-            
+            player.Play();
+
         }
 
-        public System.Windows.Media.Imaging.BitmapImage ResimGetir(string resim)
+        public static System.Windows.Media.Imaging.BitmapImage ResimGetir(string resim)
         {
 
             string directory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
@@ -114,6 +115,17 @@ namespace Hecem
                 if (window.GetType() == typeof(MainWindow))
                 {
                     (window as MainWindow).baslik.Text = baslik;
+                }
+            }
+        }
+
+        public static void PencereAc(Page page)
+        {
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window.GetType() == typeof(MainWindow))
+                {
+                    (window as MainWindow)._Sayfa.Navigate(page);
                 }
             }
         }

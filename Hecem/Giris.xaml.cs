@@ -19,7 +19,6 @@ namespace Hecem
         private void dogru_Click(object sender, RoutedEventArgs e)
         {
             Dogrula();
-            
         }
 
         private void Window_Closed(object sender, EventArgs e)

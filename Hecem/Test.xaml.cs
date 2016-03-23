@@ -5,27 +5,31 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+
 namespace Hecem
 {
     /// <summary>
     /// Interaction logic for Test.xaml
     /// </summary>
     public partial class Test : Page
-    {
-
-        Anasayfa ana = new Anasayfa();
+    { 
         TestSonuclar sonuc = new TestSonuclar();
-        int puan = 0; int secim; int onceki = -1;
-        Islemler islemler = new Islemler();
+
+        int puan = 0;
+        int secim;
+        int onceki = -1;
+         
         List<List<string>> Veri = new List<List<string>>();
+
         Random rnd = new Random();
+
         public Test(int s, string harf = "")
         {
             InitializeComponent();
             secim = s;
-          
 
-            if(secim == 3)
+
+            if (secim == 3)
             {
                 int i = 0;
                 while (i < 4)
@@ -37,7 +41,7 @@ namespace Hecem
             }
             else Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
 
-           // if (secim != 0 && secim != 3) Veri = Veri.Where(x => x[1][0] == harf[0].ToString().ToLower()[0]).ToList();
+            // if (secim != 0 && secim != 3) Veri = Veri.Where(x => x[1][0] == harf[0].ToString().ToLower()[0]).ToList();
             TestSorusuOlustur();
         }
 
@@ -70,12 +74,15 @@ namespace Hecem
                 Islemler.PuanEkle(App.ka, puan);
                 Islemler.Yenile();
 
-                ana.PencereAc(new TestSonuclari(sonuc));
+                Islemler.PencereAc(new TestSonuclari(sonuc));
 
             }
         }
-
-        public void SonucaEkle(string anahtar, bool cevap, string soru)
+        private void btnOynat_Click(object sender, RoutedEventArgs e)
+        {
+            Islemler.Oynat(((Button)sender).Tag.ToString());
+        }
+        public void SonucaEkle(string anahtar, bool cevap, string soru)//Soru cevaplandığında sonuca ekle
         {
             sonuc.sorular.Add(soru);
             sonuc.cevaplar.Add(cevap);
@@ -111,7 +118,7 @@ namespace Hecem
 
                 secenek.Content = new Image
                 {
-                    Source = islemler.ResimGetir(Veri[sira][1])
+                    Source = Islemler.ResimGetir(Veri[sira][1])
                 };
                 secenekler.Children.Add(secenek);
             }
@@ -141,7 +148,7 @@ namespace Hecem
             if (sonuc) soru = rnd.Next(0, Veri.Count);
             else yanlis = rnd.Next(0, Veri.Count);
 
-            dogruResim.Source = islemler.ResimGetir(Veri[soru][1]);
+            dogruResim.Source = Islemler.ResimGetir(Veri[soru][1]);
             dogruResim.Tag = Veri[soru][1];
             btnOynat3.Tag = Veri[(yanlis == -1) ? soru : yanlis][1];
         }
@@ -178,7 +185,7 @@ namespace Hecem
 
                 if (i < 4) { sec.Content = Veri[cevaplar[i]][1]; sec.FontSize = 24; sec.Click += SolC; sec.Tag = cevaplar[i]; }
                 else {
-                    sec.Content = new Image() { Source = islemler.ResimGetir(Veri[cevaplar[i - 4]][1]) };
+                    sec.Content = new Image() { Source = Islemler.ResimGetir(Veri[cevaplar[i - 4]][1]) };
                     sec.Click += SagC;
                     sec.Tag = cevaplar[i - 4];
                 }
@@ -296,12 +303,9 @@ namespace Hecem
         }
         #endregion
 
-        private void btnOynat_Click(object sender, RoutedEventArgs e)
-        {
-            islemler.Oynat(((Button)sender).Tag.ToString());
-        }
+      
         int pb = 0;
-        private Brush PickBrush()
+        private Brush PickBrush()// Çizgi renkleri
         {
             Brush result = Brushes.Transparent;
 

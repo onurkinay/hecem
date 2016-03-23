@@ -9,7 +9,7 @@ namespace Hecem
     /// </summary>
     public partial class Dinleme : Page
     {
-        Islemler islemler = new Islemler();
+      
         int i = 0;
         List<List<string>> Veri;
         public Dinleme(int secim, string harf = "")
@@ -36,7 +36,7 @@ namespace Hecem
 
         private void btnOynat_Click(object sender, RoutedEventArgs e)
         {
-            islemler.Oynat(label.Text.ToLower());
+            Islemler.Oynat(label.Text.ToLower());
         }
 
         private void DinlemeCek(int sira)
@@ -46,7 +46,7 @@ namespace Hecem
             
             label.Text = Veri[i][1].ToString();
 
-            image.Source = islemler.ResimGetir(Veri[i][1]);
+            image.Source = Islemler.ResimGetir(Veri[i][1]);
             
         }
     }
