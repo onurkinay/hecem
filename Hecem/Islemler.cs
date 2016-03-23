@@ -14,7 +14,7 @@ namespace Hecem
         public static List<List<string>> VeriGetir(string tablo)
         {
             if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
-            OleDbCommand cmd = new OleDbCommand("Select * from " + tablo, con);
+            OleDbCommand cmd = new OleDbCommand("Select * from " + tablo + " ORDER BY veri", con);
             OleDbDataReader dr = cmd.ExecuteReader();
             List<List<string>> Veri = new List<List<string>>();
             while (dr.Read())
