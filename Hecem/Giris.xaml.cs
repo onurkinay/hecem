@@ -59,7 +59,7 @@ namespace Hecem
 
         private void anon_Click_1(object sender, RoutedEventArgs e)
         {
-            Dogrula(1);
+            Environment.Exit(0);
         }
     }
 }

@@ -33,5 +33,6 @@
             <Image  Source="Resources/kelimeler.jpg"/>
         </Button>
 
+        <Button x:Name="btnGenel" Margin="200,50" Content="Genel Test" FontSize="81" Click="btnSecim_Click" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"/>
     </Grid>
 </Page>

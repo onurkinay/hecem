@@ -17,16 +17,30 @@ namespace Hecem
         TestSonuclar sonuc = new TestSonuclar();
         int puan = 0; int secim; int onceki = -1;
         Islemler islemler = new Islemler();
-        List<List<string>> Veri;
+        List<List<string>> Veri = new List<List<string>>();
         Random rnd = new Random();
         public Test(int s, string harf = "")
         {
             InitializeComponent();
             secim = s;
-            Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
-            if (secim != 0) Veri = Veri.Where(x => x[1][0] == harf[0].ToString().ToLower()[0]).ToList();
+          
+
+            if(secim == 3)
+            {
+                int i = 0;
+                while (i < 4)
+                {
+                    List<List<string>> gelen = Islemler.VeriGetir((i == 0) ? "harfler" : (i == 1) ? "heceler" : "kelimeler");
+                    Veri.AddRange(gelen);
+                    i++;
+                }
+            }
+            else Veri = Islemler.VeriGetir((secim == 0) ? "harfler" : (secim == 1) ? "heceler" : "kelimeler");
+
+           // if (secim != 0 && secim != 3) Veri = Veri.Where(x => x[1][0] == harf[0].ToString().ToLower()[0]).ToList();
             TestSorusuOlustur();
         }
+
         int kac = 1;
         private void TestSorusuOlustur()
         {

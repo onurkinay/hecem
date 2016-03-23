@@ -35,7 +35,7 @@
 
 
         <Button Click="anon_Click_1" x:Name="anon" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" Width="90" Height="90">
-            <Image Source="Resources/anonim.png" Stretch="Fill"  Grid.Column="2" Grid.Row="2"/>
+            <Image Source="Resources/iptal.png" Stretch="Fill"  Grid.Column="2" Grid.Row="2"/>
         </Button>
 
         <Button Click="dogru_Click" x:Name="dogru" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="3" Width="90" Height="90">
