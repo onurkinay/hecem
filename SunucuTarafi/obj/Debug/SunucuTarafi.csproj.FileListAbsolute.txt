@@ -1,0 +1,11 @@
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\bin\Debug\SunucuTarafi.exe.config
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\bin\Debug\SunucuTarafi.exe
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\bin\Debug\SunucuTarafi.pdb
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\obj\Debug\SunucuTarafi.Properties.Resources.resources
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\obj\Debug\SunucuTarafi.csproj.GenerateResource.Cache
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\obj\Debug\SunucuTarafi.exe
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\obj\Debug\SunucuTarafi.pdb
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\obj\Debug\SunucuTarafi.Form1.resources
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\bin\Debug\hecem.accdb
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\obj\Debug\SunucuTarafi.csprojResolveAssemblyReference.cache
+C:\Users\Onur\Desktop\Hecem\SunucuTarafi\bin\Debug\Tftp.Net.dll

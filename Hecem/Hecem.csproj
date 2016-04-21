@@ -49,6 +49,9 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Tftp.Net">
+      <HintPath>..\..\Tftp.Net.dll</HintPath>
+    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -87,6 +90,7 @@
     <Compile Include="TestSonuclari.xaml.cs">
       <DependentUpon>TestSonuclari.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VeriIslemleri.cs" />
     <Page Include="Anasayfa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -4077,9 +4081,6 @@
     </Content>
     <Resource Include="Resources\tik.png" />
     <Resource Include="Resources\iptal.png" />
-    <Content Include="hecem.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

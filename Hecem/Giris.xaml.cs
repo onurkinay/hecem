@@ -14,6 +14,9 @@ namespace Hecem
         {
             App.bekle.Show();
             InitializeComponent();
+
+            VeriIslemleri veri = new VeriIslemleri();
+            veri.Cek();
         }
 
         private void dogru_Click(object sender, RoutedEventArgs e)

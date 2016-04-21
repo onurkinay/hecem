@@ -20,6 +20,8 @@ namespace Hecem
             giris.ShowDialog();
          
             _Sayfa.Navigate(new Anasayfa());
+
+          
         }
 
 

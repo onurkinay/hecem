@@ -1306,6 +1306,5 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/resim/%c4%9e.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/resim/%c4%b0.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/resim/%c5%9e.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hecem.accdb")]
 
 

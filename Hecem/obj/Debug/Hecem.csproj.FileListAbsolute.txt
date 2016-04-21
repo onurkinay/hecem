@@ -3975,7 +3975,6 @@ C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Resources\resim\Ü.png
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Resources\resim\Ğ.png
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Resources\resim\İ.png
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Resources\resim\Ş.png
-C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\hecem.accdb
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Hecem.exe
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Hecem.pdb
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\WpfAnimatedGif.dll

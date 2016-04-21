@@ -6,11 +6,15 @@ using System.Reflection;
 using System.Windows.Media;
 using System.Windows;
 using System.Windows.Controls;
+using System.Net.Sockets;
+using System.Threading;
 namespace Hecem
 {
     public class Islemler
     {
         static OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
+        
+
         public static List<List<string>> VeriGetir(string tablo)
         {
             if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
@@ -129,5 +133,7 @@ namespace Hecem
                 }
             }
         }
+
+
     }
 }
