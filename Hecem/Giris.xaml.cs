@@ -13,10 +13,7 @@ namespace Hecem
         public Giris()
         {
             App.bekle.Show();
-            InitializeComponent();
-
-            VeriIslemleri veri = new VeriIslemleri();
-            veri.Cek();
+            InitializeComponent(); 
         }
 
         private void dogru_Click(object sender, RoutedEventArgs e)
