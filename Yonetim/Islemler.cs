@@ -11,7 +11,7 @@ namespace Yonetim
 {
     public class Islemler
     {
-        static OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
+        public static OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
         public static List<Ogrenci> ogrenciler;
         public static bool KullaniciDogrula(string ka, string sifre)
         {
@@ -52,8 +52,8 @@ namespace Yonetim
             
             if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
             OleDbCommand cmd = new OleDbCommand("INSERT INTO kullanicilar (ka, sifre, ad, soyad, puan) VALUES ('"+ogrenci.kullaniciAdi+"', '"+ogrenci.sifre+"', '"+adSoyad[0]+"', '"+adSoyad[1]+"', '0')", con);
-            cmd.ExecuteNonQuery();
-            return true;
+            int sonuc = cmd.ExecuteNonQuery();
+            return sonuc == 1;
         }
 
         public static bool OgrenciSil(Ogrenci ogrenci)
@@ -96,24 +96,7 @@ namespace Yonetim
        
     }
 
-    public class Yedekleme//Veritabanı yedekleme sınıfı
-    {
-
-        public static void Yedekle()
-        {
-
-        }
-
-        public static void GeriYukle()
-        {
-
-        }
-
-        public static void Listele()
-        {
-
-        }
-    }
+   
 
     public class Ogrenci
     {

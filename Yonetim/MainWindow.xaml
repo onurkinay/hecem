@@ -51,24 +51,24 @@
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" x:Name="ekle" Click="ekle_Click" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Grid>
-                    <Image Source="Resources/ekle.png"  Stretch="Fill"  Width="96" Height="96"/>
-                    <TextBlock Text="Ekle" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <Image Source="Resources/ekle.png"  Stretch="Fill"  Width="96" Height="96" Margin="0,-45,0,0"/>
+                    <TextBlock Text="Ekle" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,120,0,0"/>
                 </Grid>
 
             </Button>
 
             <Button Click="sil_Click" Grid.Column="1" x:Name="sil" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Grid>
-                    <Image Source="Resources/hata.png"  Stretch="Fill"  Width="96" Height="96"/>
-                    <TextBlock Text="Sil" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <Image Source="Resources/hata.png"  Stretch="Fill"  Width="96" Height="96" Margin="0,-45,0,0"/>
+                    <TextBlock Text="Sil" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,120,0,0"/>
                 </Grid>
                 
             </Button>
 
-            <Button Grid.Column="2" x:Name="dbYedek" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Click="dbYedek_Click" Grid.Column="2" x:Name="dbYedek" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Grid>
-                    <Image Source="Resources/db.png"  Stretch="Fill"  Width="96" Height="96"/>
-                    <TextBlock Text="Yedekle" VerticalAlignment="Bottom" HorizontalAlignment="Center" />
+                    <Image Source="Resources/db.png"  Stretch="Fill"  Width="96" Height="96" Margin="0,-45,0,0"/>
+                    <TextBlock Text="Yedekle" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,120,0,0"/>
                 </Grid>
 
             </Button>

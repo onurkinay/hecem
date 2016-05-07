@@ -67,5 +67,11 @@ namespace Yonetim
             Islemler.OgrencileriCek();
             Ogrenciler.ItemsSource = Islemler.ogrenciler;
         }
+
+        private void dbYedek_Click(object sender, RoutedEventArgs e)
+        {
+            YedekYonetim yedek = new YedekYonetim();
+            yedek.ShowDialog();
+        }
     }
 }

@@ -1,0 +1,63 @@
+﻿<Window x:Class="Yonetim.YedekYonetim"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yonetim"
+        mc:Ignorable="d"
+        Title="Yedek" Height="300" Width="300">
+    <Window.Resources>
+        <Style x:Key="DoubleClickItem" TargetType="{x:Type ListViewItem}">
+            <EventSetter Event="MouseDoubleClick" Handler="HandleDoubleClick" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <ListView Margin="10" Name="Yedekler" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" ItemContainerStyle="{StaticResource DoubleClickItem}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Tarih" Width="90" DisplayMemberBinding="{Binding tarih}" />
+                    <GridViewColumn Header="Ad" Width="150" DisplayMemberBinding="{Binding adi}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Grid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="yedekle" Click="yedekle_Click" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Grid>
+                    <Image Source="Resources/ekle.png"  Stretch="Fill"  Width="45" Height="45"  Margin="0,-30,0,0"/>
+                    <TextBlock Text="Yedekle" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,60,0,0" />
+                </Grid>
+
+            </Button>
+            <Button Grid.Column="1" x:Name="yedeksil" Click="yedeksil_Click" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Grid>
+                    <Image Source="Resources/hata.png"  Stretch="Fill"  Width="45" Height="45" Margin="0,-30,0,0"/>
+                    <TextBlock Text="Yedek Sil" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,60,0,0"/>
+                </Grid>
+
+            </Button>
+
+        </Grid>
+    </Grid>
+
+</Window>
