@@ -60,8 +60,18 @@ namespace Yonetim
         {
             if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
             OleDbCommand cmd = new OleDbCommand("DELETE FROM kullanicilar WHERE id="+ogrenci.id, con);
-            cmd.ExecuteNonQuery();
-            return false;
+            int sonuc = cmd.ExecuteNonQuery();
+            return sonuc == 1;
+        }
+
+        public static bool OgrenciDuzenle(Ogrenci ogrenci, string ka)
+        {
+            string[] adSoyad = AdSoyadAyir(ogrenci.adsoyad);
+            OleDbCommand ogrenciDuzenle = new OleDbCommand("Update kullanicilar set ka='"+ogrenci.kullaniciAdi+"', sifre='"+ogrenci.sifre+"',ad='"+adSoyad[0]+"',soyad='"+adSoyad[1]+"' where ka='" + ka + "'", con);
+
+            int sonuc = ogrenciDuzenle.ExecuteNonQuery();
+
+            return sonuc == 1;
         }
 
         public static string[] AdSoyadAyir(string adsoy)
