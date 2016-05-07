@@ -9,6 +9,7 @@
         Closed="Window_Closed"
         Loaded="Window_Loaded"
         ResizeMode="NoResize"
+         
         >
     <Window.Resources>
         <Style x:Key="DoubleClickItem" TargetType="{x:Type ListViewItem}">
@@ -56,7 +57,7 @@
 
             </Button>
 
-            <Button Grid.Column="1" x:Name="sil" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button Click="sil_Click" Grid.Column="1" x:Name="sil" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Grid>
                     <Image Source="Resources/hata.png"  Stretch="Fill"  Width="96" Height="96"/>
                     <TextBlock Text="Sil" VerticalAlignment="Bottom" HorizontalAlignment="Center" />

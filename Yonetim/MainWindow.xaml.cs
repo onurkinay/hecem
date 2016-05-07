@@ -32,8 +32,7 @@ namespace Yonetim
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Islemler.OgrencileriCek();
-            Ogrenciler.ItemsSource = Islemler.ogrenciler;
+            Yenile();
         }
 
         protected void HandleDoubleClick(object sender, MouseButtonEventArgs e)
@@ -41,12 +40,32 @@ namespace Yonetim
             Ogrenci ogrenci = ((ListViewItem)sender).Content as Ogrenci;
             OgrenciW ogrYonetim = new OgrenciW(ogrenci);
             ogrYonetim.ShowDialog();
+            Yenile();
         }
 
         private void ekle_Click(object sender, RoutedEventArgs e)
         {
             OgrenciW ogrYonetim = new OgrenciW(new Ogrenci());
             ogrYonetim.ShowDialog();
+            Yenile();
+        }
+
+        private void sil_Click(object sender, RoutedEventArgs e)
+        {
+            Ogrenci ogrenci = Ogrenciler.SelectedItem as Ogrenci;
+            MessageBoxResult result = MessageBox.Show(ogrenci.adsoyad+ " öğrenciyi silmek istediğinizden emin misiniz?", "Onayla", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+               MessageBox.Show( Islemler.OgrenciSil(ogrenci) ? "Öğrenciniz silindi":"Hata! Öğrenci silinemedi");
+            }
+
+            Yenile();
+        }
+
+        void Yenile()
+        {
+            Islemler.OgrencileriCek();
+            Ogrenciler.ItemsSource = Islemler.ogrenciler;
         }
     }
 }

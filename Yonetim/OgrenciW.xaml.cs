@@ -62,6 +62,7 @@ namespace Yonetim
 
                 MessageBox.Show(Islemler.OgrenciDuzenle(ogrenci, kullaniciAdi) ? "Öğrenci düzenlendi" : "Öğrenci düzenlenemedi");
             }
+            this.Close();
         }
     }
 }

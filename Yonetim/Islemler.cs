@@ -66,14 +66,15 @@ namespace Yonetim
 
         public static bool OgrenciDuzenle(Ogrenci ogrenci, string ka)
         {
+            if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
             string[] adSoyad = AdSoyadAyir(ogrenci.adsoyad);
             OleDbCommand ogrenciDuzenle = new OleDbCommand("Update kullanicilar set ka='"+ogrenci.kullaniciAdi+"', sifre='"+ogrenci.sifre+"',ad='"+adSoyad[0]+"',soyad='"+adSoyad[1]+"' where ka='" + ka + "'", con);
 
             int sonuc = ogrenciDuzenle.ExecuteNonQuery();
-
+            con.Close();
             return sonuc == 1;
         }
-
+         
         public static string[] AdSoyadAyir(string adsoy)
         {
             string ad = "", soyad = "";
@@ -93,6 +94,25 @@ namespace Yonetim
             return new string[] { ad, soyad };
         }
        
+    }
+
+    public class Yedekleme//Veritabanı yedekleme sınıfı
+    {
+
+        public static void Yedekle()
+        {
+
+        }
+
+        public static void GeriYukle()
+        {
+
+        }
+
+        public static void Listele()
+        {
+
+        }
     }
 
     public class Ogrenci
