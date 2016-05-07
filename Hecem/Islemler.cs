@@ -6,8 +6,6 @@ using System.Reflection;
 using System.Windows.Media;
 using System.Windows;
 using System.Windows.Controls;
-using System.Net.Sockets;
-using System.Threading;
 namespace Hecem
 {
     public class Islemler
