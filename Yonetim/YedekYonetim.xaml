@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yonetim"
         mc:Ignorable="d"
-        Title="Yedek" Height="300" Width="300">
+        Title="Yedekleme Paneli" Height="300" Width="300">
     <Window.Resources>
         <Style x:Key="DoubleClickItem" TargetType="{x:Type ListViewItem}">
             <EventSetter Event="MouseDoubleClick" Handler="HandleDoubleClick" />

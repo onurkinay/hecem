@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yonetim"
         mc:Ignorable="d"
-        Title="MainWindow" Height="470.713" Width="691.346"
+        Title="Hecem Yönetim Paneli" Height="470.713" Width="691.346"
         Closed="Window_Closed"
         Loaded="Window_Loaded"
         ResizeMode="NoResize"
-         
+        
         >
     <Window.Resources>
         <Style x:Key="DoubleClickItem" TargetType="{x:Type ListViewItem}">
@@ -69,6 +69,14 @@
                 <Grid>
                     <Image Source="Resources/db.png"  Stretch="Fill"  Width="96" Height="96" Margin="0,-45,0,0"/>
                     <TextBlock Text="Yedekle" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,120,0,0"/>
+                </Grid>
+
+            </Button>
+
+            <Button Click="adminBilgi_Click"  Grid.Column="3" x:Name="adminBilgi" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Grid>
+                    <Image Source="Resources/grup.png"  Stretch="Fill"  Width="96" Height="96" Margin="0,-45,0,0"/>
+                    <TextBlock Text="Giriş bilgileri değiştir" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,120,0,0"/>
                 </Grid>
 
             </Button>

@@ -6,7 +6,14 @@ using System.Reflection;
 using System.Windows.Media;
 using System.Windows;
 using System.Windows.Controls;
-
+/*
+ * Admin giriş sistemi değiştir
+ * vt yedek geri yükleme hatası çöz
+ * açılışta vt kontrol yap
+ * yardım dosyasını oluştur
+ * yedek dosyasını uygulamadan okuttur
+ * estetik kat
+ * **/
 namespace Yonetim
 {
     public class Islemler
@@ -73,6 +80,11 @@ namespace Yonetim
             int sonuc = ogrenciDuzenle.ExecuteNonQuery();
             con.Close();
             return sonuc == 1;
+        }
+
+        public static bool AdminDuzenle(string ka, string sifre)
+        {
+            return false;
         }
          
         public static string[] AdSoyadAyir(string adsoy)

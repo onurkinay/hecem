@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 using System.IO.IsolatedStorage;
+using System.Reflection;
 
 namespace Yedekleme
 {
@@ -30,9 +31,10 @@ namespace Yedekleme
             if (File.Exists(yedek.yol))
             {
                 Yonetim.Islemler.con.Close();
+                Yonetim.Islemler.con = new System.Data.OleDb.OleDbConnection();
                 File.Delete(@"hecem.accdb");
                 File.Copy(yedek.yol, @"hecem.accdb");
-                Yonetim.Islemler.con.Open();
+                Yonetim.Islemler.con = new System.Data.OleDb.OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
             }
             else return false;
             
@@ -56,8 +58,8 @@ namespace Yedekleme
     {
         public static string Getir()
         {
-            //To read
-            using (StreamReader r = new StreamReader("yedek.json"))
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"yedek.json");
+            using (StreamReader r = new StreamReader(path))
             {
                 return r.ReadToEnd();
             }
@@ -95,8 +97,9 @@ namespace Yedekleme
 
         public static bool JsonKaydet(string Json)
         {
+            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"yedek.json");
 
-            using (StreamWriter r = new StreamWriter("yedek.json"))
+            using (StreamWriter r = new StreamWriter(path))
             {
                 r.Write(Json);
                 return true;

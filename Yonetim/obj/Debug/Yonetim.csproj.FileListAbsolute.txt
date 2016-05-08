@@ -22,4 +22,5 @@ C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\OgrenciW.baml
 C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\YedekYonetim.g.cs
 C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\YedekYonetim.baml
 C:\Users\Onur\Desktop\Hecem\Yonetim\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Onur\Desktop\Hecem\Yonetim\bin\Debug\yedek.json
+C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\AdminDegistir.g.cs
+C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\AdminDegistir.baml
