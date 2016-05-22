@@ -34,6 +34,8 @@ namespace Yonetim
         private void yedekle_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog kaydet = new SaveFileDialog();
+            kaydet.Filter = "Veritabanı Yedeği (.dbback)|*.dbback";
+
             kaydet.ShowDialog();
 
             if (kaydet.ShowDialog() == true)

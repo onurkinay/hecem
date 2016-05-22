@@ -7,6 +7,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.IO.IsolatedStorage;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace Yedekleme
 {
@@ -28,17 +29,22 @@ namespace Yedekleme
 
         public static bool GeriYukle(Yedek yedek)
         {
+            Random rnd = new Random();
             if (File.Exists(yedek.yol))
             {
-                Yonetim.Islemler.con.Close();
-                Yonetim.Islemler.con = new System.Data.OleDb.OleDbConnection();
-                File.Delete(@"hecem.accdb");
-                File.Copy(yedek.yol, @"hecem.accdb");
-                Yonetim.Islemler.con = new System.Data.OleDb.OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
+                Process.Start("YedekGeriYukleme.exe", yedek.yol+ " "+ Yonetim.App.ka + " " + Yonetim.App.sifre);
+
+                Environment.Exit(0);
             }
             else return false;
             
             return true;
+        }
+
+        public static bool EnSonYedekGeriGetir()
+        {
+            Yedek yedek = Yonet.YedekleriCek().Last();
+            return GeriYukle(yedek);
         }
 
         public static bool Sil(Yedek yedek)
@@ -46,26 +52,21 @@ namespace Yedekleme
             Yonet.YedekSil(yedek);
             return true;
 
-        }
-
-        public static List<Yedek> Listele()
-        {
-            return new List<Yedek>();
-        }
+        } 
     }
 
     public class Yonet
     {
         public static string Getir()
         {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"yedek.json");
+            string path = "yedek.json";
             using (StreamReader r = new StreamReader(path))
             {
                 return r.ReadToEnd();
             }
-
+             
         }
-
+        
         public static bool YedekEkle(Yedek yedek)
         {
             DateTime h_Tarih = DateTime.Now;
@@ -97,7 +98,7 @@ namespace Yedekleme
 
         public static bool JsonKaydet(string Json)
         {
-            string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"yedek.json");
+            string path = "yedek.json";
 
             using (StreamWriter r = new StreamWriter(path))
             {

@@ -22,9 +22,21 @@ namespace Yonetim
         public Giris()
         {
             InitializeComponent();
+            
         }
 
         private void giris_Click(object sender, RoutedEventArgs e)
+        {
+            GirisYap(ka.Text, sifre.Password);
+
+        }
+
+        private void ka_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return) GirisYap(ka.Text, sifre.Password);  
+        }
+
+        private void GirisYap(string kadi, string sif)
         {
             durum.Text = "";
 
@@ -33,10 +45,12 @@ namespace Yonetim
             timer.Tick += (ss, args) =>
             {
                 timer.Stop();
-                bool dogrula = Islemler.KullaniciDogrula(ka.Text, sifre.Password);
-                if (dogrula) {
+                bool dogrula = Islemler.KullaniciDogrula(kadi, sif);
+                if (dogrula)
+                {
 
-                    App.ka = ka.Text;
+                    App.ka = kadi;
+                    App.sifre = sif;
                     this.Hide();
                     MainWindow mw = new MainWindow();
                     mw.Show();
@@ -44,7 +58,6 @@ namespace Yonetim
                 }
                 else durum.Text = "Hatalı giriş! Tekrar deneyin!";
             };
-        
         }
     }
 }

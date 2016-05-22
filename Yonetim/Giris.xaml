@@ -39,21 +39,21 @@
                     <TextBlock Text="Kullanıcı Adı:" VerticalAlignment="Center"/>
                 </Grid>
 
+                <Grid Grid.Column="1" Grid.Row="0" Margin="0,5">
+                    <TextBox KeyDown="ka_KeyDown" x:Name="ka" TabIndex="0"/>
+                </Grid>
+
                 <Grid Grid.Column="0" Grid.Row="1">
                     <TextBlock Text="Şifre:" VerticalAlignment="Center"/>
                 </Grid>
                 
                 <Grid Grid.Column="1" Grid.Row="1" Margin="0,5">
-                    <PasswordBox x:Name="sifre" PasswordChar="*" />
-                </Grid>
-
-                <Grid Grid.Column="1" Grid.Row="0" Margin="0,5">
-                    <TextBox x:Name="ka" />
+                    <PasswordBox x:Name="sifre" KeyDown="ka_KeyDown" PasswordChar="*" TabIndex="1"/>
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="2">
                     <TextBlock x:Name="durum" Text="" VerticalAlignment="Center"/>
-                    <Button Click="giris_Click"  x:Name="giris" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button TabIndex="2" Click="giris_Click"  x:Name="giris" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center">
                         <Image Source="Resources/tik.png"  Stretch="Uniform"/>
                     </Button>
                 </Grid>

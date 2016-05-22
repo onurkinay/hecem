@@ -7,9 +7,7 @@ using System.Windows.Media;
 using System.Windows;
 using System.Windows.Controls;
 /*
- * Admin giriş sistemi değiştir
- * vt yedek geri yükleme hatası çöz
- * açılışta vt kontrol yap
+ * vt yedek geri yükleme hatası çöz (file in use)
  * yardım dosyasını oluştur
  * yedek dosyasını uygulamadan okuttur
  * estetik kat
@@ -22,15 +20,11 @@ namespace Yonetim
         public static List<Ogrenci> ogrenciler;
         public static bool KullaniciDogrula(string ka, string sifre)
         {
-            if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
-            OleDbCommand cmd = new OleDbCommand("Select * from yetkililer where ka='" + ka + "' AND sifre='" + sifre + "'", con);
-            OleDbDataReader dr = cmd.ExecuteReader();
-             
-            while (dr.Read())
-            {
-                return true;
-            }
-            return false;
+            string kadi = Properties.Settings.Default.kadi;
+            string sif = Properties.Settings.Default.sif;
+
+            if (sifre == sif && ka == kadi) return true;
+            else return false;
         }
            
         public static void OgrencileriCek()
@@ -60,6 +54,7 @@ namespace Yonetim
             if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
             OleDbCommand cmd = new OleDbCommand("INSERT INTO kullanicilar (ka, sifre, ad, soyad, puan) VALUES ('"+ogrenci.kullaniciAdi+"', '"+ogrenci.sifre+"', '"+adSoyad[0]+"', '"+adSoyad[1]+"', '0')", con);
             int sonuc = cmd.ExecuteNonQuery();
+            con.Close();
             return sonuc == 1;
         }
 
@@ -96,7 +91,7 @@ namespace Yonetim
             {
                 if (i != adSoyad.Length - 1)
                 {
-                    ad += adSoyad[i] + " "; // Diziye aktardığımız ad değerlerini Labelimize yazdırıyoruz. 
+                    ad += adSoyad[i]; // Diziye aktardığımız ad değerlerini Labelimize yazdırıyoruz. 
                 }
                 else
                 {

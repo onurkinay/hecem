@@ -1,0 +1,5 @@
+C:\Users\Onur\Desktop\Hecem\YedekGeriYukleme\bin\Debug\YedekGeriYukleme.exe.config
+C:\Users\Onur\Desktop\Hecem\YedekGeriYukleme\bin\Debug\YedekGeriYukleme.exe
+C:\Users\Onur\Desktop\Hecem\YedekGeriYukleme\bin\Debug\YedekGeriYukleme.pdb
+C:\Users\Onur\Desktop\Hecem\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.exe
+C:\Users\Onur\Desktop\Hecem\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.pdb

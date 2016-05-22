@@ -54,14 +54,18 @@ namespace Yonetim
 
         private void sil_Click(object sender, RoutedEventArgs e)
         {
-            Ogrenci ogrenci = Ogrenciler.SelectedItem as Ogrenci;
-            MessageBoxResult result = MessageBox.Show(ogrenci.adsoyad + " öğrenciyi silmek istediğinizden emin misiniz?", "Onayla", MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (result == MessageBoxResult.Yes)
+            if (Ogrenciler.SelectedIndex != -1)
             {
-                MessageBox.Show(Islemler.OgrenciSil(ogrenci) ? "Öğrenciniz silindi" : "Hata! Öğrenci silinemedi");
-            }
+                Ogrenci ogrenci = Ogrenciler.SelectedItem as Ogrenci;
+                MessageBoxResult result = MessageBox.Show(ogrenci.adsoyad + " öğrenciyi silmek istediğinizden emin misiniz?", "Onayla", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    MessageBox.Show(Islemler.OgrenciSil(ogrenci) ? "Öğrenciniz silindi" : "Hata! Öğrenci silinemedi");
+                }
 
-            Yenile();
+                Yenile();
+            }
+            else MessageBox.Show("Öğrenci Seçiniz", "Hata!", MessageBoxButton.OK, MessageBoxImage.Stop);
         }
 
         void Yenile()
@@ -115,7 +119,8 @@ namespace Yonetim
 
         private void adminBilgi_Click(object sender, RoutedEventArgs e)
         {
-
+            AdminDegistir bilgi = new AdminDegistir();
+            bilgi.ShowDialog();
         }
         private IntPtr HelpHook(IntPtr hwnd,
                 int msg,
@@ -126,7 +131,8 @@ namespace Yonetim
             if (msg == WM_SYSCOMMAND &&
                     ((int)wParam & 0xFFF0) == SC_CONTEXTHELP)
             {
-                MessageBox.Show("help");
+                Yardim yrd = new Yardim();
+                yrd.ShowDialog();
                 handled = true;
             }
             return IntPtr.Zero;

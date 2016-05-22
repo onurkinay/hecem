@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yonetim"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="Öğrenci Paneli" Height="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
@@ -39,33 +40,33 @@
                     <TextBlock Text="Kullanıcı Adı:" VerticalAlignment="Center"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="0" Margin="0,5">
-                    <TextBox x:Name="ka" VerticalAlignment="Center"/>
+                    <TextBox x:Name="ka" VerticalAlignment="Center" TabIndex="0"/>
                 </Grid>
 
                 <Grid Grid.Column="0" Grid.Row="1">
                     <TextBlock Text="Şifre:" VerticalAlignment="Center"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="1" Margin="0,5">
-                    <PasswordBox x:Name="sifre" PasswordChar="*" VerticalAlignment="Center"/>
+                    <PasswordBox x:Name="sifre" PasswordChar="*" VerticalAlignment="Center" TabIndex="1"/>
                 </Grid>
 
                 <Grid Grid.Column="0" Grid.Row="2">
                     <TextBlock Text="Ad Soyad:" VerticalAlignment="Center"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="2" Margin="0,5">
-                    <TextBox x:Name="adsoyad" VerticalAlignment="Center"/>
+                    <TextBox x:Name="adsoyad" VerticalAlignment="Center" TabIndex="2"/>
                 </Grid>
 
                 <Grid Grid.Column="0" Grid.Row="3" x:Name="puanTextB">
                     <TextBlock Text="Puan:" VerticalAlignment="Center"/>
                 </Grid>
                 <Grid Grid.Column="1" Grid.Row="3" Margin="0,5" x:Name="puanTextT">
-                    <TextBlock x:Name="puan" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="puan" VerticalAlignment="Center" />
                 </Grid>
 
                 <Grid Grid.Column="1" Grid.Row="5">
                     <TextBlock x:Name="durum" Text="" VerticalAlignment="Center"/>
-                    <Button Click="ekle_Click" x:Name="ekle" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button TabIndex="4" Click="ekle_Click" x:Name="ekle" Style="{DynamicResource NoChromeButton}" HorizontalAlignment="Right" VerticalAlignment="Center">
                         <Image Source="Resources/ekle.png"  Stretch="Uniform" x:Name="ekleResim"/>
                     </Button>
                 </Grid>

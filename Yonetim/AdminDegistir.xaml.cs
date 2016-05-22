@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Yonetim.Properties;
 namespace Yonetim
 {
     /// <summary>
@@ -22,6 +22,16 @@ namespace Yonetim
         public AdminDegistir()
         {
             InitializeComponent();
+            ka.Text = Settings.Default.kadi;
+            sifre.Password = Settings.Default.sif;
+        }
+
+        private void degistir_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.Default.kadi = ka.Text;
+            Settings.Default.sif = sifre.Password;
+            Settings.Default.Save();
+            MessageBox.Show("Giriş bilgileri değiştirildi", "Bilgi!",MessageBoxButton.OK,MessageBoxImage.Information);
         }
     }
 }
