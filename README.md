@@ -7,7 +7,6 @@
 * Sesli harf/kelime/cümle konu anlatımı
 * Kullanıcı sistemi
 * Harf/kelime/cümle testleri
-* Sürükle-bırak testleri
 
 
 ### Yazılım ###
