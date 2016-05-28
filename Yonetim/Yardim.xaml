@@ -21,21 +21,22 @@
             <TreeView Name="tree" FontSize="10pt" 
 					  SelectedItemChanged="HelponselectedItemChanged"
 					  >
-                <TreeViewItem Header="Program Overview" 
-						  Tag="YardimDosyalari/OgrenciYardim.xaml" />
-
-                <TreeViewItem Header="Copyright Information" 
-						  Tag="Help/OverExposureAbout.xaml" />
-                <TreeViewItem Header="GIMP" 
+                <TreeViewItem Header="Hecem Kullanımı" 
 						  Tag="Help/Gimp.xaml" 
 						  />
+                <TreeViewItem Header="Öğrenci Paneli Yönetimi" 
+						  Tag="YardimDosyalari/OgrenciYardim.html" />
+
+                <TreeViewItem Header="Veri Yedekleme" 
+						  Tag="Help/OverExposureAbout.xaml" />
+             
             </TreeView>
 
             <GridSplitter Grid.Column="1" Width="6" 
 						  HorizontalAlignment="Center" 
 						  VerticalAlignment="Stretch" />
 
-            <Frame Name="frame" Grid.Column="2" />
+            <WebBrowser Name="frame" Grid.Column="2" />
         </Grid>
     </Grid>
 </Window>

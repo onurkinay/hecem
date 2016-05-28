@@ -68,9 +68,6 @@
     <Compile Include="Yardim.xaml.cs">
       <DependentUpon>Yardim.xaml</DependentUpon>
     </Compile>
-    <Compile Include="YardimDosyalari\OgrenciYardim.xaml.cs">
-      <DependentUpon>OgrenciYardim.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Yedekleme.cs" />
     <Compile Include="YedekYonetim.xaml.cs">
       <DependentUpon>YedekYonetim.xaml</DependentUpon>
@@ -104,10 +101,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Yardim.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="YardimDosyalari\OgrenciYardim.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,6 +162,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\HecemYonetim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="YardimDosyalari\OgrenciYardim.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

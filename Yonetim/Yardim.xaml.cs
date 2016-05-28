@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.IO;
 namespace Yonetim
 {
     /// <summary>
@@ -28,7 +28,9 @@ namespace Yonetim
         {
             TreeView yrd = sender as TreeView;
             TreeViewItem yardim = yrd.SelectedItem as TreeViewItem;
-            frame.Navigate(new System.Uri(yardim.Tag.ToString(), UriKind.RelativeOrAbsolute));
+            frame.Navigate(new Uri( yardim.Tag.ToString()));
+
+            
         }
     }
 }

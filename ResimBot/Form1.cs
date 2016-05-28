@@ -4,6 +4,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.IO;
 using System.Net;
+using System.Drawing;
+using System.Data.OleDb;
 
 namespace ResimBot
 {
@@ -31,14 +33,13 @@ namespace ResimBot
 
         private void btnKaydetCek_Click(object sender, EventArgs e)
         {
-            string link = Microsoft.VisualBasic.Interaction.InputBox("Linki gir", "Link", "");
-            if (link == "gec") YeniResim();
-
-            else if (link != "")
+            string link = Clipboard.GetText();
+            if (link.IndexOf("http") != -1)
             {
                 ResmiKaydet(i, link);
                 YeniResim();
             }
+
         }
 
         private void btnSonraki_Click(object sender, EventArgs e)
@@ -61,11 +62,36 @@ namespace ResimBot
 
         public void ResmiKaydet(int sira, string link)
         {
+            var webClient = new WebClient();
+            byte[] imageBytes = webClient.DownloadData(link);
+            MemoryStream ms = new MemoryStream(imageBytes);
 
-            WebClient webClient = new WebClient();
-            webClient.DownloadFile(link, @"r/" + kaynak[a]+".png");
+            Image resim = Image.FromStream(ms);
 
+            resim.Save(@"r/" + kaynak[a] + ".png", System.Drawing.Imaging.ImageFormat.Png);
+             
+        }
+        OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb;Jet OLEDB:Database Password=HecemKVeri");
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GereksizlerSil("heceler");
         }
 
+        public void GereksizlerSil(string tablo)
+        {
+            if (!(con.State == System.Data.ConnectionState.Open)) con.Open();
+            OleDbCommand cm = new OleDbCommand("Select * from " + tablo + " ORDER BY veri", con);
+            OleDbDataReader dr = cm.ExecuteReader();
+           
+            while (dr.Read())
+            {
+               if(!File.Exists(@"r/" + dr[1].ToString() + ".png"))
+                {
+                    OleDbCommand cmd = new OleDbCommand("DELETE FROM " + tablo + " WHERE veri='" + dr[1].ToString()+"'", con);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }

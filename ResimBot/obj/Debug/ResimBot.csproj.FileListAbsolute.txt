@@ -10,3 +10,15 @@ C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.exe
 C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.pdb
 C:\Users\Onur\Desktop\Hecem\ResimBot\bin\Debug\kaynak.txt
 C:\Users\Onur\Desktop\Hecem\ResimBot\obj\Debug\ResimBot.csprojResolveAssemblyReference.cache
+C:\Users\tekno\Desktop\hecem\ResimBot\bin\Debug\ResimBot.exe.config
+C:\Users\tekno\Desktop\hecem\ResimBot\bin\Debug\kaynak.txt
+C:\Users\tekno\Desktop\hecem\ResimBot\bin\Debug\ResimBot.exe
+C:\Users\tekno\Desktop\hecem\ResimBot\bin\Debug\ResimBot.pdb
+C:\Users\tekno\Desktop\hecem\ResimBot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tekno\Desktop\hecem\ResimBot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tekno\Desktop\hecem\ResimBot\obj\Debug\ResimBot.csprojResolveAssemblyReference.cache
+C:\Users\tekno\Desktop\hecem\ResimBot\obj\Debug\ResimBot.Form1.resources
+C:\Users\tekno\Desktop\hecem\ResimBot\obj\Debug\ResimBot.Properties.Resources.resources
+C:\Users\tekno\Desktop\hecem\ResimBot\obj\Debug\ResimBot.csproj.GenerateResource.Cache
+C:\Users\tekno\Desktop\hecem\ResimBot\obj\Debug\ResimBot.exe
+C:\Users\tekno\Desktop\hecem\ResimBot\obj\Debug\ResimBot.pdb
