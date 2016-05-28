@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Icon="Resources/HecemYonetim.png"
-        Title="AdminDegistir" Height="300" Width="300">
+        Title="Giriş Bilgileri Değiştir" Height="300" Width="300">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>

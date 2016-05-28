@@ -28,9 +28,12 @@ namespace Yonetim
         {
             TreeView yrd = sender as TreeView;
             TreeViewItem yardim = yrd.SelectedItem as TreeViewItem;
-            frame.Navigate(new Uri( yardim.Tag.ToString()));
 
-            
+            string curDir = Directory.GetCurrentDirectory();
+            this.frame.Navigate( new Uri(String.Format("file:///{0}/YardimDosyalari/"+ yardim.Tag.ToString(), curDir)));
+             
+
+
         }
     }
 }

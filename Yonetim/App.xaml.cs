@@ -31,9 +31,7 @@ namespace Yonetim
         }
         void App_Startup(object sender, StartupEventArgs e)
         {
-            Yardim yrd = new Yardim();
-            yrd.ShowDialog();
-            return;
+           
 
             if (e.Args.Length == 0) {
 

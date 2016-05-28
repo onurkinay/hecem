@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yonetim"
         mc:Ignorable="d"
-        Height="600" Width="800"
+        Height="593" Width="1106"
+        ResizeMode="NoResize"
         Icon="Resources/HecemYonetim.png"
 	ShowInTaskbar="False"
 	WindowStartupLocation="CenterScreen"
@@ -22,13 +23,13 @@
 					  SelectedItemChanged="HelponselectedItemChanged"
 					  >
                 <TreeViewItem Header="Hecem Kullanımı" 
-						  Tag="Help/Gimp.xaml" 
+						  Tag="HecemKullanim.mht" 
 						  />
                 <TreeViewItem Header="Öğrenci Paneli Yönetimi" 
-						  Tag="YardimDosyalari/OgrenciYardim.html" />
+						  Tag="Yonetim.mht" />
 
                 <TreeViewItem Header="Veri Yedekleme" 
-						  Tag="Help/OverExposureAbout.xaml" />
+						  Tag="Veri.mht" />
              
             </TreeView>
 

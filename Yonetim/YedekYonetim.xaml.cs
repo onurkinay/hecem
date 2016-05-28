@@ -38,7 +38,7 @@ namespace Yonetim
             
             if (kaydet.ShowDialog() == true)
             {
-                Yedekleme.Islemler.Yedekle("Yedek "+DateTime.Now.Date,kaydet.FileName);
+                Yedekleme.Islemler.Yedekle("Yedek "+DateTime.Now.Date.ToShortDateString(),kaydet.FileName);
             }
             Yenile();
 

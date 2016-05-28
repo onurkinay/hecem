@@ -6,3 +6,8 @@ C:\Users\Onur\Desktop\Hecem\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.pdb
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\YedekGeriYukleme.exe.config
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\YedekGeriYukleme.exe
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\YedekGeriYukleme.pdb
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YedekGeriYukleme.exe.config
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YedekGeriYukleme.exe
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YedekGeriYukleme.pdb
+C:\Users\tekno\Desktop\hecem\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.exe
+C:\Users\tekno\Desktop\hecem\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.pdb

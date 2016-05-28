@@ -19,7 +19,7 @@ namespace Yedekleme
             Yedek yedek = new Yedek();
 
             yedek.adi = ad;
-            yedek.tarih = DateTime.Now.Date.ToString();
+            yedek.tarih = DateTime.Now.Date.ToShortDateString().ToString();
             yedek.yol = yol;
 
             File.Copy(@"hecem.accdb", yol);

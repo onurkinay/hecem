@@ -3997,7 +3997,6 @@ C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.exe
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.pdb
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\hecem.accdb
 C:\Users\Onur\Desktop\Hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache
-C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Hecem.exe.config
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Resources\resim\A.png
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Resources\resim\B.png
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Resources\resim\C.png
@@ -5297,11 +5296,11 @@ C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Resources\resim\Ğ.png
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Resources\resim\İ.png
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Resources\resim\Ş.png
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\hecem.accdb
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Hecem.exe.config
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Hecem.exe
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Hecem.pdb
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\WpfAnimatedGif.dll
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\WpfAnimatedGif.xml
-C:\Users\tekno\Desktop\hecem\Hecem\obj\Debug\Hecem.csprojResolveAssemblyReference.cache
 C:\Users\tekno\Desktop\hecem\Hecem\obj\Debug\Anasayfa.g.cs
 C:\Users\tekno\Desktop\hecem\Hecem\obj\Debug\Bekle.g.cs
 C:\Users\tekno\Desktop\hecem\Hecem\obj\Debug\Dinleme.g.cs

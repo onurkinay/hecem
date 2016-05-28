@@ -30,9 +30,10 @@ C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\yedek.json
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Yonetim.exe
 C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Yonetim.pdb
 C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\Yonetim.csprojResolveAssemblyReference.cache
-C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Yonetim.exe
-C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Yonetim.exe.config
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\yedek.json
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Yonetim.exe.config
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Yonetim.exe
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Yonetim.pdb
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\AdminDegistir.g.cs
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Giris.g.cs
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\MainWindow.g.cs
@@ -40,7 +41,6 @@ C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\OgrenciW.g.cs
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yardim.g.cs
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\YedekYonetim.g.cs
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\App.g.cs
-C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim_Content.g.cs
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim_MarkupCompile.cache
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim_MarkupCompile.lref
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\App.baml
@@ -55,6 +55,7 @@ C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim.Properties.Resources.reso
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim.csproj.GenerateResource.Cache
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim.exe
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim.pdb
-C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\Yonetim.pdb
-C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YardimDosyalari\OgrenciYardim.html
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YardimDosyalari\HecemKullanim.mht
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YardimDosyalari\Veri.mht
+C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YardimDosyalari\Yonetim.mht
 C:\Users\tekno\Desktop\hecem\Yonetim\obj\Debug\Yonetim.csprojResolveAssemblyReference.cache
