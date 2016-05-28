@@ -35,9 +35,7 @@ namespace Yonetim
         {
             SaveFileDialog kaydet = new SaveFileDialog();
             kaydet.Filter = "Veritabanı Yedeği (.dbback)|*.dbback";
-
-            kaydet.ShowDialog();
-
+            
             if (kaydet.ShowDialog() == true)
             {
                 Yedekleme.Islemler.Yedekle("Yedek "+DateTime.Now.Date,kaydet.FileName);

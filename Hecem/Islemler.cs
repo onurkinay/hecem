@@ -10,7 +10,7 @@ namespace Hecem
 {
     public class Islemler
     {
-        static OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
+        static OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb;Jet OLEDB:Database Password=HecemKVeri");
         
 
         public static List<List<string>> VeriGetir(string tablo)

@@ -13,7 +13,7 @@ namespace Hecem
         {
             InitializeComponent();
             k = konu;
-            btnGenel.Visibility = (k == 0) ? Visibility.Collapsed : Visibility.Visible;
+             
         }
 
         private void btnSecim_Click(object sender, RoutedEventArgs e)

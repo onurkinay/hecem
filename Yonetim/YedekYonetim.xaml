@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Yonetim"
         mc:Ignorable="d"
         ResizeMode="NoResize"
+         Icon="Resources/HecemYonetim.png"
         Title="Yedekleme Paneli" Height="300" Width="300">
     <Window.Resources>
         <Style x:Key="DoubleClickItem" TargetType="{x:Type ListViewItem}">

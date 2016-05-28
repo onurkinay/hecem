@@ -50,7 +50,7 @@
             this.btnSonraki.Name = "btnSonraki";
             this.btnSonraki.Size = new System.Drawing.Size(108, 23);
             this.btnSonraki.TabIndex = 1;
-            this.btnSonraki.Text = "Sonraki Resim";
+            this.btnSonraki.Text = "Resim Al";
             this.btnSonraki.UseVisualStyleBackColor = true;
             this.btnSonraki.Click += new System.EventHandler(this.btnSonraki_Click);
             // 

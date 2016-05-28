@@ -15,13 +15,17 @@ namespace YedekGeriYukleme
             if (args.Length != 3) Console.WriteLine("Geçersiz parametler!!");
             else
             {
+                Console.Title = "Yedek Geri Yükleme Aracı";
                 string yol = args[0];
                 string ka = args[1];
                 string sifre = args[2];
+
                 Console.WriteLine("Yedek geri yükleniyor..!");
                 System.Threading.Thread.Sleep(2000);
+
                 File.Delete(@"hecem.accdb");
                 File.Copy(yol, @"hecem.accdb");
+
                 Console.WriteLine("Geri yükleme tamamlandı..!");
                 System.Threading.Thread.Sleep(2000); 
 
@@ -29,6 +33,7 @@ namespace YedekGeriYukleme
                 startInfo.FileName = @"Yonetim.exe";
                 startInfo.Arguments = "--kadi "+ka + " --sifre "+ sifre;
                 Process.Start(startInfo);
+
             }
         }
     }

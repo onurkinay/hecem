@@ -27,7 +27,7 @@
         </Grid.RowDefinitions>
 
         <Viewbox Margin="5" Grid.Column="0" Grid.ColumnSpan="3" >
-            <TextBlock Text="Hecem" FontFamily="Segoe Print" Foreground="White"/>
+            <Image Source="Resources/HecemLogo.png" />
         </Viewbox>
 
         <TextBox x:Name="ka" Margin="5,30" Grid.Column="1" Grid.Row="1" MaxLines="1" FontSize="90" HorizontalContentAlignment="Center"/>

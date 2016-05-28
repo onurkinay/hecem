@@ -25,4 +25,8 @@ C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\Yonetim.Properties.Resources.resou
 C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\Yonetim.csproj.GenerateResource.Cache
 C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\Yonetim.exe
 C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\Yonetim.pdb
+C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Yonetim.exe.config
+C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\yedek.json
+C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Yonetim.exe
+C:\Users\Onur\Desktop\Hecem\Hecem\bin\Debug\Yonetim.pdb
 C:\Users\Onur\Desktop\Hecem\Yonetim\obj\Debug\Yonetim.csprojResolveAssemblyReference.cache

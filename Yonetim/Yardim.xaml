@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Yonetim"
         mc:Ignorable="d"
         Height="600" Width="800"
+        Icon="Resources/HecemYonetim.png"
 	ShowInTaskbar="False"
 	WindowStartupLocation="CenterScreen"
 	Foreground="Blue">

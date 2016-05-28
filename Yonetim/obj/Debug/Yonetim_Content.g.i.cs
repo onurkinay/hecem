@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hecem.accdb")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("hecemyonetim.ico")]
 
 

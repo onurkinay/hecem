@@ -9,6 +9,7 @@
         Closed="Window_Closed"
         Loaded="Window_Loaded"
         ResizeMode="NoResize"
+        Icon="Resources/HecemYonetim.png"
         
         >
     <Window.Resources>

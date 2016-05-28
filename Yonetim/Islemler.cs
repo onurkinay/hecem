@@ -6,17 +6,12 @@ using System.Reflection;
 using System.Windows.Media;
 using System.Windows;
 using System.Windows.Controls;
-/*
- * vt yedek geri yükleme hatası çöz (file in use)
- * yardım dosyasını oluştur
- * yedek dosyasını uygulamadan okuttur
- * estetik kat
- * **/
+
 namespace Yonetim
 {
     public class Islemler
     {
-        public static OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb");
+        public static OleDbConnection con = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=hecem.accdb;Jet OLEDB:Database Password=HecemKVeri");
         public static List<Ogrenci> ogrenciler;
         public static bool KullaniciDogrula(string ka, string sifre)
         {
@@ -86,18 +81,22 @@ namespace Yonetim
         {
             string ad = "", soyad = "";
             string[] adSoyad; //Dizimizi Tanımlıyoruz 
-            adSoyad = adsoy.Split(' '); //Boşluklara göre ayırdığımız ad ve soyadını diziye aktarıyoruz. 
-            for (int i = 0; i < adSoyad.Length; i++)
+            adSoyad = adsoy.Split(' '); //Boşluklara göre ayırdığımız ad ve soyadını diziye aktarıyoruz.  
+            if (adSoyad.Length != 1)
             {
-                if (i != adSoyad.Length - 1)
+                for (int i = 0; i < adSoyad.Length; i++)
                 {
-                    ad += adSoyad[i]; // Diziye aktardığımız ad değerlerini Labelimize yazdırıyoruz. 
-                }
-                else
-                {
-                    soyad += adSoyad[i]; // Diziye aktardığımız Soyadı değerini Labelimize yazdırıyoruz. 
+                    if (i != adSoyad.Length - 1)
+                    {
+                        ad += adSoyad[i]; // Diziye aktardığımız ad değerlerini Labelimize yazdırıyoruz. 
+                    }
+                    else
+                    {
+                        soyad += adSoyad[i]; // Diziye aktardığımız Soyadı değerini Labelimize yazdırıyoruz. 
+                    }
                 }
             }
+            else ad = adSoyad[0];
             return new string[] { ad, soyad };
         }
        

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
 
 namespace ResimBot
 {
     public partial class Form1 : Form
     {
         List<string> kaynak = new List<string>();
-        int i = 0, a  = -1;
+        int i = 0, a = -1;
         public Form1()
         {
             InitializeComponent();
@@ -19,51 +20,52 @@ namespace ResimBot
         {
             System.IO.StreamReader file = new System.IO.StreamReader("kaynak.txt", Encoding.Default, true);
             string line;
-            while ((line = file.ReadLine()) != null) {
-                if(!File.Exists("resim/"+line+".png"))
-                kaynak.Add(line);
+            while ((line = file.ReadLine()) != null)
+            {
+                if (!File.Exists("r/" + line + ".png"))
+                    kaynak.Add(line);
             }
-          
+
             YeniResim();
         }
-        
+
         private void btnKaydetCek_Click(object sender, EventArgs e)
         {
+            string link = Microsoft.VisualBasic.Interaction.InputBox("Linki gir", "Link", "");
+            if (link == "gec") YeniResim();
 
-            DialogResult result = MessageBox.Show("Resim kaydedilsin mi?", "Onay", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            else if (link != "")
             {
-                Kaynak.ResmiKaydet(i);
+                ResmiKaydet(i, link);
                 YeniResim();
-            }
-            else if (result == DialogResult.No)
-            {
-                YeniResim();
-            }
-            else
-            {
-                //Devam et
             }
         }
-   
+
         private void btnSonraki_Click(object sender, EventArgs e)
         {
-            i++;
-            pbImage.Image = Kaynak.ResimCek(ref i);
+            YeniResim();
         }
 
         private void YeniResim()
         {
-            
-            do {
-                a++;
-                Kaynak.KaynakCek(kaynak[a]);
-            } while (Kaynak.kaynak.hits.Count == 0);
+            Random rand = new Random();
+            do
+            {
+                a = rand.Next(0, kaynak.Count);
+            }
+            while (File.Exists(@"r/" + kaynak[a] + ".png"));
 
             lbResim.Text = "Resmin kelimesi: " + kaynak[a];
 
-            i = 0;
-            pbImage.Image = Kaynak.ResimCek(ref i);
         }
+
+        public void ResmiKaydet(int sira, string link)
+        {
+
+            WebClient webClient = new WebClient();
+            webClient.DownloadFile(link, @"r/" + kaynak[a]+".png");
+
+        }
+
     }
 }

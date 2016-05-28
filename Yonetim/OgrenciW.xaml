@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Yonetim"
         mc:Ignorable="d"
         ResizeMode="NoResize"
+        Icon="Resources/HecemYonetim.png"
         Title="Öğrenci Paneli" Height="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
