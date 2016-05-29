@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hecem", "Hecem.csproj", "{5AD5B32F-0FE2-4389-8D96-C1BA6402C5DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yonetim", "..\Yonetim\Yonetim.csproj", "{F40C7645-8951-4AAF-8262-0C96CA0A2CD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YedekGeriYukleme", "..\YedekGeriYukleme\YedekGeriYukleme.csproj", "{EB4C3D09-76D2-450E-A675-06611CA2D8E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AD5B32F-0FE2-4389-8D96-C1BA6402C5DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD5B32F-0FE2-4389-8D96-C1BA6402C5DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD5B32F-0FE2-4389-8D96-C1BA6402C5DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD5B32F-0FE2-4389-8D96-C1BA6402C5DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F40C7645-8951-4AAF-8262-0C96CA0A2CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F40C7645-8951-4AAF-8262-0C96CA0A2CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F40C7645-8951-4AAF-8262-0C96CA0A2CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F40C7645-8951-4AAF-8262-0C96CA0A2CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB4C3D09-76D2-450E-A675-06611CA2D8E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB4C3D09-76D2-450E-A675-06611CA2D8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB4C3D09-76D2-450E-A675-06611CA2D8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB4C3D09-76D2-450E-A675-06611CA2D8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
