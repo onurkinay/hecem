@@ -27,8 +27,13 @@ namespace Yonetim
 
         private void yedeksil_Click(object sender, RoutedEventArgs e)
         {
-            Yedekleme.Islemler.Sil(Yedekler.SelectedItem as Yedekleme.Yedek);
-            Yenile();
+            Yedekleme.Yedek yedek = Yedekler.SelectedItem as Yedekleme.Yedek;
+            MessageBoxResult sonuc = MessageBox.Show(yedek.adi+ " adlı yedek silinsin mi?", "Yedek Sil", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            if (sonuc == MessageBoxResult.Yes)
+            {
+                Yedekleme.Islemler.Sil(yedek);
+                Yenile();
+            }
         }
 
         private void yedekle_Click(object sender, RoutedEventArgs e)
@@ -38,7 +43,10 @@ namespace Yonetim
             
             if (kaydet.ShowDialog() == true)
             {
-                Yedekleme.Islemler.Yedekle("Yedek "+DateTime.Now.Date.ToShortDateString(),kaydet.FileName);
+                var sections = kaydet.FileName.Split('\\');
+                string DosyaAd = sections[sections.Length - 1];
+
+                Yedekleme.Islemler.Yedekle(DosyaAd.Split('.')[0], kaydet.FileName);
             }
             Yenile();
 

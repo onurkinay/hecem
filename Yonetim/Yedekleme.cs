@@ -82,9 +82,18 @@ namespace Yedekleme
         public static bool YedekSil(Yedek yedek)
         {
             RootObject yedekler = JsonConvert.DeserializeObject<RootObject>(Getir());
-            int index = yedekler.yedekler.yedek.IndexOf(yedek,0);
-            yedekler.yedekler.yedek.RemoveAt(index);
-            File.Delete(yedek.yol);
+
+            foreach (Yedek YedekD in yedekler.yedekler.yedek)
+            {
+                if (YedekD.yol == yedek.yol)
+                {
+                    yedekler.yedekler.yedek.Remove(YedekD);
+                    if (File.Exists(yedek.yol)) File.Delete(yedek.yol);
+                    break;
+                }
+            }
+
+
             JsonKaydet(JsonConvert.SerializeObject(yedekler));
             return true;
 
