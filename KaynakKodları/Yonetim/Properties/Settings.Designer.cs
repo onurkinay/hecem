@@ -25,7 +25,7 @@ namespace Yonetim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ok")]
+        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
         public string kadi {
             get {
                 return ((string)(this["kadi"]));
@@ -37,7 +37,7 @@ namespace Yonetim.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("123456")]
+        [global::System.Configuration.DefaultSettingValueAttribute("hecem")]
         public string sif {
             get {
                 return ((string)(this["sif"]));

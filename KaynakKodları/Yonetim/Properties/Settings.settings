@@ -3,10 +3,10 @@
   <Profiles />
   <Settings>
     <Setting Name="kadi" Type="System.String" Scope="User">
-      <Value Profile="(Default)">ok</Value>
+      <Value Profile="(Default)">admin</Value>
     </Setting>
     <Setting Name="sif" Type="System.String" Scope="User">
-      <Value Profile="(Default)">123456</Value>
+      <Value Profile="(Default)">hecem</Value>
     </Setting>
   </Settings>
 </SettingsFile>

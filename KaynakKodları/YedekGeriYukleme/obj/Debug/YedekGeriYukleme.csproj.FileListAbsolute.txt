@@ -11,3 +11,8 @@ C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YedekGeriYukleme.exe
 C:\Users\tekno\Desktop\hecem\Hecem\bin\Debug\YedekGeriYukleme.pdb
 C:\Users\tekno\Desktop\hecem\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.exe
 C:\Users\tekno\Desktop\hecem\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.pdb
+C:\Users\tekno\Desktop\hecem\KaynakKodları\Hecem\bin\Debug\YedekGeriYukleme.exe.config
+C:\Users\tekno\Desktop\hecem\KaynakKodları\Hecem\bin\Debug\YedekGeriYukleme.exe
+C:\Users\tekno\Desktop\hecem\KaynakKodları\Hecem\bin\Debug\YedekGeriYukleme.pdb
+C:\Users\tekno\Desktop\hecem\KaynakKodları\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.exe
+C:\Users\tekno\Desktop\hecem\KaynakKodları\YedekGeriYukleme\obj\Debug\YedekGeriYukleme.pdb
